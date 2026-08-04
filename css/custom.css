@@ -443,10 +443,69 @@ textarea:focus-visible,
   max-width: 100%;
 }
 
-/* --- Decorative hero objects ------------------------------- */
-/* The hero uses the template's own `intro-bg-01` composition with its cutout
-   objects, so no sizing overrides are needed — they are transparent PNG-style
-   assets designed to float against the dark background. */
+/* --- Hero portrait ----------------------------------------- */
+/* main.css sizes this layer by height (110vh) with width:auto, which crops a
+   4:5 portrait hard enough to cut into the face. Anchor it bottom-right at its
+   own aspect ratio instead, and mask the left and top edges so it dissolves
+   into the background where the headline crosses it. */
+.intro-bg-portrait .intro-bg-03__01 {
+  top: auto;
+  bottom: 0;
+  right: 0;
+  height: auto;
+  width: min(38vw, 520px);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 42%),
+                      linear-gradient(to bottom, transparent 0%, #000 26%);
+          mask-image: linear-gradient(to right, transparent 0%, #000 42%),
+                      linear-gradient(to bottom, transparent 0%, #000 26%);
+  -webkit-mask-composite: source-in;
+          mask-composite: intersect;
+}
+
+.intro-bg-portrait .intro-bg-03__01 img {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* Monochrome, matching the rest of the site's desaturated imagery, and dark
+     enough that the headline can cross the frame. Measured against the actual
+     photo: the brightest pixel under the type reaches 3.3:1 against white,
+     clearing the 3:1 WCAG minimum for large text. At brightness .72 in colour
+     it was 2.0:1 and failed. */
+  -webkit-filter: grayscale(1) brightness(0.55) contrast(1.15);
+          filter: grayscale(1) brightness(0.55) contrast(1.15);
+}
+
+/* Small floating accent, kept from the template's composition. */
+.intro-bg-portrait .intro-bg-03__02 {
+  width: min(13vw, 180px);
+}
+
+.intro-bg-portrait .intro-bg-03__02 img {
+  width: 100%;
+  height: auto;
+  -webkit-filter: brightness(0.55) saturate(0.7);
+          filter: brightness(0.55) saturate(0.7);
+}
+
+/* Below the xl breakpoint the headline uses the full width, so pull the
+   portrait back and let it sit further behind the type. */
+@media only screen and (max-width: 1199px) {
+  .intro-bg-portrait .intro-bg-03__01 {
+    width: min(46vw, 380px);
+    opacity: 0.6;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .intro-bg-portrait .intro-bg-03__01 {
+    width: 66vw;
+    opacity: 0.4;
+  }
+
+  .intro-bg-portrait .intro-bg-03__02 {
+    display: none;
+  }
+}
 
 /* Keep the headline and its CTA above the decorative layer. */
 .headline {
