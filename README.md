@@ -2,6 +2,8 @@
 
 Personal site for Dyrn Zefanya — freelance portfolio and job-application front door in one page.
 
+**Live:** https://dyrnzefanya.github.io/personal-site/
+
 - **Base template:** Blayden (ThemeForest), demo 2
 - **Content source of truth:** `D:\CV\Docs\Dyrn_Verified_Facts_Memory.md`
 - **Content plan:** `D:\CV\Personal-HTML\CONTENT-MAP.md`
