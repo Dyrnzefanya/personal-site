@@ -1,0 +1,12 @@
+{
+  "name": "Dyrn Zefanya — WordPress Developer, Technical SEO & AI Automation",
+  "short_name": "Dyrn Zefanya",
+  "icons": [
+    { "src": "android-icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "android-icon-512.png", "type": "image/png", "sizes": "512x512" }
+  ],
+  "theme_color": "#141414",
+  "background_color": "#141414",
+  "display": "standalone",
+  "start_url": "../../"
+}

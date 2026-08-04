@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+	<style type="text/css">
+		.icon__bg { fill: #141414; }
+		.icon__mark { fill: #ffffff; }
+		@media (prefers-color-scheme: dark) {
+			.icon__bg { fill: #ffffff; }
+			.icon__mark { fill: #141414; }
+		}
+	</style>
+
+	<rect class="icon__bg" width="64" height="64" rx="14"/>
+
+	<text class="icon__mark" x="32" y="34"
+	      font-family="Helvetica, Arial, sans-serif" font-size="29" font-weight="600"
+	      letter-spacing="-1" text-anchor="middle" dominant-baseline="central">DZ</text>
+</svg>

@@ -1,0 +1,464 @@
+/* ===========================================================
+   Dyrn Zefanya — site overrides
+   Kept separate from main.css so the template stays updatable.
+   =========================================================== */
+
+/* --- Portfolio stack backgrounds --------------------------- */
+.portfolio-item-5 {
+  background-image: url("../img/work/busabunga.jpg");
+}
+
+.portfolio-item-6 {
+  background-image: url("../img/work/trinitas.jpg");
+}
+
+.portfolio-item-7 {
+  background-image: url("../img/work/tjikko.jpg");
+}
+
+.portfolio-item-8 {
+  background-image: url("../img/work/hermes.jpg");
+}
+
+.portfolio-item-9 {
+  background-image: url("../img/work/invera.jpg");
+}
+
+.portfolio-item-10 {
+  background-image: url("../img/work/nyliem.jpg");
+}
+
+/* Items 9 and 10 are additions, so they need the shared rules
+   main.css applies to .portfolio-item-1 … -8 via its own selectors. */
+.portfolio-item-9,
+.portfolio-item-10 {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* --- Full-width divider under the hero --------------------- */
+/* main.css points this at dummyimage.com; that request fails and leaves a
+   dead external dependency on the page. */
+.main-image-2 {
+  background-image: url("../img/work/hermes-seo-report.jpg");
+}
+
+/* --- Portfolio stack cards --------------------------------- */
+/* The template drops the project title straight onto the artwork with no
+   scrim. That worked against its flat grey placeholders; against real
+   screenshots the text disappears. Two layers fix it:
+     ::after  a permanent bottom gradient, so the title is always readable
+     ::before a blur + dim that fades in on hover                            */
+/* The stack cards are position:absolute siblings layered on top of each other,
+   so a z-index on the caption escapes its own card and paints over the cards
+   that slide in after it. Isolating each card keeps that z-index local. */
+.portfolio-stack__inner {
+  isolation: isolate;
+}
+
+.portfolio-stack__inner::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 62%;
+  z-index: 1;
+  pointer-events: none;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(0, 0, 0, 0.55) 32%,
+    rgba(0, 0, 0, 0.18) 62%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.portfolio-stack__inner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  background-color: rgba(10, 10, 10, 0.34);
+  -webkit-backdrop-filter: blur(7px) saturate(0.9);
+          backdrop-filter: blur(7px) saturate(0.9);
+  transition: opacity 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.portfolio-stack__inner:hover::before,
+.portfolio-stack__inner:focus-visible::before {
+  opacity: 1;
+}
+
+/* Browsers without backdrop-filter still get a readable dim. */
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .portfolio-stack__inner::before {
+    background-color: rgba(10, 10, 10, 0.62);
+  }
+}
+
+.portfolio-stack__descr {
+  z-index: 2;
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.portfolio-stack__title {
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-stack__tagline {
+  color: var(--neutral-white);
+  opacity: 0;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  transform: translateY(8px);
+  transition: opacity 0.4s ease, transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.portfolio-stack__inner:hover .portfolio-stack__tagline,
+.portfolio-stack__inner:focus-visible .portfolio-stack__tagline {
+  opacity: 0.85;
+  transform: translateY(0);
+}
+
+/* Hover is not available on touch, so the tagline has to be visible there. */
+@media (hover: none) {
+  .portfolio-stack__tagline {
+    opacity: 0.85;
+    transform: none;
+  }
+}
+
+/* --- "Visit live site" link on the cards -------------------- */
+/* Sits inside a card that is itself a popup trigger; js/custom.js stops the
+   click bubbling so the link opens the site instead of the case study. */
+.project-visit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 1.4rem;
+  padding: 9px 18px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: 1.4rem;
+  line-height: 1;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.3s ease, color 0.3s ease, opacity 0.4s ease,
+    transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.project-visit i {
+  font-size: 1.5em;
+  line-height: 1;
+}
+
+.project-visit:hover,
+.project-visit:focus-visible {
+  background-color: var(--neutral-white, #fff);
+  color: var(--base, #141414);
+}
+
+/* On the featured stack the button rides in with the tagline. */
+.portfolio-stack__descr .project-visit {
+  color: var(--neutral-white, #fff);
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.portfolio-stack__inner:hover .project-visit,
+.portfolio-stack__inner:focus-within .project-visit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (hover: none) {
+  .portfolio-stack__descr .project-visit {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* On the tiles it is always visible — nothing is covering it. */
+.work-tile__descr .project-visit {
+  margin-top: 1.2rem;
+  opacity: 0.75;
+}
+
+.work-tile__descr .project-visit:hover,
+.work-tile__descr .project-visit:focus-visible {
+  opacity: 1;
+}
+
+.portfolio-stack__inner:hover .portfolio-stack__descr,
+.portfolio-stack__inner:focus-visible .portfolio-stack__descr {
+  transform: translateY(-6px);
+}
+
+/* main.css hides the title below 768px, which leaves the stack as six
+   unlabelled images on a phone. With the scrim in place it can stay. */
+@media only screen and (max-width: 767px) {
+  .portfolio-stack__descr {
+    display: block;
+    width: 100%;
+    padding: 1.8rem 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-stack__inner::before,
+  .portfolio-stack__descr,
+  .portfolio-stack__tagline,
+  .project-visit,
+  .work-tile__image img,
+  .work-tile__image::before {
+    transition: none;
+  }
+
+  .portfolio-stack__inner:hover .portfolio-stack__descr,
+  .portfolio-stack__tagline,
+  .portfolio-stack__descr .project-visit {
+    transform: none;
+  }
+}
+
+/* --- "Other work" tiles ------------------------------------ */
+.work-tile {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
+}
+
+.work-tile__image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  aspect-ratio: 3 / 2;
+  background-color: rgba(127, 127, 127, 0.12);
+}
+
+/* Same blur-on-hover language as the featured stack, so the two families of
+   card read as one system. */
+.work-tile__image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  background-color: rgba(10, 10, 10, 0.3);
+  -webkit-backdrop-filter: blur(5px) saturate(0.9);
+          backdrop-filter: blur(5px) saturate(0.9);
+  transition: opacity 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.work-tile:hover .work-tile__image::before,
+.work-tile:focus-visible .work-tile__image::before {
+  opacity: 1;
+}
+
+/* Fallback for browsers without aspect-ratio support. */
+@supports not (aspect-ratio: 3 / 2) {
+  .work-tile__image {
+    height: 220px;
+  }
+}
+
+.work-tile__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.work-tile:hover .work-tile__image img,
+.work-tile:focus-visible .work-tile__image img {
+  transform: scale(1.04);
+}
+
+.work-tile__descr {
+  padding: 18px 2px 0;
+}
+
+.work-tile__title {
+  margin-bottom: 4px;
+}
+
+.work-tile__text {
+  opacity: 0.65;
+}
+
+.work-note {
+  margin-top: 28px;
+  opacity: 0.55;
+}
+
+/* --- Case-study popup cover -------------------------------- */
+/* The cover image is taller than the viewport, so opening a project showed a
+   full screen of photo and nothing else — it read as an image-only lightbox
+   even though the popup scrolls fine. Capping it brings the title and the
+   first rows of content into view, which is what signals "there is more". */
+.popup .project-image-bg {
+  position: relative;
+  max-height: min(58vh, 620px);
+}
+
+.popup .project-image-bg img {
+  width: 100%;
+  height: min(58vh, 620px);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Same reason as the cards: a white title on a bright screenshot vanishes. */
+.popup .project-image-bg::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 55%;
+  pointer-events: none;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.45) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.popup .project__title {
+  z-index: 1;
+}
+
+/* --- Case-study popup detail ------------------------------- */
+.project__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project__list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+}
+
+.project__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 8px;
+  height: 1px;
+  background-color: currentColor;
+  opacity: 0.5;
+}
+
+.project__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project__tags li {
+  padding: 6px 14px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: 0.8em;
+  line-height: 1.4;
+  opacity: 0.7;
+}
+
+/* --- Headline safety --------------------------------------- */
+/* The hero title lines are laid out with flex and no wrapping, so a phrase
+   longer than the template's original copy pushes the side note off-screen.
+   Let the note hold its own space instead. */
+.headline__title .title__line em {
+  flex: 0 0 auto;
+}
+
+.headline__title .title__line {
+  max-width: 100%;
+}
+
+/* --- Decorative hero images -------------------------------- */
+/* main.css sizes these by height with width:auto, which assumes a portrait
+   source. Our screenshots are landscape, so pin the width and let the image
+   crop instead of letting it expand across the headline. */
+.intro-bg-03__01 {
+  width: min(32vw, 460px);
+}
+
+.intro-bg-03__02 {
+  width: min(15vw, 210px);
+}
+
+/* This one sits directly under the headline's last line and the CTA, so it
+   needs to go darker still. */
+.intro-bg-03__02 img {
+  -webkit-filter: brightness(0.3) saturate(0.6);
+          filter: brightness(0.3) saturate(0.6);
+}
+
+.intro-bg-03__01 img,
+.intro-bg-03__02 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* The template's placeholders were dark grey, so the headline sat on them
+     legibly. Real screenshots are bright — dim them back down. */
+  -webkit-filter: brightness(0.42) saturate(0.75);
+          filter: brightness(0.42) saturate(0.75);
+}
+
+/* Keep the headline and its CTA above the decorative layer. */
+.headline {
+  position: relative;
+  z-index: 2;
+}
+
+.bottom-bg-03__01 img,
+.bottom-bg-03__02 img {
+  width: 100%;
+  height: auto;
+}
+
+/* --- Text-only service cards ------------------------------- */
+/* The template's card expects an image below the copy; without one the card
+   collapses to its text height, so restore the padding it loses. */
+.cards__card--text {
+  height: 100%;
+}
+
+/* --- Contact form select ----------------------------------- */
+/* Match the native select to the template's input styling. */
+.contact-form select {
+  width: 100%;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--t-bright-20, rgba(255, 255, 255, 0.2));
+  border-radius: 0;
+  padding: 12px 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+}
+
+.contact-form select:focus {
+  outline: none;
+  border-bottom-color: currentColor;
+}
+
+.contact-form select option {
+  color: #141414;
+  background-color: #fff;
+}

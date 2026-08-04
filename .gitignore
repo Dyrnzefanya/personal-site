@@ -1,0 +1,13 @@
+# OS / editor cruft
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+
+# Local scratch
+*.bak
+_*-preview.html
+
+# The CV PDF is regenerated from Docs and added deliberately, not committed
+# by accident. Drop the file in cv/ and remove this line when it is ready.
+cv/
