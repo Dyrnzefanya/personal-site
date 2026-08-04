@@ -386,36 +386,10 @@
   max-width: 100%;
 }
 
-/* --- Decorative hero images -------------------------------- */
-/* main.css sizes these by height with width:auto, which assumes a portrait
-   source. Our screenshots are landscape, so pin the width and let the image
-   crop instead of letting it expand across the headline. */
-.intro-bg-03__01 {
-  width: min(32vw, 460px);
-}
-
-.intro-bg-03__02 {
-  width: min(15vw, 210px);
-}
-
-/* This one sits directly under the headline's last line and the CTA, so it
-   needs to go darker still. */
-.intro-bg-03__02 img {
-  -webkit-filter: brightness(0.3) saturate(0.6);
-          filter: brightness(0.3) saturate(0.6);
-}
-
-.intro-bg-03__01 img,
-.intro-bg-03__02 img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  /* The template's placeholders were dark grey, so the headline sat on them
-     legibly. Real screenshots are bright — dim them back down. */
-  -webkit-filter: brightness(0.42) saturate(0.75);
-          filter: brightness(0.42) saturate(0.75);
-}
+/* --- Decorative hero objects ------------------------------- */
+/* The hero uses the template's own `intro-bg-01` composition with its cutout
+   objects, so no sizing overrides are needed — they are transparent PNG-style
+   assets designed to float against the dark background. */
 
 /* Keep the headline and its CTA above the decorative layer. */
 .headline {
