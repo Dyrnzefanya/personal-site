@@ -35,8 +35,8 @@ PROJECTS = [
                  "covered supplier, distributor, grosir and private-label variations. Each target term got a single "
                  "page that clearly owned it, so no two pages competed with each other.",
         result="Within roughly one month of launch the site held #1 and page-one Google positions for its target "
-               "commercial keywords \u2014 a result that came from structure and intent matching rather than from "
-               "authority it had not had time to build.",
+               "commercial keywords. That came from structure and intent matching, not from "
+               "authority the domain had not had time to build.",
         stack=["React", "Claude Code", "Technical SEO", "Search Console", "GA4"],
     ),
     dict(
@@ -56,7 +56,7 @@ PROJECTS = [
                "Rank tracking against the target set"],
         challenge="Education keywords in a regional market are crowded with directories, aggregators and long-"
                   "established institutions. Ranking meant beating pages with far more authority, on terms where "
-                  "realistically only the top result converts \u2014 parents do not scroll for a school.",
+                  "realistically only the top result converts. Parents do not scroll for a school.",
         approach="I rebuilt the on-page and technical foundation around the five keywords that mattered and made sure "
                  "each one had a clear, single page earning it, which removed the cannibalisation that was splitting "
                  "the site's own relevance. Local signals were tightened so the school read unambiguously as a "
@@ -75,7 +75,7 @@ PROJECTS = [
         url=("Visit tjikkofoam.com", "https://tjikkofoam.com"),
         intro="For four years I have been the entire digital and IT function at a B2B polyurethane foam manufacturer. "
               "Websites, SEO, analytics, brand and packaging design, video, marketplace channels, cybersecurity, "
-              "servers and procurement \u2014 with reporting that goes up to the Board.",
+              "servers and procurement, with reporting that goes up to the Board.",
         scope=["Corporate site rebuilt on WordPress and Elementor with an SEO-first structure",
                "Technical SEO: Core Web Vitals, schema markup, crawl and index hygiene",
                "GA4, Google Tag Manager, Looker Studio and Search Console",
@@ -85,7 +85,7 @@ PROJECTS = [
                "Servers, Cloudflare, Docker, and IT procurement",
                "Client-facing and Board-level presentations"],
         challenge="A B2B industrial manufacturer with a technical product, a long sales cycle and no paid advertising "
-                  "budget. Every lead had to be earned through organic search. There was also no team \u2014 nothing "
+                  "budget. Every lead had to be earned through organic search. There was also no team, so nothing "
                   "could be delegated, so everything had to be built to run without much maintenance.",
         approach="I rebuilt the site around the language buyers actually search with instead of internal product "
                  "naming, then fixed the technical foundation underneath it. Analytics went in so that performance "
@@ -102,7 +102,7 @@ PROJECTS = [
         type="AI automation", date="2026 \u2014 ongoing",
         role="Architect &amp; builder", client="Self-hosted / internal",
         url=None,
-        intro="A self-hosted multi-agent system running real daily work \u2014 not a demo and not a prototype. Claude "
+        intro="A self-hosted multi-agent system that does real daily work. Not a demo, not a prototype. Claude "
               "API handles the reasoning, n8n orchestrates the workflows, and MCP connects the whole thing to live "
               "WordPress sites and analytics properties.",
         scope=["Multi-agent framework running on a self-hosted VPS",
@@ -114,7 +114,7 @@ PROJECTS = [
                "Full multi-page client website builds executed through MCP",
                "SEO, GEO and AEO documentation systems",
                "GA4 audits and a daily reporting agent"],
-        challenge="Most AI automation stops at the proof-of-concept stage \u2014 impressive in a screenshot, "
+        challenge="Most AI automation stops at the proof-of-concept stage: impressive in a screenshot, "
                   "unreliable the moment it has to run unattended against production systems. The hard part is not "
                   "the model call; it is everything around it: scheduling, error handling, credentials, and knowing "
                   "when the output is wrong.",
@@ -124,8 +124,8 @@ PROJECTS = [
                  "validates customer quotations against purchase orders on line items, pricing and expiry, and "
                  "reports hourly.",
         result="A GA4 Daily Reporter runs in production across three properties. The quotation validation layer has "
-               "been live since July 2026. It is deliberately too early to claim a catch rate or a time saving \u2014 "
-               "those numbers will exist once the system has a real track record behind it.",
+               "been live since July 2026. It is deliberately too early to claim a catch rate or a time saving. "
+               "Those numbers can wait until the system has a real track record behind it.",
         stack=["Claude API", "Claude Code", "MCP", "n8n", "Docker", "Self-hosted VPS", "RAG"],
     ),
     dict(
@@ -135,14 +135,14 @@ PROJECTS = [
         type="Website development", date="2025", role="Website developer",
         client="Invera Wedding \u2014 via RIAS Strategic",
         url=("Visit inverawedding.web.id", "https://inverawedding.web.id"),
-        intro="A wedding service platform built through the RIAS Strategic talent pool \u2014 one of a run of projects "
+        intro="A wedding service platform built through the RIAS Strategic talent pool, one of several projects "
               "spanning SMEs, companies and factories.",
         scope=["WordPress and Elementor build",
                "Service and package presentation",
                "Gallery setup",
                "Local SEO fundamentals"],
         challenge="Wedding sites live or die on first impression. The design had to feel personal and unhurried while "
-                  "still loading quickly on the phones most guests would actually open it on \u2014 image-heavy and "
+                  "still loading quickly on the phones most guests would actually open it on. Image-heavy and "
                   "fast are not natural allies.",
         approach="An image-led build with the couple's story and the enquiry flow as the spine of the layout, tuned so "
                  "the photography stays sharp without making the page heavy.",
@@ -163,7 +163,7 @@ PROJECTS = [
                "SEO-ready page structure"],
         challenge="Translating an established offline brand identity into a web presence without flattening the "
                   "character that made it recognisable in the first place. Heritage brands lose more than they gain "
-                  "from a generic modern template.",
+                  "from a template that could belong to anyone.",
         approach="The build leads with the brand's own visual language and keeps the interface deliberately quiet, so "
                  "the heritage does the talking.",
         result="A premium digital presence that carries the brand's story rather than replacing it.",
@@ -239,7 +239,7 @@ PROJECTS = [
         type="E-commerce", date="2025", role="Store build",
         client="The Paw Charm",
         url=("Visit thepawcharmstore.com", "https://thepawcharmstore.com"),
-        intro="An e-commerce store for a pet accessories brand selling directly to consumers \u2014 a different "
+        intro="An e-commerce store for a pet accessories brand selling directly to consumers. A different "
               "problem from the B2B work: impulse-led, mobile-first, and dependent on checkout not getting in the way.",
         scope=["Shopify store setup",
                "Product catalogue and collections",
@@ -265,7 +265,7 @@ PROJECTS = [
                "Google Ads campaign structure and targeting",
                "Conversion tracking setup",
                "Ongoing optimisation across the campaign period"],
-        challenge="Florists compete on immediacy \u2014 people buy flowers with a deadline. The campaign had to catch "
+        challenge="Florists compete on immediacy. People buy flowers with a deadline. The campaign had to catch "
                   "high-intent searches at the moment of need on a small budget.",
         approach="Tight keyword targeting around purchase-intent terms, with conversion tracking in place from the "
                  "start so budget could be moved toward what was actually converting rather than what was getting "
@@ -478,8 +478,8 @@ OTHER_SECTION = '''                  <!-- Content Block - Other Work Start -->
 %s                      </div>
                     </div>
 
-                    <p class="type-basic-160lh animate-in-up work-note">Two more corporate sites \u2014 Agromas Tapioca
-                      and Agromas Crackers \u2014 are in development and will be added once they are live.</p>
+                    <p class="type-basic-160lh animate-in-up work-note">Two more corporate sites, Agromas Tapioca
+                      and Agromas Crackers, are in development and will be added once they are live.</p>
 
                   </div>
                   <!-- Content Block - Other Work End -->

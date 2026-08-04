@@ -44,6 +44,63 @@
   background-image: url("../img/work/hermes-seo-report.jpg");
 }
 
+/* --- Colophon ---------------------------------------------- */
+/* A visible "last updated" date. AI search engines weight recency, and an
+   undated page loses to a dated one on otherwise equal footing. */
+.colophon {
+  padding-top: 1.2rem;
+  opacity: 0.55;
+}
+
+.colophon__sep {
+  margin: 0 0.6rem;
+}
+
+/* --- Accessibility ----------------------------------------- */
+/* Labels for the contact fields. The template relied on placeholders alone,
+   which vanish on focus and are not announced as labels. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 10000;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #141414;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+/* The template removes focus rings in places. Keyboard users need them. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
 /* --- Portfolio stack cards --------------------------------- */
 /* The template drops the project title straight onto the artwork with no
    scrim. That worked against its flat grey placeholders; against real

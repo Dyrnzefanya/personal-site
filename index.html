@@ -14,7 +14,7 @@
 
     <!-- Viewport Meta-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Template Favicon & Icons Start -->
     <link rel="icon" href="img/favicon/favicon.ico" sizes="any">
@@ -38,25 +38,175 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Dyrn Zefanya",
-      "jobTitle": "IT & Digital Specialist",
-      "url": "https://dyrnzefanya.github.io/personal-site/",
-      "email": "dryndarmawan@gmail.com",
-      "telephone": "+62-896-9075-7512",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Jakarta",
-        "addressCountry": "ID"
-      },
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "Universitas Multimedia Nusantara"
-      },
-      "knowsAbout": ["WordPress Development", "Technical SEO", "Google Analytics 4", "AI Workflow Automation", "Next.js"],
-      "sameAs": [
-        "https://www.linkedin.com/in/dyrnzefanya",
-        "https://github.com/dyrnzefanya"
+      "@graph": [
+        {
+          "@type": "ProfilePage",
+          "@id": "https://dyrnzefanya.github.io/personal-site/#page",
+          "url": "https://dyrnzefanya.github.io/personal-site/",
+          "name": "Dyrn Zefanya — WordPress Developer, Technical SEO & AI Automation",
+          "inLanguage": "en",
+          "dateModified": "2026-08-04",
+          "mainEntity": {
+            "@id": "https://dyrnzefanya.github.io/personal-site/#person"
+          },
+          "isPartOf": {
+            "@id": "https://dyrnzefanya.github.io/personal-site/#website"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://dyrnzefanya.github.io/personal-site/#website",
+          "url": "https://dyrnzefanya.github.io/personal-site/",
+          "name": "Dyrn Zefanya",
+          "publisher": {
+            "@id": "https://dyrnzefanya.github.io/personal-site/#person"
+          },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://dyrnzefanya.github.io/personal-site/#person",
+          "name": "Dyrn Zefanya",
+          "jobTitle": "IT & Digital Specialist",
+          "description": "Jakarta-based IT and digital specialist with eight years across IT infrastructure and digital marketing, and five in WordPress, technical SEO and analytics for B2B industrial clients.",
+          "url": "https://dyrnzefanya.github.io/personal-site/",
+          "email": "dryndarmawan@gmail.com",
+          "telephone": "+62-896-9075-7512",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Jakarta",
+            "addressCountry": "ID"
+          },
+          "worksFor": {
+            "@type": "Organization",
+            "name": "PT Tjikko Sentral Industrial",
+            "url": "https://tjikkofoam.com"
+          },
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Universitas Multimedia Nusantara",
+            "url": "https://www.umn.ac.id/"
+          },
+          "knowsAbout": [
+            "WordPress Development",
+            "Elementor",
+            "Technical SEO",
+            "Local SEO",
+            "Google Analytics 4",
+            "Google Tag Manager",
+            "Looker Studio",
+            "Google Search Console",
+            "AI Workflow Automation",
+            "n8n",
+            "Model Context Protocol",
+            "Next.js",
+            "React",
+            "Shopify",
+            "Wazuh SIEM"
+          ],
+          "knowsLanguage": [
+            {
+              "@type": "Language",
+              "name": "Indonesian"
+            },
+            {
+              "@type": "Language",
+              "name": "English"
+            }
+          ],
+          "sameAs": [
+            "https://www.linkedin.com/in/dyrnzefanya",
+            "https://github.com/dyrnzefanya"
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://dyrnzefanya.github.io/personal-site/#work",
+          "name": "Selected projects",
+          "itemListOrder": "https://schema.org/ItemListOrderDescending",
+          "numberOfItems": 6,
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "WebSite",
+                "name": "busabunga.com",
+                "url": "https://busabunga.com",
+                "description": "Decorative foam supplier site built end to end in React. Reached #1 and page-one Google positions for its target commercial keywords within about a month of launch.",
+                "author": {
+                  "@id": "https://dyrnzefanya.github.io/personal-site/#person"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "WebSite",
+                "name": "Sekolah Trinitas",
+                "url": "https://sekolahtrinitasbdl.sch.id",
+                "description": "Local SEO for a Christian trilingual school in Bandar Lampung. #1 Google rankings for five competitive local keywords.",
+                "author": {
+                  "@id": "https://dyrnzefanya.github.io/personal-site/#person"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "WebSite",
+                "name": "Tjikko Foam",
+                "url": "https://tjikkofoam.com",
+                "description": "B2B polyurethane foam manufacturer. Roughly 40% organic traffic growth and 25% more leads, SEO-driven with no paid advertising.",
+                "author": {
+                  "@id": "https://dyrnzefanya.github.io/personal-site/#person"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "item": {
+                "@type": "SoftwareApplication",
+                "name": "Hermes AI Agent System",
+                "applicationCategory": "BusinessApplication",
+                "operatingSystem": "Linux",
+                "description": "Self-hosted multi-agent system on Claude API, n8n and MCP. A GA4 Daily Reporter runs in production across three properties.",
+                "author": {
+                  "@id": "https://dyrnzefanya.github.io/personal-site/#person"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "item": {
+                "@type": "WebSite",
+                "name": "Tjikko Foam Global",
+                "url": "https://global.tjikkofoam.com",
+                "description": "Export-facing Next.js platform for international wholesale buyers.",
+                "author": {
+                  "@id": "https://dyrnzefanya.github.io/personal-site/#person"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "item": {
+                "@type": "WebSite",
+                "name": "Soka Chemical",
+                "url": "https://soka-chem.com",
+                "description": "Corporate product site for a chemical distribution company.",
+                "author": {
+                  "@id": "https://dyrnzefanya.github.io/personal-site/#person"
+                }
+              }
+            }
+          ]
+        }
       ]
     }
     </script>
@@ -79,6 +229,8 @@
   </head>
 
   <body>
+
+    <a class="skip-link" href="#page-content">Skip to content</a>
 
     <!-- Loader Start -->
     <div id="loader" class="loader">
@@ -522,8 +674,8 @@
                       </div>
                     </div>
 
-                    <p class="type-basic-160lh animate-in-up work-note">Two more corporate sites — Agromas Tapioca
-                      and Agromas Crackers — are in development and will be added once they are live.</p>
+                    <p class="type-basic-160lh animate-in-up work-note">Two more corporate sites, Agromas Tapioca
+                      and Agromas Crackers, are in development and will be added once they are live.</p>
 
                   </div>
                   <!-- Content Block - Other Work End -->
@@ -660,7 +812,7 @@
                                     <p class="project__subtitle tagline-chapter">Result</p>
                                   </div>
                                   <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">Within roughly one month of launch the site held #1 and page-one Google positions for its target commercial keywords — a result that came from structure and intent matching rather than from authority it had not had time to build.</p>
+                                    <p class="type-basic-160lh">Within roughly one month of launch the site held #1 and page-one Google positions for its target commercial keywords. That came from structure and intent matching, not from authority the domain had not had time to build.</p>
                                   </div>
                                 </div>
                               </div>
@@ -804,7 +956,7 @@
                                     <p class="project__subtitle tagline-chapter">The challenge</p>
                                   </div>
                                   <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">Education keywords in a regional market are crowded with directories, aggregators and long-established institutions. Ranking meant beating pages with far more authority, on terms where realistically only the top result converts — parents do not scroll for a school.</p>
+                                    <p class="type-basic-160lh">Education keywords in a regional market are crowded with directories, aggregators and long-established institutions. Ranking meant beating pages with far more authority, on terms where realistically only the top result converts. Parents do not scroll for a school.</p>
                                   </div>
                                 </div>
                               </div>
@@ -941,7 +1093,7 @@
                                     </div>
                                   </div>
                                   <div class="col-12 col-xl-8 grid-item">
-                                    <p class="type-basic-160lh">For four years I have been the entire digital and IT function at a B2B polyurethane foam manufacturer. Websites, SEO, analytics, brand and packaging design, video, marketplace channels, cybersecurity, servers and procurement — with reporting that goes up to the Board.</p>
+                                    <p class="type-basic-160lh">For four years I have been the entire digital and IT function at a B2B polyurethane foam manufacturer. Websites, SEO, analytics, brand and packaging design, video, marketplace channels, cybersecurity, servers and procurement, with reporting that goes up to the Board.</p>
                                   </div>
                                 </div>
                               </div>
@@ -984,7 +1136,7 @@
                                     <p class="project__subtitle tagline-chapter">The challenge</p>
                                   </div>
                                   <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">A B2B industrial manufacturer with a technical product, a long sales cycle and no paid advertising budget. Every lead had to be earned through organic search. There was also no team — nothing could be delegated, so everything had to be built to run without much maintenance.</p>
+                                    <p class="type-basic-160lh">A B2B industrial manufacturer with a technical product, a long sales cycle and no paid advertising budget. Every lead had to be earned through organic search. There was also no team, so nothing could be delegated, so everything had to be built to run without much maintenance.</p>
                                   </div>
                                 </div>
                               </div>
@@ -1125,7 +1277,7 @@
                                     </div>
                                   </div>
                                   <div class="col-12 col-xl-8 grid-item">
-                                    <p class="type-basic-160lh">A self-hosted multi-agent system running real daily work — not a demo and not a prototype. Claude API handles the reasoning, n8n orchestrates the workflows, and MCP connects the whole thing to live WordPress sites and analytics properties.</p>
+                                    <p class="type-basic-160lh">A self-hosted multi-agent system that does real daily work. Not a demo, not a prototype. Claude API handles the reasoning, n8n orchestrates the workflows, and MCP connects the whole thing to live WordPress sites and analytics properties.</p>
                                   </div>
                                 </div>
                               </div>
@@ -1169,7 +1321,7 @@
                                     <p class="project__subtitle tagline-chapter">The challenge</p>
                                   </div>
                                   <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">Most AI automation stops at the proof-of-concept stage — impressive in a screenshot, unreliable the moment it has to run unattended against production systems. The hard part is not the model call; it is everything around it: scheduling, error handling, credentials, and knowing when the output is wrong.</p>
+                                    <p class="type-basic-160lh">Most AI automation stops at the proof-of-concept stage: impressive in a screenshot, unreliable the moment it has to run unattended against production systems. The hard part is not the model call; it is everything around it: scheduling, error handling, credentials, and knowing when the output is wrong.</p>
                                   </div>
                                 </div>
                               </div>
@@ -1203,7 +1355,7 @@
                                     <p class="project__subtitle tagline-chapter">Result</p>
                                   </div>
                                   <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">A GA4 Daily Reporter runs in production across three properties. The quotation validation layer has been live since July 2026. It is deliberately too early to claim a catch rate or a time saving — those numbers will exist once the system has a real track record behind it.</p>
+                                    <p class="type-basic-160lh">A GA4 Daily Reporter runs in production across three properties. The quotation validation layer has been live since July 2026. It is deliberately too early to claim a catch rate or a time saving. Those numbers can wait until the system has a real track record behind it.</p>
                                   </div>
                                 </div>
                               </div>
@@ -1294,7 +1446,7 @@
                                     </div>
                                   </div>
                                   <div class="col-12 col-xl-8 grid-item">
-                                    <p class="type-basic-160lh">A wedding service platform built through the RIAS Strategic talent pool — one of a run of projects spanning SMEs, companies and factories.</p>
+                                    <p class="type-basic-160lh">A wedding service platform built through the RIAS Strategic talent pool, one of several projects spanning SMEs, companies and factories.</p>
                                   </div>
                                 </div>
                               </div>
@@ -1333,7 +1485,7 @@
                                     <p class="project__subtitle tagline-chapter">The challenge</p>
                                   </div>
                                   <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">Wedding sites live or die on first impression. The design had to feel personal and unhurried while still loading quickly on the phones most guests would actually open it on — image-heavy and fast are not natural allies.</p>
+                                    <p class="type-basic-160lh">Wedding sites live or die on first impression. The design had to feel personal and unhurried while still loading quickly on the phones most guests would actually open it on. Image-heavy and fast are not natural allies.</p>
                                   </div>
                                 </div>
                               </div>
@@ -1507,7 +1659,7 @@
                                     <p class="project__subtitle tagline-chapter">The challenge</p>
                                   </div>
                                   <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">Translating an established offline brand identity into a web presence without flattening the character that made it recognisable in the first place. Heritage brands lose more than they gain from a generic modern template.</p>
+                                    <p class="type-basic-160lh">Translating an established offline brand identity into a web presence without flattening the character that made it recognisable in the first place. Heritage brands lose more than they gain from a template that could belong to anyone.</p>
                                   </div>
                                 </div>
                               </div>
@@ -2169,7 +2321,7 @@
                                     </div>
                                   </div>
                                   <div class="col-12 col-xl-8 grid-item">
-                                    <p class="type-basic-160lh">An e-commerce store for a pet accessories brand selling directly to consumers — a different problem from the B2B work: impulse-led, mobile-first, and dependent on checkout not getting in the way.</p>
+                                    <p class="type-basic-160lh">An e-commerce store for a pet accessories brand selling directly to consumers. A different problem from the B2B work: impulse-led, mobile-first, and dependent on checkout not getting in the way.</p>
                                   </div>
                                 </div>
                               </div>
@@ -2382,7 +2534,7 @@
                                     <p class="project__subtitle tagline-chapter">The challenge</p>
                                   </div>
                                   <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">Florists compete on immediacy — people buy flowers with a deadline. The campaign had to catch high-intent searches at the moment of need on a small budget.</p>
+                                    <p class="type-basic-160lh">Florists compete on immediacy. People buy flowers with a deadline. The campaign had to catch high-intent searches at the moment of need on a small budget.</p>
                                   </div>
                                 </div>
                               </div>
@@ -2536,13 +2688,12 @@
 
                         <div class="col-12 col-md-8 grid-item about-descr pre-title">
                           <p class="about-descr__text type-basic-160lh animate-in-up">For the past four years I have been the entire digital and IT
-                            function at a B2B polyurethane foam manufacturer — websites, SEO, analytics, brand design, video, marketplace
+                            function at a B2B polyurethane foam manufacturer: websites, SEO, analytics, brand design, video, marketplace
                             channels, cybersecurity, servers, procurement, and reporting straight to the Board. Before that, four years as an
-                            IT front-end analyst across a retail group's branches. It adds up to a particular kind of professional: hired like a
-                            specialist, delivers like a team.
+                            IT front-end analyst across a retail group's branches. That adds up to a particular kind of professional: hired as a specialist, delivering like a team.
                           </p>
                           <p class="about-descr__text type-basic-160lh animate-in-up">The AI part is not a side interest. I run Hermes, a
-                            self-hosted agent system that does real work every day — a GA4 Daily Reporter across three properties, MCP
+                            self-hosted agent system that does real work every day: a GA4 Daily Reporter across three properties, MCP
                             integrations into live WordPress sites, and a validation layer checking quotations against purchase orders. Built,
                             deployed, and in production.
                           </p>
@@ -2654,8 +2805,8 @@
                               <div class="cards__descr">
                                 <h3 class="cards__title animate-in-up">Website<br>development</h3>
                                 <p class="cards__text type-basic-160lh animate-in-up">WordPress and Elementor, or Next.js and React when
-                                  the project calls for it. Delivered across factories, schools, SMEs and service businesses —
-                                  built to load fast and be found, not just to look finished.</p>
+                                  the project calls for it. Delivered across factories, schools, SMEs and service businesses,
+                                  built to load fast and be found rather than merely to look finished.</p>
                               </div>
                             </div>
                           </div>
@@ -2886,7 +3037,7 @@
                         </div>
                         <div class="col-12 col-md-6">
                           <p class="resume-lines-number__date type-basic-160lh animate-in-up">2017</p>
-                          <p class="resume-lines-number__descr type-basic-160lh animate-in-up">&ldquo;IT Governance Evaluation on Educational Institutions Based on COBIT 5.0 Framework&rdquo; &mdash; co-authored with Wella, published on IEEE Xplore.</p>
+                          <p class="resume-lines-number__descr type-basic-160lh animate-in-up">&ldquo;IT Governance Evaluation on Educational Institutions Based on COBIT 5.0 Framework&rdquo;, co-authored with Wella, published on IEEE Xplore.</p>
                           <p class="resume-lines-number__source small animate-in-up">
                             <a class="link-small-underline" href="https://ieeexplore.ieee.org/document/8266030" target="_blank" rel="noopener">IEEE Xplore, document 8266030</a>
                           </p>
@@ -3192,8 +3343,7 @@
                   <div class="content__block section-form-title">
                     <div class="block__descr">
                       <h2 class="reveal-type animate-in-up">Let's talk</h2>
-                      <p class="h2__text text-twothirds type-basic-160lh animate-in-up">Hiring for a role, or need a website that actually gets
-                        found? Tell me which one and I'll come back to you with something useful, not a brochure.</p>
+                      <p class="h2__text text-twothirds type-basic-160lh animate-in-up">Hiring for a role, or after a website that actually gets found? Say which one and I'll come back with something useful rather than a brochure.</p>
                     </div>
                   </div>
                   <!-- Content Block - H2 Section Title End -->
@@ -3222,19 +3372,24 @@
                         <div class="container-fluid p-0">
                           <div class="row gx-0">
                             <div class="col-12 col-md-6 form__item animate-in-up">
-                              <input type="text" name="Name" placeholder="Your name*" required>
+                              <label class="visually-hidden" for="f-name">Your name</label>
+                              <input id="f-name" type="text" name="Name" placeholder="Your name*" required>
                             </div>
                             <div class="col-12 col-md-6 form__item animate-in-up">
-                              <input type="text" name="Company" placeholder="Company name">
+                              <label class="visually-hidden" for="f-company">Company name</label>
+                              <input id="f-company" type="text" name="Company" placeholder="Company name">
                             </div>
                             <div class="col-12 col-md-6 form__item animate-in-up">
-                              <input type="email" name="E-mail" placeholder="Email*" required>
+                              <label class="visually-hidden" for="f-email">Email address</label>
+                              <input id="f-email" type="email" name="E-mail" placeholder="Email*" required>
                             </div>
                             <div class="col-12 col-md-6 form__item animate-in-up">
-                              <input type="tel" name="Phone" placeholder="Phone">
+                              <label class="visually-hidden" for="f-phone">Phone number</label>
+                              <input id="f-phone" type="tel" name="Phone" placeholder="Phone">
                             </div>
                             <div class="col-12 form__item animate-in-up">
-                              <select name="Enquiry type" required>
+                              <label class="visually-hidden" for="f-enquiry">What is this about?</label>
+                              <select id="f-enquiry" name="Enquiry type" required>
                                 <option value="" disabled selected>What is this about?*</option>
                                 <option value="Job opportunity">A job opportunity</option>
                                 <option value="Website project">A website or SEO project</option>
@@ -3242,7 +3397,8 @@
                               </select>
                             </div>
                             <div class="col-12 form__item animate-in-up">
-                              <textarea name="Message" placeholder="A few words about your project or role*" required></textarea>
+                              <label class="visually-hidden" for="f-message">Your message</label>
+                              <textarea id="f-message" name="Message" placeholder="A few words about your project or role*" required></textarea>
                             </div>
                             <div class="col-12 form__item animate-in-up">
                               <button class="btn btn-default hover-default" type="submit">
@@ -3343,6 +3499,18 @@
                               </div>
                             </div>
                             <!-- Content Block - Contact Data End -->
+
+                            <!-- Content Block - Colophon Start -->
+                            <div class="content__block colophon">
+                              <p class="small type-basic-160lh">
+                                Last updated <time datetime="2026-08-04">4 August 2026</time>.
+                                <span class="colophon__sep">&middot;</span>
+                                <a class="link-small-underline" href="llms.txt">llms.txt</a>
+                                <span class="colophon__sep">&middot;</span>
+                                <a class="link-small-underline" href="sitemap.xml">Sitemap</a>
+                              </p>
+                            </div>
+                            <!-- Content Block - Colophon End -->
 
                         </div>
                       </div>

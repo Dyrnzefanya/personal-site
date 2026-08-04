@@ -61,6 +61,60 @@ git commit -m "Your message"
 git push
 ```
 
+## SEO, GEO and accessibility
+
+- **`llms.txt`** — plain-language summary of who Dyrn is and what he has shipped, for
+  ChatGPT / Claude / Perplexity. Keep the verified numbers in it identical to the page.
+- **`sitemap.xml`** — one URL, submit it in Search Console.
+- **JSON-LD `@graph`** — `ProfilePage` + `WebSite` + `Person` + an `ItemList` of six
+  projects, all cross-linked by `@id`. Replaces the flat `Person` object; gives AI
+  systems an entity to attach the results to rather than loose prose.
+- **Freshness** — a visible "Last updated" date in the footer plus `dateModified` in the
+  graph. Undated pages lose to dated ones when AI systems weigh recency.
+- **Accessibility fixes**: `maximum-scale=1` removed from the viewport (it disabled pinch
+  zoom, a WCAG 1.4.4 failure the template shipped with); real `<label>` elements for
+  every contact field, which had been placeholder-only; a skip link; visible
+  `:focus-visible` rings.
+
+### ⚠️ robots.txt and llms.txt cannot work from this repo
+
+Both are **root-only** files. Crawlers read `https://dyrnzefanya.github.io/robots.txt`,
+never `.../personal-site/robots.txt`. That root path belongs to the separate
+`dyrnzefanya.github.io` repo, so this project site cannot serve either one where it
+counts. The `llms.txt` here is still worth having — it is linked from the footer and
+some agents will follow that — but it is not in the canonical location.
+
+To fix properly, add to the **root repo** (`Dyrnzefanya/dyrnzefanya.github.io`):
+
+```
+# robots.txt
+User-agent: *
+Allow: /
+
+# AI search crawlers — these must stay allowed to be cited
+User-agent: GPTBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://dyrnzefanya.github.io/personal-site/sitemap.xml
+```
+
+Moving the site to the root repo, or onto a custom domain, solves this outright.
+
+### Known gaps
+
+- **Heading hierarchy skips levels** (h2 → h5 in the portfolio stack, h2 → h6 in the
+  about block). Fixing it means changing tags whose sizing comes from the tag, not the
+  class, so it needs a visual check before shipping.
+- **No third-party presence work.** AI systems cite Wikipedia, Reddit and review sites
+  far more than personal domains. Guest posts, a filled-out LinkedIn, and answers in
+  relevant communities move AI visibility more than anything left on this page.
+
 ## Layout
 
 ```

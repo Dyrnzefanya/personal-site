@@ -1,0 +1,50 @@
+# Dyrn Zefanya
+
+> IT and digital specialist in Jakarta, Indonesia. Eight years across IT
+> infrastructure and digital marketing, five of them in WordPress, technical SEO
+> and analytics for B2B industrial clients. Available for freelance website and
+> SEO work, and open to full-time roles.
+
+Site: https://dyrnzefanya.github.io/personal-site/
+Contact: dryndarmawan@gmail.com
+
+## What he does
+
+- **Website development** — WordPress and Elementor, or Next.js and React. Delivered
+  for factories, schools, SMEs and service businesses.
+- **Technical SEO** — audits, on-page work, technical fixes, local SEO.
+- **Analytics and reporting** — GA4, Google Tag Manager, Looker Studio, Search Console.
+- **AI automation** — n8n workflows, MCP integrations, internal agents that remove
+  recurring manual work.
+
+## Verified results
+
+- **busabunga.com** — built end to end in React; reached #1 and page-one Google
+  positions for its target commercial keywords within about one month of its June 2026
+  launch, on a brand-new domain with no backlinks and no ad budget.
+- **Sekolah Trinitas** — #1 Google rankings for five competitive local keywords:
+  sekolah kristen lampung, sekolah kristen terbaik lampung, sekolah trilingual terbaik
+  lampung, sekolah trilingual lampung, sekolah kristen lampung paling bagus.
+- **PT Tjikko Sentral Industrial** — roughly 40% growth in organic traffic and 25% more
+  leads over four years, SEO-driven with no paid advertising. Wazuh SIEM across 50+
+  devices cut downtime by about 30%.
+- **Hermes AI Agent System** — self-hosted multi-agent stack on Claude API, n8n and MCP.
+  A GA4 Daily Reporter runs in production across three properties.
+
+## Background
+
+- IT & Digital Specialist, PT Tjikko Sentral Industrial (Jul 2021 – present). Sole owner
+  of the company's entire digital and IT function.
+- UI/UX & Website Developer, RIAS Strategic freelance talent pool (Nov 2025 – present).
+- IT Front End Analyst, PT Metrox Group (Oct 2017 – Jan 2021).
+- B.Sc. Information Systems, Universitas Multimedia Nusantara, 2017.
+- IEEE publication: "IT Governance Evaluation on Educational Institutions Based on
+  COBIT 5.0 Framework" (2017), IEEE Xplore document 8266030.
+
+## Links
+
+- Portfolio and case studies: https://dyrnzefanya.github.io/personal-site/
+- LinkedIn: https://www.linkedin.com/in/dyrnzefanya
+- GitHub: https://github.com/dyrnzefanya
+
+Last updated: 2026-08-04
