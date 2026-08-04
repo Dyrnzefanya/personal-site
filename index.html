@@ -124,7 +124,7 @@
           "@id": "https://dyrnzefanya.github.io/personal-site/#work",
           "name": "Selected projects",
           "itemListOrder": "https://schema.org/ItemListOrderDescending",
-          "numberOfItems": 6,
+          "numberOfItems": 7,
           "itemListElement": [
             {
               "@type": "ListItem",
@@ -133,7 +133,7 @@
                 "@type": "WebSite",
                 "name": "busabunga.com",
                 "url": "https://busabunga.com",
-                "description": "Decorative foam supplier site built end to end in React. Reached #1 and page-one Google positions for its target commercial keywords within about a month of launch.",
+                "description": "Decorative foam supplier site built end to end in React. Reached #1 and page-one Google positions for its target commercial keywords within about a month of launch, on a new domain with no backlinks and no ad budget.",
                 "author": {
                   "@id": "https://dyrnzefanya.github.io/personal-site/#person"
                 }
@@ -159,7 +159,7 @@
                 "@type": "WebSite",
                 "name": "Tjikko Foam",
                 "url": "https://tjikkofoam.com",
-                "description": "B2B polyurethane foam manufacturer. Roughly 40% organic traffic growth and 25% more leads, SEO-driven with no paid advertising.",
+                "description": "B2B polyurethane foam manufacturer. Sole owner of the digital and IT function for four years: roughly 40% organic traffic growth and 25% more leads with no paid advertising, plus Wazuh SIEM across 50+ devices and about 30% less downtime.",
                 "author": {
                   "@id": "https://dyrnzefanya.github.io/personal-site/#person"
                 }
@@ -173,7 +173,7 @@
                 "name": "Hermes AI Agent System",
                 "applicationCategory": "BusinessApplication",
                 "operatingSystem": "Linux",
-                "description": "Self-hosted multi-agent system on Claude API, n8n and MCP. A GA4 Daily Reporter runs in production across three properties.",
+                "description": "Self-hosted multi-agent system on Claude API, n8n and MCP, with a RAG layer. A GA4 Daily Reporter runs in production across three properties.",
                 "author": {
                   "@id": "https://dyrnzefanya.github.io/personal-site/#person"
                 }
@@ -183,10 +183,10 @@
               "@type": "ListItem",
               "position": 5,
               "item": {
-                "@type": "WebSite",
-                "name": "Tjikko Foam Global",
-                "url": "https://global.tjikkofoam.com",
-                "description": "Export-facing Next.js platform for international wholesale buyers.",
+                "@type": "SoftwareApplication",
+                "name": "Quotation vs PO Validation Automation",
+                "applicationCategory": "BusinessApplication",
+                "description": "First-line AI validation checking customer purchase orders against quotations on line items, pricing and expiry. Built on Claude scheduled tasks with MCP into Google Drive and Gmail; live since July 2026, reporting hourly.",
                 "author": {
                   "@id": "https://dyrnzefanya.github.io/personal-site/#person"
                 }
@@ -197,9 +197,23 @@
               "position": 6,
               "item": {
                 "@type": "WebSite",
-                "name": "Soka Chemical",
-                "url": "https://soka-chem.com",
-                "description": "Corporate product site for a chemical distribution company.",
+                "name": "Tjikko Foam Global",
+                "url": "https://global.tjikkofoam.com",
+                "description": "Export-facing Next.js platform built for international wholesale buyers and distributors.",
+                "author": {
+                  "@id": "https://dyrnzefanya.github.io/personal-site/#person"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 7,
+              "item": {
+                "@type": "SoftwareApplication",
+                "name": "SEOFlow AI Dashboard",
+                "applicationCategory": "BusinessApplication",
+                "url": "https://github.com/Dyrnzefanya/seoflow-ai-dashboard",
+                "description": "Full-stack SEO and GEO analytics SaaS on Next.js, TypeScript, Tailwind, Supabase and Vercel.",
                 "author": {
                   "@id": "https://dyrnzefanya.github.io/personal-site/#person"
                 }
@@ -524,7 +538,7 @@
                             <div data-mfp-src="#project-tjikko" class="portfolio-stack__inner portfolio-item-7 popup-trigger">
                               <div class="portfolio-stack__descr">
                                 <h5 class="portfolio-stack__title light">Tjikko Foam</h5>
-                                <p class="portfolio-stack__tagline">Four years owning an entire digital function</p>
+                                <p class="portfolio-stack__tagline">Four years owning an entire digital and IT function</p>
                                 <a class="project-visit" href="https://tjikkofoam.com" target="_blank" rel="noopener"
                                    aria-label="Open Tjikko Foam in a new tab">
                                   <span>Visit live site</span>
@@ -544,26 +558,21 @@
                           </div>
                           <!-- portfolio stack single item -->
                           <div class="stack-item">
-                            <div data-mfp-src="#project-invera" class="portfolio-stack__inner portfolio-item-9 popup-trigger">
+                            <div data-mfp-src="#project-quotation-po" class="portfolio-stack__inner portfolio-item-9 popup-trigger">
                               <div class="portfolio-stack__descr">
-                                <h5 class="portfolio-stack__title light">Invera Wedding</h5>
-                                <p class="portfolio-stack__tagline">Wedding platform built for first impressions</p>
-                                <a class="project-visit" href="https://inverawedding.web.id" target="_blank" rel="noopener"
-                                   aria-label="Open Invera Wedding in a new tab">
-                                  <span>Visit live site</span>
-                                  <i class="ph ph-arrow-up-right"></i>
-                                </a>
+                                <h5 class="portfolio-stack__title light">Quotation vs PO Validation</h5>
+                                <p class="portfolio-stack__tagline">AI checking paperwork nobody wanted to check</p>
                               </div>
                             </div>
                           </div>
                           <!-- portfolio stack single item -->
                           <div class="stack-item">
-                            <div data-mfp-src="#project-nyliem" class="portfolio-stack__inner portfolio-item-10 popup-trigger">
+                            <div data-mfp-src="#project-tjikko-global" class="portfolio-stack__inner portfolio-item-10 popup-trigger">
                               <div class="portfolio-stack__descr">
-                                <h5 class="portfolio-stack__title light">Ny Liem Heritage</h5>
-                                <p class="portfolio-stack__tagline">Heritage brand, translated to the web</p>
-                                <a class="project-visit" href="https://nyliem.com" target="_blank" rel="noopener"
-                                   aria-label="Open Ny Liem Heritage in a new tab">
+                                <h5 class="portfolio-stack__title light">Tjikko Foam Global</h5>
+                                <p class="portfolio-stack__tagline">Export-facing platform for international buyers</p>
+                                <a class="project-visit" href="https://global.tjikkofoam.com" target="_blank" rel="noopener"
+                                   aria-label="Open Tjikko Foam Global in a new tab">
                                   <span>Visit live site</span>
                                   <i class="ph ph-arrow-up-right"></i>
                                 </a>
@@ -586,23 +595,6 @@
 
                     <div class="container-fluid p-0">
                       <div class="row g-0 align-items-stretch">
-                          <!-- other work single item -->
-                          <div class="col-12 col-md-6 col-xl-4 grid-item animate-card-2">
-                            <div data-mfp-src="#project-tjikko-global" class="work-tile popup-trigger">
-                              <div class="work-tile__image">
-                                <img src="img/work/tjikko-global.jpg" alt="Tjikko Foam Global website" loading="lazy">
-                              </div>
-                              <div class="work-tile__descr">
-                                <h4 class="work-tile__title animate-in-up">Tjikko Foam Global</h4>
-                                <p class="work-tile__text small type-basic-160lh animate-in-up">Export-facing platform</p>
-                                <a class="project-visit" href="https://global.tjikkofoam.com" target="_blank" rel="noopener"
-                                   aria-label="Open Tjikko Foam Global in a new tab">
-                                  <span>Visit live site</span>
-                                  <i class="ph ph-arrow-up-right"></i>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
                           <!-- other work single item -->
                           <div class="col-12 col-md-6 col-xl-4 grid-item animate-card-2">
                             <div data-mfp-src="#project-soka" class="work-tile popup-trigger">
@@ -671,11 +663,54 @@
                               </div>
                             </div>
                           </div>
+                          <!-- other work single item -->
+                          <div class="col-12 col-md-6 col-xl-4 grid-item animate-card-2">
+                            <div data-mfp-src="#project-invera" class="work-tile popup-trigger">
+                              <div class="work-tile__image">
+                                <img src="img/work/invera.jpg" alt="Invera Wedding website" loading="lazy">
+                              </div>
+                              <div class="work-tile__descr">
+                                <h4 class="work-tile__title animate-in-up">Invera Wedding</h4>
+                                <p class="work-tile__text small type-basic-160lh animate-in-up">Wedding platform built for first impressions</p>
+                                <a class="project-visit" href="https://inverawedding.web.id" target="_blank" rel="noopener"
+                                   aria-label="Open Invera Wedding in a new tab">
+                                  <span>Visit live site</span>
+                                  <i class="ph ph-arrow-up-right"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- other work single item -->
+                          <div class="col-12 col-md-6 col-xl-4 grid-item animate-card-2">
+                            <div data-mfp-src="#project-nyliem" class="work-tile popup-trigger">
+                              <div class="work-tile__image">
+                                <img src="img/work/nyliem.jpg" alt="Ny Liem Heritage website" loading="lazy">
+                              </div>
+                              <div class="work-tile__descr">
+                                <h4 class="work-tile__title animate-in-up">Ny Liem Heritage</h4>
+                                <p class="work-tile__text small type-basic-160lh animate-in-up">Heritage brand, translated to the web</p>
+                                <a class="project-visit" href="https://nyliem.com" target="_blank" rel="noopener"
+                                   aria-label="Open Ny Liem Heritage in a new tab">
+                                  <span>Visit live site</span>
+                                  <i class="ph ph-arrow-up-right"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
                       </div>
                     </div>
 
-                    <p class="type-basic-160lh animate-in-up work-note">Two more corporate sites, Agromas Tapioca
-                      and Agromas Crackers, are in development and will be added once they are live.</p>
+                    <div class="work-note animate-in-up">
+                      <p class="type-basic-160lh">Also built, outside client work:
+                        <a class="link-small-underline" href="https://github.com/Dyrnzefanya/seoflow-ai-dashboard" target="_blank" rel="noopener">SEOFlow AI Dashboard</a>,
+                        a full-stack SEO analytics SaaS on Next.js, TypeScript, Supabase and Vercel; and
+                        <a class="link-small-underline" href="https://github.com/Dyrnzefanya/Watermark-Bulk" target="_blank" rel="noopener">WaterStamp</a>,
+                        a bulk WebP watermarking tool that runs entirely in the browser in a single Vanilla JS
+                        file, with no backend and no upload. App Store Optimisation work on a Play Store app
+                        rounds out the list.</p>
+                      <p class="type-basic-160lh">Two more corporate sites, Agromas Tapioca and Agromas Crackers,
+                        are in development and will be added once they are live.</p>
+                    </div>
 
                   </div>
                   <!-- Content Block - Other Work End -->
@@ -719,7 +754,7 @@
                                       <div class="row g-0">
                                         <div class="col-12 col-md-6 grid-item pdata__item">
                                           <p class="data__title tagline-chapter small type-basic-160lh">Type</p>
-                                          <p class="data__descr small type-basic-160lh">Website build + SEO</p>
+                                          <p class="data__descr small type-basic-160lh">Website build + technical SEO</p>
                                         </div>
                                         <div class="col-12 col-md-6 grid-item pdata__item">
                                           <p class="data__title tagline-chapter small type-basic-160lh">Date</p>
@@ -727,7 +762,7 @@
                                         </div>
                                         <div class="col-12 col-md-6 grid-item pdata__item">
                                           <p class="data__title tagline-chapter small type-basic-160lh">Role</p>
-                                          <p class="data__descr small type-basic-160lh">Design, build, SEO</p>
+                                          <p class="data__descr small type-basic-160lh">Research, design, build, SEO</p>
                                         </div>
                                         <div class="col-12 col-md-6 grid-item pdata__item">
                                           <p class="data__title tagline-chapter small type-basic-160lh">Client</p>
@@ -737,7 +772,7 @@
                                     </div>
                                   </div>
                                   <div class="col-12 col-xl-8 grid-item">
-                                    <p class="type-basic-160lh">A commercial site for Tjikko's decorative foam (busa bunga) line, built end to end in React with Claude Code as the development partner. Design, build, content and search strategy were all mine. There was no existing site, no legacy traffic, and no ad budget to lean on.</p>
+                                    <p class="type-basic-160lh">A commercial site for Tjikko's decorative foam line, built end to end in React with Claude Code as the development partner. Keyword research, information architecture, build, content and search strategy were all mine. There was no existing site, no legacy traffic, no backlink profile and no advertising budget, so the only lever available was getting the structure and the search intent right before anything shipped.</p>
                                   </div>
                                 </div>
                               </div>
@@ -755,12 +790,13 @@
                                   </div>
                                   <div class="col-12 col-xl-8">
                                     <ul class="project__list type-basic-160lh">
-                                      <li>Keyword and intent research before any code was written</li>
-                                      <li>Information architecture built around buyer intent, not the product catalogue</li>
-                                      <li>Full React build, AI-assisted with Claude Code</li>
-                                      <li>Technical SEO foundation: crawlability, schema, Core Web Vitals</li>
-                                      <li>Long-tail landing pages for florists, wholesale buyers and private-label enquiries</li>
-                                      <li>Search Console and analytics set up from day one</li>
+                                      <li>Commercial keyword and intent research completed before any code was written</li>
+                                      <li>Information architecture organised around buyer intent rather than the internal product catalogue</li>
+                                      <li>Full React build, AI-assisted through Claude Code and Git</li>
+                                      <li>Technical SEO foundation: crawl paths, indexation rules, schema, Core Web Vitals</li>
+                                      <li>Dedicated pages for florists, wholesale buyers and private-label enquiries</li>
+                                      <li>WhatsApp-first enquiry flow, matching how Indonesian B2B buyers actually make contact</li>
+                                      <li>Search Console and analytics instrumented from day one, not retrofitted</li>
                                     </ul>
                                   </div>
                                 </div>
@@ -778,7 +814,7 @@
                                     <p class="project__subtitle tagline-chapter">The challenge</p>
                                   </div>
                                   <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">A brand-new domain competing for commercial keywords that established suppliers and marketplaces already owned. No backlink profile, no history, and no paid support. The only route to visibility was getting the technical foundation and the search intent right the first time.</p>
+                                    <p class="type-basic-160lh">A brand-new domain competing for commercial terms that established suppliers and the big marketplaces already owned. No authority to borrow from, no history for Google to trust, and no paid support to buy time while rankings matured. On a domain like that, most of the usual SEO levers are unavailable: what is left is structure, intent matching, and not making the mistakes that keep new sites invisible.</p>
                                   </div>
                                 </div>
                               </div>
@@ -795,7 +831,7 @@
                                     <p class="project__subtitle tagline-chapter">How I approached it</p>
                                   </div>
                                   <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">I mapped the commercial keyword set before writing a line of code, then shaped the site structure around how buyers actually search rather than how the company organises its products. Primary terms were floral foam, wet and dry floral foam, busa bunga and floral foam indonesia; secondary terms covered supplier, distributor, grosir and private-label variations. Each target term got a single page that clearly owned it, so no two pages competed with each other.</p>
+                                    <p class="type-basic-160lh">I mapped the commercial keyword set first and let it decide the site architecture, which is the opposite of the usual order. Primary terms were floral foam, wet and dry floral foam, busa bunga and floral foam indonesia; secondary terms covered supplier, distributor, grosir and private-label variations. Each target term got exactly one page that clearly owned it, so the site never competed with itself. Buyer-intent language went into headings and body copy rather than internal product naming, and the enquiry path was kept short enough that arriving traffic had somewhere obvious to go.</p>
                                   </div>
                                 </div>
                               </div>
@@ -812,7 +848,7 @@
                                     <p class="project__subtitle tagline-chapter">Result</p>
                                   </div>
                                   <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">Within roughly one month of launch the site held #1 and page-one Google positions for its target commercial keywords. That came from structure and intent matching, not from authority the domain had not had time to build.</p>
+                                    <p class="type-basic-160lh">Within roughly one month of launch the site held #1 and page-one Google positions for its target commercial keywords. That came from structure and intent matching, not from authority the domain had not had time to build. It is the cleanest evidence I have that the method is repeatable: same approach, no inherited advantages, measurable outcome.</p>
                                   </div>
                                 </div>
                               </div>
@@ -833,8 +869,10 @@
                                       <li>React</li>
                                       <li>Claude Code</li>
                                       <li>Technical SEO</li>
+                                      <li>Schema.org</li>
                                       <li>Search Console</li>
                                       <li>GA4</li>
+                                      <li>Cloudflare</li>
                                     </ul>
                                   </div>
                                 </div>
@@ -916,7 +954,7 @@
                                     </div>
                                   </div>
                                   <div class="col-12 col-xl-8 grid-item">
-                                    <p class="type-basic-160lh">Local search work for a Christian trilingual school in Bandar Lampung, delivered through the RIAS Strategic freelance talent pool. The brief was simple to state and hard to win: own the terms parents actually type when they are choosing a school.</p>
+                                    <p class="type-basic-160lh">Local search work for a Christian trilingual school in Bandar Lampung, delivered through the RIAS Strategic freelance talent pool. The brief was easy to state and hard to win: own the terms parents type when they are shortlisting schools for their children.</p>
                                   </div>
                                 </div>
                               </div>
@@ -935,10 +973,11 @@
                                   <div class="col-12 col-xl-8">
                                     <ul class="project__list type-basic-160lh">
                                       <li>Keyword mapping across the five priority local terms</li>
-                                      <li>On-page rewrite so each term had one page earning it</li>
-                                      <li>Technical fixes and crawl clean-up</li>
-                                      <li>Local relevance signals tightened</li>
-                                      <li>Rank tracking against the target set</li>
+                                      <li>On-page rewrite so each term had one page unambiguously earning it</li>
+                                      <li>Cannibalisation audit and fixes across overlapping pages</li>
+                                      <li>Technical clean-up: crawl paths, indexation, on-page structure</li>
+                                      <li>Local relevance signals tightened around Bandar Lampung</li>
+                                      <li>Rank tracking against the target set through to position</li>
                                     </ul>
                                   </div>
                                 </div>
@@ -956,7 +995,7 @@
                                     <p class="project__subtitle tagline-chapter">The challenge</p>
                                   </div>
                                   <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">Education keywords in a regional market are crowded with directories, aggregators and long-established institutions. Ranking meant beating pages with far more authority, on terms where realistically only the top result converts. Parents do not scroll for a school.</p>
+                                    <p class="type-basic-160lh">Education keywords in a regional Indonesian market are crowded with directories, aggregators and institutions that have been online for a decade. Ranking meant beating pages with far more authority, on terms where realistically only the top result converts. Parents do not scroll for a school, and the decision cycle is short and emotional, so second place is close to worthless.</p>
                                   </div>
                                 </div>
                               </div>
@@ -973,7 +1012,7 @@
                                     <p class="project__subtitle tagline-chapter">How I approached it</p>
                                   </div>
                                   <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">I rebuilt the on-page and technical foundation around the five keywords that mattered and made sure each one had a clear, single page earning it, which removed the cannibalisation that was splitting the site's own relevance. Local signals were tightened so the school read unambiguously as a Bandar Lampung institution.</p>
+                                    <p class="type-basic-160lh">I rebuilt the on-page and technical foundation around the five keywords that mattered and made sure each had a single page earning it, which removed the cannibalisation quietly splitting the site's own relevance across near-duplicate pages. Local signals were tightened so the school read unambiguously as a Bandar Lampung institution rather than a generic national one. No link building was involved: the gains came from fixing what the site was already saying badly.</p>
                                   </div>
                                 </div>
                               </div>
@@ -990,7 +1029,7 @@
                                     <p class="project__subtitle tagline-chapter">Result</p>
                                   </div>
                                   <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">#1 Google rankings for all five target keywords: sekolah kristen lampung, sekolah kristen terbaik lampung, sekolah trilingual terbaik lampung, sekolah trilingual lampung, and sekolah kristen lampung paling bagus.</p>
+                                    <p class="type-basic-160lh">#1 Google rankings for all five target keywords: sekolah kristen lampung, sekolah kristen terbaik lampung, sekolah trilingual terbaik lampung, sekolah trilingual lampung, and sekolah kristen lampung paling bagus. Verifiable in an incognito search from the region.</p>
                                   </div>
                                 </div>
                               </div>
@@ -1012,6 +1051,7 @@
                                       <li>Technical SEO</li>
                                       <li>Local SEO</li>
                                       <li>Search Console</li>
+                                      <li>Rank tracking</li>
                                     </ul>
                                   </div>
                                 </div>
@@ -1075,11 +1115,11 @@
                                       <div class="row g-0">
                                         <div class="col-12 col-md-6 grid-item pdata__item">
                                           <p class="data__title tagline-chapter small type-basic-160lh">Type</p>
-                                          <p class="data__descr small type-basic-160lh">Website, SEO &amp; digital ownership</p>
+                                          <p class="data__descr small type-basic-160lh">Digital &amp; IT ownership</p>
                                         </div>
                                         <div class="col-12 col-md-6 grid-item pdata__item">
                                           <p class="data__title tagline-chapter small type-basic-160lh">Date</p>
-                                          <p class="data__descr small type-basic-160lh">2021 — present</p>
+                                          <p class="data__descr small type-basic-160lh">Jul 2021 — present</p>
                                         </div>
                                         <div class="col-12 col-md-6 grid-item pdata__item">
                                           <p class="data__title tagline-chapter small type-basic-160lh">Role</p>
@@ -1093,7 +1133,7 @@
                                     </div>
                                   </div>
                                   <div class="col-12 col-xl-8 grid-item">
-                                    <p class="type-basic-160lh">For four years I have been the entire digital and IT function at a B2B polyurethane foam manufacturer. Websites, SEO, analytics, brand and packaging design, video, marketplace channels, cybersecurity, servers and procurement, with reporting that goes up to the Board.</p>
+                                    <p class="type-basic-160lh">For four years I have been the entire digital and IT function at a B2B polyurethane foam manufacturer. Not the marketing person with IT help, and not the IT person who also runs the website: both jobs, alone. Websites, SEO, analytics, brand and packaging design, video, marketplace channels, servers, security and procurement, with reporting that goes to the Board.</p>
                                   </div>
                                 </div>
                               </div>
@@ -1113,12 +1153,13 @@
                                     <ul class="project__list type-basic-160lh">
                                       <li>Corporate site rebuilt on WordPress and Elementor with an SEO-first structure</li>
                                       <li>Technical SEO: Core Web Vitals, schema markup, crawl and index hygiene</li>
-                                      <li>GA4, Google Tag Manager, Looker Studio and Search Console</li>
-                                      <li>Indotrading listing built from scratch, including coordination with their account team</li>
-                                      <li>Full design ownership: catalogues, company profile, logos, packaging, video, listing visuals</li>
-                                      <li>Wazuh SIEM deployed across 50+ devices</li>
-                                      <li>Servers, Cloudflare, Docker, and IT procurement</li>
-                                      <li>Client-facing and Board-level presentations</li>
+                                      <li>Analytics stack: GA4, Google Tag Manager, Looker Studio, Search Console</li>
+                                      <li>Indotrading B2B listing built from scratch, including direct coordination with their account team</li>
+                                      <li>Shopee and Tokopedia listings built and managed, and currently leading their redesign</li>
+                                      <li>Full design ownership: print and online catalogues, company profile, logos, packaging, product photography direction and video</li>
+                                      <li>Wazuh SIEM deployed and monitored across 50+ devices</li>
+                                      <li>Server, Cloudflare and Docker administration, plus IT procurement and hardware rollout</li>
+                                      <li>Client-facing sales material and Board-level reporting</li>
                                     </ul>
                                   </div>
                                 </div>
@@ -1136,7 +1177,7 @@
                                     <p class="project__subtitle tagline-chapter">The challenge</p>
                                   </div>
                                   <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">A B2B industrial manufacturer with a technical product, a long sales cycle and no paid advertising budget. Every lead had to be earned through organic search. There was also no team, so nothing could be delegated, so everything had to be built to run without much maintenance.</p>
+                                    <p class="type-basic-160lh">A B2B industrial manufacturer with a technical product, a long sales cycle and no paid advertising budget. Every enquiry had to be earned through organic search. There was also no team, so nothing could be delegated and nothing could be high-maintenance: anything I built had to keep working while I was busy with the other half of the job. The constraint shaped the engineering as much as the strategy.</p>
                                   </div>
                                 </div>
                               </div>
@@ -1153,7 +1194,7 @@
                                     <p class="project__subtitle tagline-chapter">How I approached it</p>
                                   </div>
                                   <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">I rebuilt the site around the language buyers actually search with instead of internal product naming, then fixed the technical foundation underneath it. Analytics went in so that performance became something the business could see and argue about, rather than a black box. On the infrastructure side I standardised monitoring so problems surfaced before they became downtime.</p>
+                                    <p class="type-basic-160lh">I rebuilt the site around the language buyers actually search with instead of internal product naming, then fixed the technical foundation underneath it so the content had a chance of being found. Analytics went in early so performance became something the business could see and argue about rather than a black box. On the infrastructure side I standardised monitoring so problems surfaced before they became downtime. The marketplace work taught the most useful lesson: after building and running the Shopee and Tokopedia listings, it became clear that molded industrial foam had a product-market fit problem on consumer platforms, not an execution problem, which is why the reactivation now centres on the consumer-fit decorative foam line instead.</p>
                                   </div>
                                 </div>
                               </div>
@@ -1170,7 +1211,7 @@
                                     <p class="project__subtitle tagline-chapter">Result</p>
                                   </div>
                                   <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">~40% growth in organic traffic and a ~25% increase in lead generation, entirely SEO-driven with no paid advertising. On the infrastructure side, roughly 30% less downtime.</p>
+                                    <p class="type-basic-160lh">Roughly 40% growth in organic traffic and a 25% increase in lead generation, entirely SEO-driven with no paid advertising. On the infrastructure side, around 30% less downtime across 50+ monitored devices, with no major security incident in four years.</p>
                                   </div>
                                 </div>
                               </div>
@@ -1194,8 +1235,11 @@
                                       <li>GA4</li>
                                       <li>GTM</li>
                                       <li>Looker Studio</li>
+                                      <li>Search Console</li>
                                       <li>Cloudflare</li>
+                                      <li>Docker</li>
                                       <li>Wazuh SIEM</li>
+                                      <li>Adobe CC</li>
                                     </ul>
                                   </div>
                                 </div>
@@ -1259,7 +1303,7 @@
                                       <div class="row g-0">
                                         <div class="col-12 col-md-6 grid-item pdata__item">
                                           <p class="data__title tagline-chapter small type-basic-160lh">Type</p>
-                                          <p class="data__descr small type-basic-160lh">AI automation</p>
+                                          <p class="data__descr small type-basic-160lh">AI automation platform</p>
                                         </div>
                                         <div class="col-12 col-md-6 grid-item pdata__item">
                                           <p class="data__title tagline-chapter small type-basic-160lh">Date</p>
@@ -1277,7 +1321,7 @@
                                     </div>
                                   </div>
                                   <div class="col-12 col-xl-8 grid-item">
-                                    <p class="type-basic-160lh">A self-hosted multi-agent system that does real daily work. Not a demo, not a prototype. Claude API handles the reasoning, n8n orchestrates the workflows, and MCP connects the whole thing to live WordPress sites and analytics properties.</p>
+                                    <p class="type-basic-160lh">A self-hosted multi-agent system that does real daily work. Not a demo, not a prototype. Claude API handles the reasoning, n8n owns scheduling and orchestration, and MCP connects the whole thing to live WordPress sites and analytics properties. It runs on my own VPS, which means I also own the uptime, the credentials and the failure modes.</p>
                                   </div>
                                 </div>
                               </div>
@@ -1295,15 +1339,14 @@
                                   </div>
                                   <div class="col-12 col-xl-8">
                                     <ul class="project__list type-basic-160lh">
-                                      <li>Multi-agent framework running on a self-hosted VPS</li>
-                                      <li>Claude API as the reasoning engine</li>
-                                      <li>n8n for scheduling and workflow orchestration</li>
-                                      <li>Claude Desktop + MCP connected to live WordPress sites</li>
-                                      <li>Claude Code and Git development workflow</li>
-                                      <li>RAG architecture for document grounding</li>
+                                      <li>Multi-agent framework on a self-hosted VPS, with a reusable skill library</li>
+                                      <li>Claude API as the reasoning engine; Claude Code and Git as the development workflow</li>
+                                      <li>n8n for scheduling, orchestration, retries and error handling</li>
+                                      <li>Claude Desktop with MCP connected to live WordPress sites</li>
+                                      <li>RAG architecture for grounding agents in real documents rather than model memory</li>
                                       <li>Full multi-page client website builds executed through MCP</li>
                                       <li>SEO, GEO and AEO documentation systems</li>
-                                      <li>GA4 audits and a daily reporting agent</li>
+                                      <li>GA4 audits and a daily reporting agent across three properties</li>
                                     </ul>
                                   </div>
                                 </div>
@@ -1321,7 +1364,7 @@
                                     <p class="project__subtitle tagline-chapter">The challenge</p>
                                   </div>
                                   <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">Most AI automation stops at the proof-of-concept stage: impressive in a screenshot, unreliable the moment it has to run unattended against production systems. The hard part is not the model call; it is everything around it: scheduling, error handling, credentials, and knowing when the output is wrong.</p>
+                                    <p class="type-basic-160lh">Most AI automation stops at the proof-of-concept stage: impressive in a screenshot, unreliable the moment it has to run unattended against production systems. The hard part was never the model call. It is everything around it: scheduling, credential handling, retry logic, and knowing when the output is wrong before it reaches anyone who would act on it.</p>
                                   </div>
                                 </div>
                               </div>
@@ -1338,7 +1381,7 @@
                                     <p class="project__subtitle tagline-chapter">How I approached it</p>
                                   </div>
                                   <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">I built Hermes as infrastructure rather than as a script. Agents are composable skills with a Git workflow behind them, MCP handles the integrations into live systems, and n8n owns scheduling and retries. A separate system, built on Claude scheduled tasks with MCP into Google Drive and Gmail, validates customer quotations against purchase orders on line items, pricing and expiry, and reports hourly.</p>
+                                    <p class="type-basic-160lh">I built Hermes as infrastructure rather than as a collection of scripts. Agents are composable skills with a Git workflow behind them, so behaviour is versioned and reviewable. MCP handles the integrations into live systems so agents act through real interfaces instead of scraped ones. n8n owns scheduling and retries, which keeps the failure handling out of the prompts. The design bias throughout is towards systems that degrade visibly rather than silently.</p>
                                   </div>
                                 </div>
                               </div>
@@ -1355,7 +1398,7 @@
                                     <p class="project__subtitle tagline-chapter">Result</p>
                                   </div>
                                   <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">A GA4 Daily Reporter runs in production across three properties. The quotation validation layer has been live since July 2026. It is deliberately too early to claim a catch rate or a time saving. Those numbers can wait until the system has a real track record behind it.</p>
+                                    <p class="type-basic-160lh">A GA4 Daily Reporter runs in production across three properties, pulling the data, formatting the report and distributing the insight without a human in the loop. The system is part of a 90-day practitioner sprint aimed at three to five production agents and a monetisable automation service.</p>
                                   </div>
                                 </div>
                               </div>
@@ -1377,9 +1420,10 @@
                                       <li>Claude Code</li>
                                       <li>MCP</li>
                                       <li>n8n</li>
+                                      <li>RAG</li>
                                       <li>Docker</li>
                                       <li>Self-hosted VPS</li>
-                                      <li>RAG</li>
+                                      <li>Git</li>
                                     </ul>
                                   </div>
                                 </div>
@@ -1396,6 +1440,1051 @@
 
               </div>
               <!-- Project Popup - Hermes AI Agent System End -->
+
+              <!-- Project Popup - Quotation vs PO Validation Start -->
+              <div id="project-quotation-po" class="popup mfp-hide">
+
+                <button class="mfp-close permanent-dark"></button>
+
+                <div class="popup__container">
+                  <div class="container-fluid p-0">
+                    <div class="row g-0">
+                      <div class="col-12">
+                        <div class="project">
+
+                          <!-- Project Block - Title with Image Start -->
+                          <div class="project__block no-padding no-margin project-image-bg">
+                            <img class="project-image-bg__portrait" src="img/work/quotation-po.jpg" alt="Quotation vs PO Validation project cover" loading="lazy">
+                            <img class="project-image-bg__landscape" src="img/work/quotation-po.jpg" alt="Quotation vs PO Validation project cover" loading="lazy">
+                            <div class="project__title">
+                              <h3 class="light">Quotation vs PO Validation</h3>
+                            </div>
+                          </div>
+                          <!-- Project Block - Title with Image End -->
+
+                          <!-- Project Block - Description Start -->
+                          <div class="project__block grid-block grid-items">
+                            <div class="project__data">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <div class="container-fluid p-0">
+                                      <div class="row g-0">
+                                        <div class="col-12 col-md-6 grid-item pdata__item">
+                                          <p class="data__title tagline-chapter small type-basic-160lh">Type</p>
+                                          <p class="data__descr small type-basic-160lh">Business process automation</p>
+                                        </div>
+                                        <div class="col-12 col-md-6 grid-item pdata__item">
+                                          <p class="data__title tagline-chapter small type-basic-160lh">Date</p>
+                                          <p class="data__descr small type-basic-160lh">Live since July 2026</p>
+                                        </div>
+                                        <div class="col-12 col-md-6 grid-item pdata__item">
+                                          <p class="data__title tagline-chapter small type-basic-160lh">Role</p>
+                                          <p class="data__descr small type-basic-160lh">Architect &amp; builder</p>
+                                        </div>
+                                        <div class="col-12 col-md-6 grid-item pdata__item">
+                                          <p class="data__title tagline-chapter small type-basic-160lh">Client</p>
+                                          <p class="data__descr small type-basic-160lh">PT Tjikko Sentral Industrial</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-12 col-xl-8 grid-item">
+                                    <p class="type-basic-160lh">A first-line AI validation layer that checks incoming customer purchase orders against the quotations they came from. It is a small, unglamorous problem that quietly costs a lot: a mismatch caught after acceptance becomes a margin loss or an argument, and catching them by hand is exactly the kind of work that gets skipped when the week is busy.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - Description End -->
+
+                          <!-- Project Block - What I built Start -->
+                          <div class="project__block pre-grid-items">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">What I built</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <ul class="project__list type-basic-160lh">
+                                      <li>Line-item validation: does the PO match what was actually quoted</li>
+                                      <li>Price validation: does the PO price match the quotation price</li>
+                                      <li>Expiry validation: was the quotation still valid when the PO arrived</li>
+                                      <li>Built on Claude scheduled tasks with MCP integrations into Google Drive and Gmail</li>
+                                      <li>Reports hourly, so a mismatch surfaces the same working day</li>
+                                      <li>Deliberately separate from Hermes, which is n8n-based: different failure modes, different operational risk</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - What I built End -->
+
+                          <!-- Project Block - The challenge Start -->
+                          <div class="project__block">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">The challenge</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <p class="type-basic-160lh">Manual reconciliation is the sort of task that is important but never urgent, so it slips. It also has to be right: a validation layer that raises false alarms gets ignored within a week, and one that misses real mismatches is worse than nothing because it creates false confidence.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - The challenge End -->
+
+                          <!-- Project Block - How I approached it Start -->
+                          <div class="project__block">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">How I approached it</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <p class="type-basic-160lh">I kept the scope narrow on purpose. Three checks, clearly defined, running on a schedule rather than trying to be a general-purpose document agent. It reads from the systems the team already uses via MCP rather than asking anyone to change how they work, and reports hourly so a problem surfaces while the paperwork is still fresh. Building it separately from Hermes was a reliability decision, not a technical one: I did not want a workflow failure in one system to take out the other.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - How I approached it End -->
+
+                          <!-- Project Block - Result Start -->
+                          <div class="project__block">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">Result</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <p class="type-basic-160lh">Live in production since July 2026, removing a recurring manual reconciliation task from the Marketing Manager and returning that time to field and market work. It is still early, so there is deliberately no catch-rate or time-saved figure here: those numbers are worth having only once the system has a real track record behind it.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - Result End -->
+
+                          <!-- Project Block - Stack Start -->
+                          <div class="project__block">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">Stack</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <ul class="project__tags">
+                                      <li>Claude API</li>
+                                      <li>Claude scheduled tasks</li>
+                                      <li>MCP</li>
+                                      <li>Google Drive</li>
+                                      <li>Gmail</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - Stack End -->
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- Project Popup - Quotation vs PO Validation End -->
+
+              <!-- Project Popup - Tjikko Foam Global Start -->
+              <div id="project-tjikko-global" class="popup mfp-hide">
+
+                <button class="mfp-close permanent-dark"></button>
+
+                <div class="popup__container">
+                  <div class="container-fluid p-0">
+                    <div class="row g-0">
+                      <div class="col-12">
+                        <div class="project">
+
+                          <!-- Project Block - Title with Image Start -->
+                          <div class="project__block no-padding no-margin project-image-bg">
+                            <img class="project-image-bg__portrait" src="img/work/tjikko-global.jpg" alt="Tjikko Foam Global project cover" loading="lazy">
+                            <img class="project-image-bg__landscape" src="img/work/tjikko-global.jpg" alt="Tjikko Foam Global project cover" loading="lazy">
+                            <div class="project__title">
+                              <h3 class="light">Tjikko Foam Global</h3>
+                            </div>
+                          </div>
+                          <!-- Project Block - Title with Image End -->
+
+                          <!-- Project Block - Description Start -->
+                          <div class="project__block grid-block grid-items">
+                            <div class="project__data">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <div class="container-fluid p-0">
+                                      <div class="row g-0">
+                                        <div class="col-12 col-md-6 grid-item pdata__item">
+                                          <p class="data__title tagline-chapter small type-basic-160lh">Type</p>
+                                          <p class="data__descr small type-basic-160lh">International website + SEO</p>
+                                        </div>
+                                        <div class="col-12 col-md-6 grid-item pdata__item">
+                                          <p class="data__title tagline-chapter small type-basic-160lh">Date</p>
+                                          <p class="data__descr small type-basic-160lh">2026</p>
+                                        </div>
+                                        <div class="col-12 col-md-6 grid-item pdata__item">
+                                          <p class="data__title tagline-chapter small type-basic-160lh">Role</p>
+                                          <p class="data__descr small type-basic-160lh">Build &amp; international SEO</p>
+                                        </div>
+                                        <div class="col-12 col-md-6 grid-item pdata__item">
+                                          <p class="data__title tagline-chapter small type-basic-160lh">Client</p>
+                                          <p class="data__descr small type-basic-160lh">PT Tjikko Sentral Industrial</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-12 col-xl-8 grid-item">
+                                    <p class="type-basic-160lh">A dedicated global-facing site positioning Tjikko Foam for international wholesale buyers, distributors and export partners. Built in Next.js and kept structurally separate from the domestic site so neither proposition had to compromise for the other.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - Description End -->
+
+                          <!-- Project Block - What I built Start -->
+                          <div class="project__block pre-grid-items">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">What I built</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <ul class="project__list type-basic-160lh">
+                                      <li>Next.js build with an export-oriented information architecture</li>
+                                      <li>English-first messaging written for overseas procurement teams</li>
+                                      <li>Product specifications surfaced early rather than buried in a catalogue</li>
+                                      <li>International on-page SEO</li>
+                                      <li>Cloudflare performance and security layer</li>
+                                      <li>Cross-border enquiry flow with the credibility signals export buyers look for</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - What I built End -->
+
+                          <!-- Project Block - The challenge Start -->
+                          <div class="project__block">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">The challenge</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <p class="type-basic-160lh">Domestic B2B messaging does not transfer across borders. International procurement teams evaluate on specification, capacity and verifiable credibility long before they consider brand, and they arrive with no context about an Indonesian manufacturer they have not heard of.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - The challenge End -->
+
+                          <!-- Project Block - How I approached it Start -->
+                          <div class="project__block">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">How I approached it</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <p class="type-basic-160lh">I restructured the content around what an overseas buyer needs to verify first, kept the specifications explicit and scannable, and separated the export proposition from the domestic site entirely. The technical build uses Next.js for speed and clean indexation, with Cloudflare in front to keep latency reasonable for visitors far from the origin.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - How I approached it End -->
+
+                          <!-- Project Block - Result Start -->
+                          <div class="project__block">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">Result</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <p class="type-basic-160lh">A distinct international presence engineered to capture export demand and convert overseas visitors into qualified enquiries, rather than an English translation of a domestic site.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - Result End -->
+
+                          <!-- Project Block - Stack Start -->
+                          <div class="project__block">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">Stack</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <ul class="project__tags">
+                                      <li>Next.js</li>
+                                      <li>International SEO</li>
+                                      <li>GA4</li>
+                                      <li>Search Console</li>
+                                      <li>Cloudflare</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - Stack End -->
+
+                          <!-- Project Block - Project Link Start -->
+                          <div class="project__block small-size">
+                            <div class="container-fluid p-0">
+                              <div class="row g-0">
+                                <div class="col-12 d-flex justify-content-center">
+                                  <a class="btn btn-circle-text hover-circle" href="https://global.tjikkofoam.com" target="_blank" rel="noopener">
+                                    <em></em>
+                                    <span class="btn-caption">Visit global.tjikkofoam.com</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - Project Link End -->
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- Project Popup - Tjikko Foam Global End -->
+
+              <!-- Project Popup - Soka Chemical Start -->
+              <div id="project-soka" class="popup mfp-hide">
+
+                <button class="mfp-close permanent-dark"></button>
+
+                <div class="popup__container">
+                  <div class="container-fluid p-0">
+                    <div class="row g-0">
+                      <div class="col-12">
+                        <div class="project">
+
+                          <!-- Project Block - Title with Image Start -->
+                          <div class="project__block no-padding no-margin project-image-bg">
+                            <img class="project-image-bg__portrait" src="img/work/soka.jpg" alt="Soka Chemical project cover" loading="lazy">
+                            <img class="project-image-bg__landscape" src="img/work/soka.jpg" alt="Soka Chemical project cover" loading="lazy">
+                            <div class="project__title">
+                              <h3 class="light">Soka Chemical</h3>
+                            </div>
+                          </div>
+                          <!-- Project Block - Title with Image End -->
+
+                          <!-- Project Block - Description Start -->
+                          <div class="project__block grid-block grid-items">
+                            <div class="project__data">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <div class="container-fluid p-0">
+                                      <div class="row g-0">
+                                        <div class="col-12 col-md-6 grid-item pdata__item">
+                                          <p class="data__title tagline-chapter small type-basic-160lh">Type</p>
+                                          <p class="data__descr small type-basic-160lh">Corporate website</p>
+                                        </div>
+                                        <div class="col-12 col-md-6 grid-item pdata__item">
+                                          <p class="data__title tagline-chapter small type-basic-160lh">Date</p>
+                                          <p class="data__descr small type-basic-160lh">2025</p>
+                                        </div>
+                                        <div class="col-12 col-md-6 grid-item pdata__item">
+                                          <p class="data__title tagline-chapter small type-basic-160lh">Role</p>
+                                          <p class="data__descr small type-basic-160lh">Website developer</p>
+                                        </div>
+                                        <div class="col-12 col-md-6 grid-item pdata__item">
+                                          <p class="data__title tagline-chapter small type-basic-160lh">Client</p>
+                                          <p class="data__descr small type-basic-160lh">PT Soka Uni Pratama — via RIAS Strategic</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-12 col-xl-8 grid-item">
+                                    <p class="type-basic-160lh">A corporate product website for a chemical distribution company selling to industrial buyers and distributors, delivered through the RIAS Strategic talent pool.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - Description End -->
+
+                          <!-- Project Block - What I built Start -->
+                          <div class="project__block pre-grid-items">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">What I built</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <ul class="project__list type-basic-160lh">
+                                      <li>WordPress and Elementor design and build</li>
+                                      <li>Product catalogue structure organised by application, not by internal SKU grouping</li>
+                                      <li>Specification presentation aimed at procurement readers</li>
+                                      <li>On-page SEO foundation and indexable catalogue pages</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - What I built End -->
+
+                          <!-- Project Block - The challenge Start -->
+                          <div class="project__block">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">The challenge</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <p class="type-basic-160lh">Chemical distribution is a credibility-first category with an unglamorous catalogue. Buyers compare on specification and supply reliability, so the site had to make dry technical information legible and trustworthy rather than dress it up.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - The challenge End -->
+
+                          <!-- Project Block - How I approached it Start -->
+                          <div class="project__block">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">How I approached it</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <p class="type-basic-160lh">A clean catalogue structure that puts specifications where buyers look for them, built on a foundation that can actually be found in search rather than only handed out as a link in an email.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - How I approached it End -->
+
+                          <!-- Project Block - Result Start -->
+                          <div class="project__block">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">Result</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <p class="type-basic-160lh">A professional digital presence that represents the company credibly to industrial buyers and gives its catalogue a searchable home.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - Result End -->
+
+                          <!-- Project Block - Stack Start -->
+                          <div class="project__block">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">Stack</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <ul class="project__tags">
+                                      <li>WordPress</li>
+                                      <li>Elementor</li>
+                                      <li>On-page SEO</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - Stack End -->
+
+                          <!-- Project Block - Project Link Start -->
+                          <div class="project__block small-size">
+                            <div class="container-fluid p-0">
+                              <div class="row g-0">
+                                <div class="col-12 d-flex justify-content-center">
+                                  <a class="btn btn-circle-text hover-circle" href="https://soka-chem.com" target="_blank" rel="noopener">
+                                    <em></em>
+                                    <span class="btn-caption">Visit soka-chem.com</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - Project Link End -->
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- Project Popup - Soka Chemical End -->
+
+              <!-- Project Popup - RIAS Strategic Start -->
+              <div id="project-rias" class="popup mfp-hide">
+
+                <button class="mfp-close permanent-dark"></button>
+
+                <div class="popup__container">
+                  <div class="container-fluid p-0">
+                    <div class="row g-0">
+                      <div class="col-12">
+                        <div class="project">
+
+                          <!-- Project Block - Title with Image Start -->
+                          <div class="project__block no-padding no-margin project-image-bg">
+                            <img class="project-image-bg__portrait" src="img/work/rias.jpg" alt="RIAS Strategic project cover" loading="lazy">
+                            <img class="project-image-bg__landscape" src="img/work/rias.jpg" alt="RIAS Strategic project cover" loading="lazy">
+                            <div class="project__title">
+                              <h3 class="light">RIAS Strategic</h3>
+                            </div>
+                          </div>
+                          <!-- Project Block - Title with Image End -->
+
+                          <!-- Project Block - Description Start -->
+                          <div class="project__block grid-block grid-items">
+                            <div class="project__data">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <div class="container-fluid p-0">
+                                      <div class="row g-0">
+                                        <div class="col-12 col-md-6 grid-item pdata__item">
+                                          <p class="data__title tagline-chapter small type-basic-160lh">Type</p>
+                                          <p class="data__descr small type-basic-160lh">Corporate website</p>
+                                        </div>
+                                        <div class="col-12 col-md-6 grid-item pdata__item">
+                                          <p class="data__title tagline-chapter small type-basic-160lh">Date</p>
+                                          <p class="data__descr small type-basic-160lh">2025</p>
+                                        </div>
+                                        <div class="col-12 col-md-6 grid-item pdata__item">
+                                          <p class="data__title tagline-chapter small type-basic-160lh">Role</p>
+                                          <p class="data__descr small type-basic-160lh">Website developer</p>
+                                        </div>
+                                        <div class="col-12 col-md-6 grid-item pdata__item">
+                                          <p class="data__title tagline-chapter small type-basic-160lh">Client</p>
+                                          <p class="data__descr small type-basic-160lh">RIAS Strategic — the agency whose talent pool I freelance through</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-12 col-xl-8 grid-item">
+                                    <p class="type-basic-160lh">A digital platform for RIAS Strategic, the virtual assistant agency whose freelance talent pool I belong to as a UI/UX and website developer. Their own site was one of the projects I delivered for them, which is a reasonable signal in itself.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - Description End -->
+
+                          <!-- Project Block - What I built Start -->
+                          <div class="project__block pre-grid-items">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">What I built</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <ul class="project__list type-basic-160lh">
+                                      <li>WordPress design and build</li>
+                                      <li>Service page structure organised around client problems rather than internal divisions</li>
+                                      <li>Brand-aligned visual layout</li>
+                                      <li>Conversion path for enquiry and onboarding</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - What I built End -->
+
+                          <!-- Project Block - The challenge Start -->
+                          <div class="project__block">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">The challenge</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <p class="type-basic-160lh">A services business has nothing physical to show. Credibility has to come from how clearly the offer is structured and how quickly a prospect can work out whether it applies to them.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - The challenge End -->
+
+                          <!-- Project Block - How I approached it Start -->
+                          <div class="project__block">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">How I approached it</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <p class="type-basic-160lh">Service pages framed by the problem the client arrives with, with the agency's internal structure kept out of the navigation entirely, on a layout consistent with the existing brand.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - How I approached it End -->
+
+                          <!-- Project Block - Result Start -->
+                          <div class="project__block">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">Result</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <p class="type-basic-160lh">A platform ready for client acquisition and service promotion, and the site the agency uses to represent itself.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - Result End -->
+
+                          <!-- Project Block - Stack Start -->
+                          <div class="project__block">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">Stack</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <ul class="project__tags">
+                                      <li>WordPress</li>
+                                      <li>Elementor</li>
+                                      <li>UX layout</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - Stack End -->
+
+                          <!-- Project Block - Project Link Start -->
+                          <div class="project__block small-size">
+                            <div class="container-fluid p-0">
+                              <div class="row g-0">
+                                <div class="col-12 d-flex justify-content-center">
+                                  <a class="btn btn-circle-text hover-circle" href="https://riasstrategic.com" target="_blank" rel="noopener">
+                                    <em></em>
+                                    <span class="btn-caption">Visit riasstrategic.com</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - Project Link End -->
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- Project Popup - RIAS Strategic End -->
+
+              <!-- Project Popup - The Paw Charm Start -->
+              <div id="project-pawcharm" class="popup mfp-hide">
+
+                <button class="mfp-close permanent-dark"></button>
+
+                <div class="popup__container">
+                  <div class="container-fluid p-0">
+                    <div class="row g-0">
+                      <div class="col-12">
+                        <div class="project">
+
+                          <!-- Project Block - Title with Image Start -->
+                          <div class="project__block no-padding no-margin project-image-bg">
+                            <img class="project-image-bg__portrait" src="img/work/pawcharm.jpg" alt="The Paw Charm project cover" loading="lazy">
+                            <img class="project-image-bg__landscape" src="img/work/pawcharm.jpg" alt="The Paw Charm project cover" loading="lazy">
+                            <div class="project__title">
+                              <h3 class="light">The Paw Charm</h3>
+                            </div>
+                          </div>
+                          <!-- Project Block - Title with Image End -->
+
+                          <!-- Project Block - Description Start -->
+                          <div class="project__block grid-block grid-items">
+                            <div class="project__data">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <div class="container-fluid p-0">
+                                      <div class="row g-0">
+                                        <div class="col-12 col-md-6 grid-item pdata__item">
+                                          <p class="data__title tagline-chapter small type-basic-160lh">Type</p>
+                                          <p class="data__descr small type-basic-160lh">E-commerce</p>
+                                        </div>
+                                        <div class="col-12 col-md-6 grid-item pdata__item">
+                                          <p class="data__title tagline-chapter small type-basic-160lh">Date</p>
+                                          <p class="data__descr small type-basic-160lh">2025</p>
+                                        </div>
+                                        <div class="col-12 col-md-6 grid-item pdata__item">
+                                          <p class="data__title tagline-chapter small type-basic-160lh">Role</p>
+                                          <p class="data__descr small type-basic-160lh">Store build</p>
+                                        </div>
+                                        <div class="col-12 col-md-6 grid-item pdata__item">
+                                          <p class="data__title tagline-chapter small type-basic-160lh">Client</p>
+                                          <p class="data__descr small type-basic-160lh">The Paw Charm</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-12 col-xl-8 grid-item">
+                                    <p class="type-basic-160lh">A Shopify store for a pet accessories brand selling directly to consumers. A different problem from the B2B work: impulse-led, mobile-first, and entirely dependent on the checkout not getting in the way.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - Description End -->
+
+                          <!-- Project Block - What I built Start -->
+                          <div class="project__block pre-grid-items">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">What I built</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <ul class="project__list type-basic-160lh">
+                                      <li>Shopify store setup and theme configuration</li>
+                                      <li>Product catalogue and collection structure built around browsing behaviour</li>
+                                      <li>Checkout path optimisation</li>
+                                      <li>Mobile-first presentation, where the majority of the traffic lands</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - What I built End -->
+
+                          <!-- Project Block - The challenge Start -->
+                          <div class="project__block">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">The challenge</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <p class="type-basic-160lh">Consumer retail forgives nothing at checkout. Every additional step between wanting the product and owning it costs conversions, and the margin on accessories does not leave room to buy that traffic back.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - The challenge End -->
+
+                          <!-- Project Block - How I approached it Start -->
+                          <div class="project__block">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">How I approached it</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <p class="type-basic-160lh">A catalogue organised the way shoppers browse rather than the way inventory is filed, with the checkout path kept as short as the platform allows and the mobile view treated as the primary design target rather than an adaptation.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - How I approached it End -->
+
+                          <!-- Project Block - Result Start -->
+                          <div class="project__block">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">Result</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <p class="type-basic-160lh">An operational store ready to sell, with the catalogue and fulfilment structure in place behind it.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - Result End -->
+
+                          <!-- Project Block - Stack Start -->
+                          <div class="project__block">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">Stack</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <ul class="project__tags">
+                                      <li>Shopify</li>
+                                      <li>E-commerce setup</li>
+                                      <li>Product catalogue</li>
+                                      <li>CRO</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - Stack End -->
+
+                          <!-- Project Block - Project Link Start -->
+                          <div class="project__block small-size">
+                            <div class="container-fluid p-0">
+                              <div class="row g-0">
+                                <div class="col-12 d-flex justify-content-center">
+                                  <a class="btn btn-circle-text hover-circle" href="https://thepawcharmstore.com" target="_blank" rel="noopener">
+                                    <em></em>
+                                    <span class="btn-caption">Visit thepawcharmstore.com</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - Project Link End -->
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- Project Popup - The Paw Charm End -->
+
+              <!-- Project Popup - Lingga Florist Start -->
+              <div id="project-lingga" class="popup mfp-hide">
+
+                <button class="mfp-close permanent-dark"></button>
+
+                <div class="popup__container">
+                  <div class="container-fluid p-0">
+                    <div class="row g-0">
+                      <div class="col-12">
+                        <div class="project">
+
+                          <!-- Project Block - Title with Image Start -->
+                          <div class="project__block no-padding no-margin project-image-bg">
+                            <img class="project-image-bg__portrait" src="img/work/lingga.jpg" alt="Lingga Florist project cover" loading="lazy">
+                            <img class="project-image-bg__landscape" src="img/work/lingga.jpg" alt="Lingga Florist project cover" loading="lazy">
+                            <div class="project__title">
+                              <h3 class="light">Lingga Florist</h3>
+                            </div>
+                          </div>
+                          <!-- Project Block - Title with Image End -->
+
+                          <!-- Project Block - Description Start -->
+                          <div class="project__block grid-block grid-items">
+                            <div class="project__data">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <div class="container-fluid p-0">
+                                      <div class="row g-0">
+                                        <div class="col-12 col-md-6 grid-item pdata__item">
+                                          <p class="data__title tagline-chapter small type-basic-160lh">Type</p>
+                                          <p class="data__descr small type-basic-160lh">Website + Google Ads</p>
+                                        </div>
+                                        <div class="col-12 col-md-6 grid-item pdata__item">
+                                          <p class="data__title tagline-chapter small type-basic-160lh">Date</p>
+                                          <p class="data__descr small type-basic-160lh">Aug — Sep 2023</p>
+                                        </div>
+                                        <div class="col-12 col-md-6 grid-item pdata__item">
+                                          <p class="data__title tagline-chapter small type-basic-160lh">Role</p>
+                                          <p class="data__descr small type-basic-160lh">Build &amp; campaign</p>
+                                        </div>
+                                        <div class="col-12 col-md-6 grid-item pdata__item">
+                                          <p class="data__title tagline-chapter small type-basic-160lh">Client</p>
+                                          <p class="data__descr small type-basic-160lh">Lingga Florist</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-12 col-xl-8 grid-item">
+                                    <p class="type-basic-160lh">A florist store website, plus a Google Ads campaign I ran as a personal project between August and September 2023. It is the one place in my work where I have run paid search end to end rather than relying on organic, and I include it precisely because it marks the boundary of what I have actually executed.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - Description End -->
+
+                          <!-- Project Block - What I built Start -->
+                          <div class="project__block pre-grid-items">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">What I built</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <ul class="project__list type-basic-160lh">
+                                      <li>Website build and product presentation</li>
+                                      <li>Google Ads campaign structure, targeting and ad copy</li>
+                                      <li>Conversion tracking configured before spend started</li>
+                                      <li>Ongoing optimisation across the campaign period</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - What I built End -->
+
+                          <!-- Project Block - The challenge Start -->
+                          <div class="project__block">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">The challenge</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <p class="type-basic-160lh">Florists compete on immediacy. People buy flowers against a deadline, so the campaign had to catch high-intent searches at the moment of need, on a budget small enough that wasted impressions mattered.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - The challenge End -->
+
+                          <!-- Project Block - How I approached it Start -->
+                          <div class="project__block">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">How I approached it</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <p class="type-basic-160lh">Tight keyword targeting around purchase-intent terms rather than broad category terms, with conversion tracking in place from the start so budget could follow what was actually converting instead of what was merely getting clicks.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - How I approached it End -->
+
+                          <!-- Project Block - Result Start -->
+                          <div class="project__block">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">Result</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <p class="type-basic-160lh">Across the campaign period: 261,000+ impressions, 795 clicks and 275 conversions at a 34.6% conversion rate, on roughly Rp 1.04M of total spend.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - Result End -->
+
+                          <!-- Project Block - Stack Start -->
+                          <div class="project__block">
+                            <div class="project__descr">
+                              <div class="container-fluid p-0">
+                                <div class="row g-0">
+                                  <div class="col-12 col-xl-4">
+                                    <p class="project__subtitle tagline-chapter">Stack</p>
+                                  </div>
+                                  <div class="col-12 col-xl-8">
+                                    <ul class="project__tags">
+                                      <li>WordPress</li>
+                                      <li>Google Ads</li>
+                                      <li>Conversion tracking</li>
+                                      <li>GA4</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - Stack End -->
+
+                          <!-- Project Block - Project Link Start -->
+                          <div class="project__block small-size">
+                            <div class="container-fluid p-0">
+                              <div class="row g-0">
+                                <div class="col-12 d-flex justify-content-center">
+                                  <a class="btn btn-circle-text hover-circle" href="https://linggaflorist.com/" target="_blank" rel="noopener">
+                                    <em></em>
+                                    <span class="btn-caption">Visit linggaflorist.com</span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Project Block - Project Link End -->
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- Project Popup - Lingga Florist End -->
 
               <!-- Project Popup - Invera Wedding Start -->
               <div id="project-invera" class="popup mfp-hide">
@@ -1466,7 +2555,7 @@
                                     <ul class="project__list type-basic-160lh">
                                       <li>WordPress and Elementor build</li>
                                       <li>Service and package presentation</li>
-                                      <li>Gallery setup</li>
+                                      <li>Gallery setup tuned so imagery stays sharp without bloating the page</li>
                                       <li>Local SEO fundamentals</li>
                                     </ul>
                                   </div>
@@ -1502,7 +2591,7 @@
                                     <p class="project__subtitle tagline-chapter">How I approached it</p>
                                   </div>
                                   <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">An image-led build with the couple's story and the enquiry flow as the spine of the layout, tuned so the photography stays sharp without making the page heavy.</p>
+                                    <p class="type-basic-160lh">An image-led build with the couple's story and the enquiry flow as the spine of the layout, with the photography compressed and sized so the emotional impact survives a mobile connection.</p>
                                   </div>
                                 </div>
                               </div>
@@ -1519,7 +2608,7 @@
                                     <p class="project__subtitle tagline-chapter">Result</p>
                                   </div>
                                   <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">Delivered and live, with a structure that supports service enquiries rather than just looking good.</p>
+                                    <p class="type-basic-160lh">Delivered and live, with a structure that supports service enquiries rather than only looking good.</p>
                                   </div>
                                 </div>
                               </div>
@@ -1640,7 +2729,8 @@
                                   <div class="col-12 col-xl-8">
                                     <ul class="project__list type-basic-160lh">
                                       <li>WordPress design and build</li>
-                                      <li>Brand storytelling layout</li>
+                                      <li>Brand storytelling layout that gives the history room</li>
+                                      <li>Product presentation for an established range</li>
                                       <li>SEO-ready page structure</li>
                                     </ul>
                                   </div>
@@ -1659,7 +2749,7 @@
                                     <p class="project__subtitle tagline-chapter">The challenge</p>
                                   </div>
                                   <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">Translating an established offline brand identity into a web presence without flattening the character that made it recognisable in the first place. Heritage brands lose more than they gain from a template that could belong to anyone.</p>
+                                    <p class="type-basic-160lh">Translating an established offline brand identity into a web presence without flattening the character that made it recognisable in the first place. A generic modern template costs a heritage brand more than it gains.</p>
                                   </div>
                                 </div>
                               </div>
@@ -1676,7 +2766,7 @@
                                     <p class="project__subtitle tagline-chapter">How I approached it</p>
                                   </div>
                                   <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">The build leads with the brand's own visual language and keeps the interface deliberately quiet, so the heritage does the talking.</p>
+                                    <p class="type-basic-160lh">The build leads with the brand's own visual language and keeps the interface deliberately quiet, so the heritage does the talking rather than the layout.</p>
                                   </div>
                                 </div>
                               </div>
@@ -1693,7 +2783,7 @@
                                     <p class="project__subtitle tagline-chapter">Result</p>
                                   </div>
                                   <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">A premium digital presence that carries the brand's story rather than replacing it.</p>
+                                    <p class="type-basic-160lh">A premium digital presence that carries the brand's story instead of replacing it.</p>
                                   </div>
                                 </div>
                               </div>
@@ -1745,881 +2835,6 @@
 
               </div>
               <!-- Project Popup - Ny Liem Heritage End -->
-
-              <!-- Project Popup - Tjikko Foam Global Start -->
-              <div id="project-tjikko-global" class="popup mfp-hide">
-
-                <button class="mfp-close permanent-dark"></button>
-
-                <div class="popup__container">
-                  <div class="container-fluid p-0">
-                    <div class="row g-0">
-                      <div class="col-12">
-                        <div class="project">
-
-                          <!-- Project Block - Title with Image Start -->
-                          <div class="project__block no-padding no-margin project-image-bg">
-                            <img class="project-image-bg__portrait" src="img/work/tjikko-global.jpg" alt="Tjikko Foam Global project cover" loading="lazy">
-                            <img class="project-image-bg__landscape" src="img/work/tjikko-global.jpg" alt="Tjikko Foam Global project cover" loading="lazy">
-                            <div class="project__title">
-                              <h3 class="light">Tjikko Foam Global</h3>
-                            </div>
-                          </div>
-                          <!-- Project Block - Title with Image End -->
-
-                          <!-- Project Block - Description Start -->
-                          <div class="project__block grid-block grid-items">
-                            <div class="project__data">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <div class="container-fluid p-0">
-                                      <div class="row g-0">
-                                        <div class="col-12 col-md-6 grid-item pdata__item">
-                                          <p class="data__title tagline-chapter small type-basic-160lh">Type</p>
-                                          <p class="data__descr small type-basic-160lh">International website</p>
-                                        </div>
-                                        <div class="col-12 col-md-6 grid-item pdata__item">
-                                          <p class="data__title tagline-chapter small type-basic-160lh">Date</p>
-                                          <p class="data__descr small type-basic-160lh">2026</p>
-                                        </div>
-                                        <div class="col-12 col-md-6 grid-item pdata__item">
-                                          <p class="data__title tagline-chapter small type-basic-160lh">Role</p>
-                                          <p class="data__descr small type-basic-160lh">Build &amp; international SEO</p>
-                                        </div>
-                                        <div class="col-12 col-md-6 grid-item pdata__item">
-                                          <p class="data__title tagline-chapter small type-basic-160lh">Client</p>
-                                          <p class="data__descr small type-basic-160lh">PT Tjikko Sentral Industrial</p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-12 col-xl-8 grid-item">
-                                    <p class="type-basic-160lh">A dedicated global-facing site positioning Tjikko Foam for international wholesale buyers, distributors and export partners beyond Indonesia.</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - Description End -->
-
-                          <!-- Project Block - What I built Start -->
-                          <div class="project__block pre-grid-items">
-                            <div class="project__descr">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <p class="project__subtitle tagline-chapter">What I built</p>
-                                  </div>
-                                  <div class="col-12 col-xl-8">
-                                    <ul class="project__list type-basic-160lh">
-                                      <li>Next.js build</li>
-                                      <li>Global information architecture with English-first messaging</li>
-                                      <li>International on-page SEO</li>
-                                      <li>Cloudflare performance and security layer</li>
-                                      <li>Enquiry flow designed for cross-border leads</li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - What I built End -->
-
-                          <!-- Project Block - The challenge Start -->
-                          <div class="project__block">
-                            <div class="project__descr">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <p class="project__subtitle tagline-chapter">The challenge</p>
-                                  </div>
-                                  <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">Domestic B2B messaging does not transfer. International procurement teams look for specifications, capacity and credibility signals long before they look at brand.</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - The challenge End -->
-
-                          <!-- Project Block - How I approached it Start -->
-                          <div class="project__block">
-                            <div class="project__descr">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <p class="project__subtitle tagline-chapter">How I approached it</p>
-                                  </div>
-                                  <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">I restructured the content around what an overseas buyer needs to verify first, kept the product specifications explicit, and separated the export proposition from the domestic site so neither had to compromise for the other.</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - How I approached it End -->
-
-                          <!-- Project Block - Result Start -->
-                          <div class="project__block">
-                            <div class="project__descr">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <p class="project__subtitle tagline-chapter">Result</p>
-                                  </div>
-                                  <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">A distinct international presence built to capture export demand and convert overseas visitors into qualified enquiries.</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - Result End -->
-
-                          <!-- Project Block - Stack Start -->
-                          <div class="project__block">
-                            <div class="project__descr">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <p class="project__subtitle tagline-chapter">Stack</p>
-                                  </div>
-                                  <div class="col-12 col-xl-8">
-                                    <ul class="project__tags">
-                                      <li>Next.js</li>
-                                      <li>International SEO</li>
-                                      <li>GA4</li>
-                                      <li>Search Console</li>
-                                      <li>Cloudflare</li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - Stack End -->
-
-                          <!-- Project Block - Project Link Start -->
-                          <div class="project__block small-size">
-                            <div class="container-fluid p-0">
-                              <div class="row g-0">
-                                <div class="col-12 d-flex justify-content-center">
-                                  <a class="btn btn-circle-text hover-circle" href="https://global.tjikkofoam.com" target="_blank" rel="noopener">
-                                    <em></em>
-                                    <span class="btn-caption">Visit global.tjikkofoam.com</span>
-                                  </a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - Project Link End -->
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-              <!-- Project Popup - Tjikko Foam Global End -->
-
-              <!-- Project Popup - Soka Chemical Start -->
-              <div id="project-soka" class="popup mfp-hide">
-
-                <button class="mfp-close permanent-dark"></button>
-
-                <div class="popup__container">
-                  <div class="container-fluid p-0">
-                    <div class="row g-0">
-                      <div class="col-12">
-                        <div class="project">
-
-                          <!-- Project Block - Title with Image Start -->
-                          <div class="project__block no-padding no-margin project-image-bg">
-                            <img class="project-image-bg__portrait" src="img/work/soka.jpg" alt="Soka Chemical project cover" loading="lazy">
-                            <img class="project-image-bg__landscape" src="img/work/soka.jpg" alt="Soka Chemical project cover" loading="lazy">
-                            <div class="project__title">
-                              <h3 class="light">Soka Chemical</h3>
-                            </div>
-                          </div>
-                          <!-- Project Block - Title with Image End -->
-
-                          <!-- Project Block - Description Start -->
-                          <div class="project__block grid-block grid-items">
-                            <div class="project__data">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <div class="container-fluid p-0">
-                                      <div class="row g-0">
-                                        <div class="col-12 col-md-6 grid-item pdata__item">
-                                          <p class="data__title tagline-chapter small type-basic-160lh">Type</p>
-                                          <p class="data__descr small type-basic-160lh">Corporate website</p>
-                                        </div>
-                                        <div class="col-12 col-md-6 grid-item pdata__item">
-                                          <p class="data__title tagline-chapter small type-basic-160lh">Date</p>
-                                          <p class="data__descr small type-basic-160lh">2025</p>
-                                        </div>
-                                        <div class="col-12 col-md-6 grid-item pdata__item">
-                                          <p class="data__title tagline-chapter small type-basic-160lh">Role</p>
-                                          <p class="data__descr small type-basic-160lh">Website developer</p>
-                                        </div>
-                                        <div class="col-12 col-md-6 grid-item pdata__item">
-                                          <p class="data__title tagline-chapter small type-basic-160lh">Client</p>
-                                          <p class="data__descr small type-basic-160lh">PT Soka Uni Pratama — via RIAS Strategic</p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-12 col-xl-8 grid-item">
-                                    <p class="type-basic-160lh">A corporate product website for a chemical distribution company selling to industrial buyers and distributors.</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - Description End -->
-
-                          <!-- Project Block - What I built Start -->
-                          <div class="project__block pre-grid-items">
-                            <div class="project__descr">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <p class="project__subtitle tagline-chapter">What I built</p>
-                                  </div>
-                                  <div class="col-12 col-xl-8">
-                                    <ul class="project__list type-basic-160lh">
-                                      <li>WordPress and Elementor design and build</li>
-                                      <li>Product catalogue structure</li>
-                                      <li>On-page SEO foundation</li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - What I built End -->
-
-                          <!-- Project Block - The challenge Start -->
-                          <div class="project__block">
-                            <div class="project__descr">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <p class="project__subtitle tagline-chapter">The challenge</p>
-                                  </div>
-                                  <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">Chemical distribution is a credibility-first category. The site had to make an unglamorous catalogue legible and trustworthy to procurement buyers who compare on specification.</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - The challenge End -->
-
-                          <!-- Project Block - How I approached it Start -->
-                          <div class="project__block">
-                            <div class="project__descr">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <p class="project__subtitle tagline-chapter">How I approached it</p>
-                                  </div>
-                                  <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">A clean catalogue structure that puts specifications where buyers look for them, on a foundation that can be found in search rather than only handed out as a link.</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - How I approached it End -->
-
-                          <!-- Project Block - Result Start -->
-                          <div class="project__block">
-                            <div class="project__descr">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <p class="project__subtitle tagline-chapter">Result</p>
-                                  </div>
-                                  <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">A professional digital presence that represents the brand credibly to industrial buyers.</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - Result End -->
-
-                          <!-- Project Block - Stack Start -->
-                          <div class="project__block">
-                            <div class="project__descr">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <p class="project__subtitle tagline-chapter">Stack</p>
-                                  </div>
-                                  <div class="col-12 col-xl-8">
-                                    <ul class="project__tags">
-                                      <li>WordPress</li>
-                                      <li>Elementor</li>
-                                      <li>On-page SEO</li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - Stack End -->
-
-                          <!-- Project Block - Project Link Start -->
-                          <div class="project__block small-size">
-                            <div class="container-fluid p-0">
-                              <div class="row g-0">
-                                <div class="col-12 d-flex justify-content-center">
-                                  <a class="btn btn-circle-text hover-circle" href="https://soka-chem.com" target="_blank" rel="noopener">
-                                    <em></em>
-                                    <span class="btn-caption">Visit soka-chem.com</span>
-                                  </a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - Project Link End -->
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-              <!-- Project Popup - Soka Chemical End -->
-
-              <!-- Project Popup - RIAS Strategic Start -->
-              <div id="project-rias" class="popup mfp-hide">
-
-                <button class="mfp-close permanent-dark"></button>
-
-                <div class="popup__container">
-                  <div class="container-fluid p-0">
-                    <div class="row g-0">
-                      <div class="col-12">
-                        <div class="project">
-
-                          <!-- Project Block - Title with Image Start -->
-                          <div class="project__block no-padding no-margin project-image-bg">
-                            <img class="project-image-bg__portrait" src="img/work/rias.jpg" alt="RIAS Strategic project cover" loading="lazy">
-                            <img class="project-image-bg__landscape" src="img/work/rias.jpg" alt="RIAS Strategic project cover" loading="lazy">
-                            <div class="project__title">
-                              <h3 class="light">RIAS Strategic</h3>
-                            </div>
-                          </div>
-                          <!-- Project Block - Title with Image End -->
-
-                          <!-- Project Block - Description Start -->
-                          <div class="project__block grid-block grid-items">
-                            <div class="project__data">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <div class="container-fluid p-0">
-                                      <div class="row g-0">
-                                        <div class="col-12 col-md-6 grid-item pdata__item">
-                                          <p class="data__title tagline-chapter small type-basic-160lh">Type</p>
-                                          <p class="data__descr small type-basic-160lh">Corporate website</p>
-                                        </div>
-                                        <div class="col-12 col-md-6 grid-item pdata__item">
-                                          <p class="data__title tagline-chapter small type-basic-160lh">Date</p>
-                                          <p class="data__descr small type-basic-160lh">2025</p>
-                                        </div>
-                                        <div class="col-12 col-md-6 grid-item pdata__item">
-                                          <p class="data__title tagline-chapter small type-basic-160lh">Role</p>
-                                          <p class="data__descr small type-basic-160lh">Website developer</p>
-                                        </div>
-                                        <div class="col-12 col-md-6 grid-item pdata__item">
-                                          <p class="data__title tagline-chapter small type-basic-160lh">Client</p>
-                                          <p class="data__descr small type-basic-160lh">RIAS Strategic — the agency whose talent pool I freelance through</p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-12 col-xl-8 grid-item">
-                                    <p class="type-basic-160lh">A digital platform for RIAS Strategic, the virtual assistant agency whose freelance talent pool I belong to as a UI/UX and website developer. Their own site was one of the projects I delivered.</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - Description End -->
-
-                          <!-- Project Block - What I built Start -->
-                          <div class="project__block pre-grid-items">
-                            <div class="project__descr">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <p class="project__subtitle tagline-chapter">What I built</p>
-                                  </div>
-                                  <div class="col-12 col-xl-8">
-                                    <ul class="project__list type-basic-160lh">
-                                      <li>WordPress design and build</li>
-                                      <li>Service page structure</li>
-                                      <li>Brand-aligned visual layout</li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - What I built End -->
-
-                          <!-- Project Block - The challenge Start -->
-                          <div class="project__block">
-                            <div class="project__descr">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <p class="project__subtitle tagline-chapter">The challenge</p>
-                                  </div>
-                                  <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">A services business has nothing physical to show. Credibility has to come from how clearly the offer is structured and how easily a prospect can work out whether it applies to them.</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - The challenge End -->
-
-                          <!-- Project Block - How I approached it Start -->
-                          <div class="project__block">
-                            <div class="project__descr">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <p class="project__subtitle tagline-chapter">How I approached it</p>
-                                  </div>
-                                  <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">Service pages structured around the client's problem rather than the agency's internal divisions, with a visual layout that stays consistent with the existing brand.</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - How I approached it End -->
-
-                          <!-- Project Block - Result Start -->
-                          <div class="project__block">
-                            <div class="project__descr">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <p class="project__subtitle tagline-chapter">Result</p>
-                                  </div>
-                                  <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">A platform ready for client acquisition and service promotion.</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - Result End -->
-
-                          <!-- Project Block - Stack Start -->
-                          <div class="project__block">
-                            <div class="project__descr">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <p class="project__subtitle tagline-chapter">Stack</p>
-                                  </div>
-                                  <div class="col-12 col-xl-8">
-                                    <ul class="project__tags">
-                                      <li>WordPress</li>
-                                      <li>Elementor</li>
-                                      <li>UX layout</li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - Stack End -->
-
-                          <!-- Project Block - Project Link Start -->
-                          <div class="project__block small-size">
-                            <div class="container-fluid p-0">
-                              <div class="row g-0">
-                                <div class="col-12 d-flex justify-content-center">
-                                  <a class="btn btn-circle-text hover-circle" href="https://riasstrategic.com" target="_blank" rel="noopener">
-                                    <em></em>
-                                    <span class="btn-caption">Visit riasstrategic.com</span>
-                                  </a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - Project Link End -->
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-              <!-- Project Popup - RIAS Strategic End -->
-
-              <!-- Project Popup - The Paw Charm Start -->
-              <div id="project-pawcharm" class="popup mfp-hide">
-
-                <button class="mfp-close permanent-dark"></button>
-
-                <div class="popup__container">
-                  <div class="container-fluid p-0">
-                    <div class="row g-0">
-                      <div class="col-12">
-                        <div class="project">
-
-                          <!-- Project Block - Title with Image Start -->
-                          <div class="project__block no-padding no-margin project-image-bg">
-                            <img class="project-image-bg__portrait" src="img/work/pawcharm.jpg" alt="The Paw Charm project cover" loading="lazy">
-                            <img class="project-image-bg__landscape" src="img/work/pawcharm.jpg" alt="The Paw Charm project cover" loading="lazy">
-                            <div class="project__title">
-                              <h3 class="light">The Paw Charm</h3>
-                            </div>
-                          </div>
-                          <!-- Project Block - Title with Image End -->
-
-                          <!-- Project Block - Description Start -->
-                          <div class="project__block grid-block grid-items">
-                            <div class="project__data">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <div class="container-fluid p-0">
-                                      <div class="row g-0">
-                                        <div class="col-12 col-md-6 grid-item pdata__item">
-                                          <p class="data__title tagline-chapter small type-basic-160lh">Type</p>
-                                          <p class="data__descr small type-basic-160lh">E-commerce</p>
-                                        </div>
-                                        <div class="col-12 col-md-6 grid-item pdata__item">
-                                          <p class="data__title tagline-chapter small type-basic-160lh">Date</p>
-                                          <p class="data__descr small type-basic-160lh">2025</p>
-                                        </div>
-                                        <div class="col-12 col-md-6 grid-item pdata__item">
-                                          <p class="data__title tagline-chapter small type-basic-160lh">Role</p>
-                                          <p class="data__descr small type-basic-160lh">Store build</p>
-                                        </div>
-                                        <div class="col-12 col-md-6 grid-item pdata__item">
-                                          <p class="data__title tagline-chapter small type-basic-160lh">Client</p>
-                                          <p class="data__descr small type-basic-160lh">The Paw Charm</p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-12 col-xl-8 grid-item">
-                                    <p class="type-basic-160lh">An e-commerce store for a pet accessories brand selling directly to consumers. A different problem from the B2B work: impulse-led, mobile-first, and dependent on checkout not getting in the way.</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - Description End -->
-
-                          <!-- Project Block - What I built Start -->
-                          <div class="project__block pre-grid-items">
-                            <div class="project__descr">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <p class="project__subtitle tagline-chapter">What I built</p>
-                                  </div>
-                                  <div class="col-12 col-xl-8">
-                                    <ul class="project__list type-basic-160lh">
-                                      <li>Shopify store setup</li>
-                                      <li>Product catalogue and collections</li>
-                                      <li>Checkout optimisation</li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - What I built End -->
-
-                          <!-- Project Block - The challenge Start -->
-                          <div class="project__block">
-                            <div class="project__descr">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <p class="project__subtitle tagline-chapter">The challenge</p>
-                                  </div>
-                                  <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">Consumer retail forgives nothing at checkout. Every extra step between wanting the product and owning it costs conversions.</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - The challenge End -->
-
-                          <!-- Project Block - How I approached it Start -->
-                          <div class="project__block">
-                            <div class="project__descr">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <p class="project__subtitle tagline-chapter">How I approached it</p>
-                                  </div>
-                                  <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">A catalogue organised the way shoppers browse rather than the way inventory is filed, with the checkout path kept as short as the platform allows.</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - How I approached it End -->
-
-                          <!-- Project Block - Result Start -->
-                          <div class="project__block">
-                            <div class="project__descr">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <p class="project__subtitle tagline-chapter">Result</p>
-                                  </div>
-                                  <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">An operational store ready to sell, with the fulfilment and catalogue structure in place behind it.</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - Result End -->
-
-                          <!-- Project Block - Stack Start -->
-                          <div class="project__block">
-                            <div class="project__descr">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <p class="project__subtitle tagline-chapter">Stack</p>
-                                  </div>
-                                  <div class="col-12 col-xl-8">
-                                    <ul class="project__tags">
-                                      <li>Shopify</li>
-                                      <li>E-commerce setup</li>
-                                      <li>Product catalogue</li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - Stack End -->
-
-                          <!-- Project Block - Project Link Start -->
-                          <div class="project__block small-size">
-                            <div class="container-fluid p-0">
-                              <div class="row g-0">
-                                <div class="col-12 d-flex justify-content-center">
-                                  <a class="btn btn-circle-text hover-circle" href="https://thepawcharmstore.com" target="_blank" rel="noopener">
-                                    <em></em>
-                                    <span class="btn-caption">Visit thepawcharmstore.com</span>
-                                  </a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - Project Link End -->
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-              <!-- Project Popup - The Paw Charm End -->
-
-              <!-- Project Popup - Lingga Florist Start -->
-              <div id="project-lingga" class="popup mfp-hide">
-
-                <button class="mfp-close permanent-dark"></button>
-
-                <div class="popup__container">
-                  <div class="container-fluid p-0">
-                    <div class="row g-0">
-                      <div class="col-12">
-                        <div class="project">
-
-                          <!-- Project Block - Title with Image Start -->
-                          <div class="project__block no-padding no-margin project-image-bg">
-                            <img class="project-image-bg__portrait" src="img/work/lingga.jpg" alt="Lingga Florist project cover" loading="lazy">
-                            <img class="project-image-bg__landscape" src="img/work/lingga.jpg" alt="Lingga Florist project cover" loading="lazy">
-                            <div class="project__title">
-                              <h3 class="light">Lingga Florist</h3>
-                            </div>
-                          </div>
-                          <!-- Project Block - Title with Image End -->
-
-                          <!-- Project Block - Description Start -->
-                          <div class="project__block grid-block grid-items">
-                            <div class="project__data">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <div class="container-fluid p-0">
-                                      <div class="row g-0">
-                                        <div class="col-12 col-md-6 grid-item pdata__item">
-                                          <p class="data__title tagline-chapter small type-basic-160lh">Type</p>
-                                          <p class="data__descr small type-basic-160lh">Website + Google Ads</p>
-                                        </div>
-                                        <div class="col-12 col-md-6 grid-item pdata__item">
-                                          <p class="data__title tagline-chapter small type-basic-160lh">Date</p>
-                                          <p class="data__descr small type-basic-160lh">2023</p>
-                                        </div>
-                                        <div class="col-12 col-md-6 grid-item pdata__item">
-                                          <p class="data__title tagline-chapter small type-basic-160lh">Role</p>
-                                          <p class="data__descr small type-basic-160lh">Build &amp; campaign</p>
-                                        </div>
-                                        <div class="col-12 col-md-6 grid-item pdata__item">
-                                          <p class="data__title tagline-chapter small type-basic-160lh">Client</p>
-                                          <p class="data__descr small type-basic-160lh">Lingga Florist</p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-12 col-xl-8 grid-item">
-                                    <p class="type-basic-160lh">A florist store website, plus a Google Ads campaign I ran as a personal project between August and September 2023. It is the one place in my work where I have run paid search end to end rather than relying on organic.</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - Description End -->
-
-                          <!-- Project Block - What I built Start -->
-                          <div class="project__block pre-grid-items">
-                            <div class="project__descr">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <p class="project__subtitle tagline-chapter">What I built</p>
-                                  </div>
-                                  <div class="col-12 col-xl-8">
-                                    <ul class="project__list type-basic-160lh">
-                                      <li>Website build and product presentation</li>
-                                      <li>Google Ads campaign structure and targeting</li>
-                                      <li>Conversion tracking setup</li>
-                                      <li>Ongoing optimisation across the campaign period</li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - What I built End -->
-
-                          <!-- Project Block - The challenge Start -->
-                          <div class="project__block">
-                            <div class="project__descr">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <p class="project__subtitle tagline-chapter">The challenge</p>
-                                  </div>
-                                  <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">Florists compete on immediacy. People buy flowers with a deadline. The campaign had to catch high-intent searches at the moment of need on a small budget.</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - The challenge End -->
-
-                          <!-- Project Block - How I approached it Start -->
-                          <div class="project__block">
-                            <div class="project__descr">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <p class="project__subtitle tagline-chapter">How I approached it</p>
-                                  </div>
-                                  <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">Tight keyword targeting around purchase-intent terms, with conversion tracking in place from the start so budget could be moved toward what was actually converting rather than what was getting clicks.</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - How I approached it End -->
-
-                          <!-- Project Block - Result Start -->
-                          <div class="project__block">
-                            <div class="project__descr">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <p class="project__subtitle tagline-chapter">Result</p>
-                                  </div>
-                                  <div class="col-12 col-xl-8">
-                                    <p class="type-basic-160lh">Across the campaign period: 261,000+ impressions, 795 clicks, 275 conversions, and a 34.6% conversion rate on roughly Rp 1.04M of total spend.</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - Result End -->
-
-                          <!-- Project Block - Stack Start -->
-                          <div class="project__block">
-                            <div class="project__descr">
-                              <div class="container-fluid p-0">
-                                <div class="row g-0">
-                                  <div class="col-12 col-xl-4">
-                                    <p class="project__subtitle tagline-chapter">Stack</p>
-                                  </div>
-                                  <div class="col-12 col-xl-8">
-                                    <ul class="project__tags">
-                                      <li>WordPress</li>
-                                      <li>Google Ads</li>
-                                      <li>Conversion tracking</li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - Stack End -->
-
-                          <!-- Project Block - Project Link Start -->
-                          <div class="project__block small-size">
-                            <div class="container-fluid p-0">
-                              <div class="row g-0">
-                                <div class="col-12 d-flex justify-content-center">
-                                  <a class="btn btn-circle-text hover-circle" href="https://linggaflorist.com/" target="_blank" rel="noopener">
-                                    <em></em>
-                                    <span class="btn-caption">Visit linggaflorist.com</span>
-                                  </a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Project Block - Project Link End -->
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-              <!-- Project Popup - Lingga Florist End -->
 
             </div>
           </div>

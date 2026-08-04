@@ -14,30 +14,38 @@ PROJECTS = [
         key="busabunga", featured=True, img="busabunga",
         title="busabunga.com",
         tagline="Greenfield build that reached #1 in a month",
-        type="Website build + SEO", date="Launched June 2026",
-        role="Design, build, SEO", client="PT Tjikko Sentral Industrial",
+        type="Website build + technical SEO", date="Launched June 2026",
+        role="Research, design, build, SEO", client="PT Tjikko Sentral Industrial",
         url=("Visit busabunga.com", "https://busabunga.com"),
-        intro="A commercial site for Tjikko's decorative foam (busa bunga) line, built end to end in React with "
-              "Claude Code as the development partner. Design, build, content and search strategy were all mine. "
-              "There was no existing site, no legacy traffic, and no ad budget to lean on.",
-        scope=["Keyword and intent research before any code was written",
-               "Information architecture built around buyer intent, not the product catalogue",
-               "Full React build, AI-assisted with Claude Code",
-               "Technical SEO foundation: crawlability, schema, Core Web Vitals",
-               "Long-tail landing pages for florists, wholesale buyers and private-label enquiries",
-               "Search Console and analytics set up from day one"],
-        challenge="A brand-new domain competing for commercial keywords that established suppliers and marketplaces "
-                  "already owned. No backlink profile, no history, and no paid support. The only route to visibility "
-                  "was getting the technical foundation and the search intent right the first time.",
-        approach="I mapped the commercial keyword set before writing a line of code, then shaped the site structure "
-                 "around how buyers actually search rather than how the company organises its products. Primary terms "
-                 "were floral foam, wet and dry floral foam, busa bunga and floral foam indonesia; secondary terms "
-                 "covered supplier, distributor, grosir and private-label variations. Each target term got a single "
-                 "page that clearly owned it, so no two pages competed with each other.",
+        intro="A commercial site for Tjikko's decorative foam line, built end to end in React with Claude "
+              "Code as the development partner. Keyword research, information architecture, build, content "
+              "and search strategy were all mine. There was no existing site, no legacy traffic, no backlink "
+              "profile and no advertising budget, so the only lever available was getting the structure and "
+              "the search intent right before anything shipped.",
+        scope=["Commercial keyword and intent research completed before any code was written",
+               "Information architecture organised around buyer intent rather than the internal product catalogue",
+               "Full React build, AI-assisted through Claude Code and Git",
+               "Technical SEO foundation: crawl paths, indexation rules, schema, Core Web Vitals",
+               "Dedicated pages for florists, wholesale buyers and private-label enquiries",
+               "WhatsApp-first enquiry flow, matching how Indonesian B2B buyers actually make contact",
+               "Search Console and analytics instrumented from day one, not retrofitted"],
+        challenge="A brand-new domain competing for commercial terms that established suppliers and the big "
+                  "marketplaces already owned. No authority to borrow from, no history for Google to trust, and "
+                  "no paid support to buy time while rankings matured. On a domain like that, most of the usual "
+                  "SEO levers are unavailable: what is left is structure, intent matching, and not making the "
+                  "mistakes that keep new sites invisible.",
+        approach="I mapped the commercial keyword set first and let it decide the site architecture, which is "
+                 "the opposite of the usual order. Primary terms were floral foam, wet and dry floral foam, busa "
+                 "bunga and floral foam indonesia; secondary terms covered supplier, distributor, grosir and "
+                 "private-label variations. Each target term got exactly one page that clearly owned it, so the "
+                 "site never competed with itself. Buyer-intent language went into headings and body copy rather "
+                 "than internal product naming, and the enquiry path was kept short enough that arriving traffic "
+                 "had somewhere obvious to go.",
         result="Within roughly one month of launch the site held #1 and page-one Google positions for its target "
-               "commercial keywords. That came from structure and intent matching, not from "
-               "authority the domain had not had time to build.",
-        stack=["React", "Claude Code", "Technical SEO", "Search Console", "GA4"],
+               "commercial keywords. That came from structure and intent matching, not from authority the domain "
+               "had not had time to build. It is the cleanest evidence I have that the method is repeatable: same "
+               "approach, no inherited advantages, measurable outcome.",
+        stack=["React", "Claude Code", "Technical SEO", "Schema.org", "Search Console", "GA4", "Cloudflare"],
     ),
     dict(
         key="trinitas", featured=True, img="trinitas",
@@ -47,153 +55,162 @@ PROJECTS = [
         client="Sekolah Trinitas \u2014 via RIAS Strategic",
         url=("Visit sekolahtrinitasbdl.sch.id", "https://sekolahtrinitasbdl.sch.id"),
         intro="Local search work for a Christian trilingual school in Bandar Lampung, delivered through the RIAS "
-              "Strategic freelance talent pool. The brief was simple to state and hard to win: own the terms parents "
-              "actually type when they are choosing a school.",
+              "Strategic freelance talent pool. The brief was easy to state and hard to win: own the terms parents "
+              "type when they are shortlisting schools for their children.",
         scope=["Keyword mapping across the five priority local terms",
-               "On-page rewrite so each term had one page earning it",
-               "Technical fixes and crawl clean-up",
-               "Local relevance signals tightened",
-               "Rank tracking against the target set"],
-        challenge="Education keywords in a regional market are crowded with directories, aggregators and long-"
-                  "established institutions. Ranking meant beating pages with far more authority, on terms where "
-                  "realistically only the top result converts. Parents do not scroll for a school.",
-        approach="I rebuilt the on-page and technical foundation around the five keywords that mattered and made sure "
-                 "each one had a clear, single page earning it, which removed the cannibalisation that was splitting "
-                 "the site's own relevance. Local signals were tightened so the school read unambiguously as a "
-                 "Bandar Lampung institution.",
+               "On-page rewrite so each term had one page unambiguously earning it",
+               "Cannibalisation audit and fixes across overlapping pages",
+               "Technical clean-up: crawl paths, indexation, on-page structure",
+               "Local relevance signals tightened around Bandar Lampung",
+               "Rank tracking against the target set through to position"],
+        challenge="Education keywords in a regional Indonesian market are crowded with directories, aggregators "
+                  "and institutions that have been online for a decade. Ranking meant beating pages with far more "
+                  "authority, on terms where realistically only the top result converts. Parents do not scroll for "
+                  "a school, and the decision cycle is short and emotional, so second place is close to worthless.",
+        approach="I rebuilt the on-page and technical foundation around the five keywords that mattered and made "
+                 "sure each had a single page earning it, which removed the cannibalisation quietly splitting the "
+                 "site's own relevance across near-duplicate pages. Local signals were tightened so the school read "
+                 "unambiguously as a Bandar Lampung institution rather than a generic national one. No link "
+                 "building was involved: the gains came from fixing what the site was already saying badly.",
         result="#1 Google rankings for all five target keywords: sekolah kristen lampung, sekolah kristen terbaik "
-               "lampung, sekolah trilingual terbaik lampung, sekolah trilingual lampung, and sekolah kristen lampung "
-               "paling bagus.",
-        stack=["WordPress", "Technical SEO", "Local SEO", "Search Console"],
+               "lampung, sekolah trilingual terbaik lampung, sekolah trilingual lampung, and sekolah kristen "
+               "lampung paling bagus. Verifiable in an incognito search from the region.",
+        stack=["WordPress", "Technical SEO", "Local SEO", "Search Console", "Rank tracking"],
     ),
     dict(
         key="tjikko", featured=True, img="tjikko",
         title="Tjikko Foam",
-        tagline="Four years owning an entire digital function",
-        type="Website, SEO &amp; digital ownership", date="2021 \u2014 present",
+        tagline="Four years owning an entire digital and IT function",
+        type="Digital &amp; IT ownership", date="Jul 2021 \u2014 present",
         role="IT &amp; Digital Specialist", client="PT Tjikko Sentral Industrial",
         url=("Visit tjikkofoam.com", "https://tjikkofoam.com"),
-        intro="For four years I have been the entire digital and IT function at a B2B polyurethane foam manufacturer. "
-              "Websites, SEO, analytics, brand and packaging design, video, marketplace channels, cybersecurity, "
-              "servers and procurement, with reporting that goes up to the Board.",
+        intro="For four years I have been the entire digital and IT function at a B2B polyurethane foam "
+              "manufacturer. Not the marketing person with IT help, and not the IT person who also runs the "
+              "website: both jobs, alone. Websites, SEO, analytics, brand and packaging design, video, "
+              "marketplace channels, servers, security and procurement, with reporting that goes to the Board.",
         scope=["Corporate site rebuilt on WordPress and Elementor with an SEO-first structure",
                "Technical SEO: Core Web Vitals, schema markup, crawl and index hygiene",
-               "GA4, Google Tag Manager, Looker Studio and Search Console",
-               "Indotrading listing built from scratch, including coordination with their account team",
-               "Full design ownership: catalogues, company profile, logos, packaging, video, listing visuals",
-               "Wazuh SIEM deployed across 50+ devices",
-               "Servers, Cloudflare, Docker, and IT procurement",
-               "Client-facing and Board-level presentations"],
-        challenge="A B2B industrial manufacturer with a technical product, a long sales cycle and no paid advertising "
-                  "budget. Every lead had to be earned through organic search. There was also no team, so nothing "
-                  "could be delegated, so everything had to be built to run without much maintenance.",
+               "Analytics stack: GA4, Google Tag Manager, Looker Studio, Search Console",
+               "Indotrading B2B listing built from scratch, including direct coordination with their account team",
+               "Shopee and Tokopedia listings built and managed, and currently leading their redesign",
+               "Full design ownership: print and online catalogues, company profile, logos, packaging, product "
+               "photography direction and video",
+               "Wazuh SIEM deployed and monitored across 50+ devices",
+               "Server, Cloudflare and Docker administration, plus IT procurement and hardware rollout",
+               "Client-facing sales material and Board-level reporting"],
+        challenge="A B2B industrial manufacturer with a technical product, a long sales cycle and no paid "
+                  "advertising budget. Every enquiry had to be earned through organic search. There was also no "
+                  "team, so nothing could be delegated and nothing could be high-maintenance: anything I built had "
+                  "to keep working while I was busy with the other half of the job. The constraint shaped the "
+                  "engineering as much as the strategy.",
         approach="I rebuilt the site around the language buyers actually search with instead of internal product "
-                 "naming, then fixed the technical foundation underneath it. Analytics went in so that performance "
-                 "became something the business could see and argue about, rather than a black box. On the "
-                 "infrastructure side I standardised monitoring so problems surfaced before they became downtime.",
-        result="~40% growth in organic traffic and a ~25% increase in lead generation, entirely SEO-driven with no "
-               "paid advertising. On the infrastructure side, roughly 30% less downtime.",
-        stack=["WordPress", "Elementor", "Technical SEO", "GA4", "GTM", "Looker Studio", "Cloudflare", "Wazuh SIEM"],
+                 "naming, then fixed the technical foundation underneath it so the content had a chance of being "
+                 "found. Analytics went in early so performance became something the business could see and argue "
+                 "about rather than a black box. On the infrastructure side I standardised monitoring so problems "
+                 "surfaced before they became downtime. The marketplace work taught the most useful lesson: after "
+                 "building and running the Shopee and Tokopedia listings, it became clear that molded industrial "
+                 "foam had a product-market fit problem on consumer platforms, not an execution problem, which is "
+                 "why the reactivation now centres on the consumer-fit decorative foam line instead.",
+        result="Roughly 40% growth in organic traffic and a 25% increase in lead generation, entirely SEO-driven "
+               "with no paid advertising. On the infrastructure side, around 30% less downtime across 50+ "
+               "monitored devices, with no major security incident in four years.",
+        stack=["WordPress", "Elementor", "Technical SEO", "GA4", "GTM", "Looker Studio", "Search Console",
+               "Cloudflare", "Docker", "Wazuh SIEM", "Adobe CC"],
     ),
     dict(
         key="hermes", featured=True, img="hermes",
         title="Hermes AI Agent System",
         tagline="A self-hosted agent stack doing real daily work",
-        type="AI automation", date="2026 \u2014 ongoing",
+        type="AI automation platform", date="2026 \u2014 ongoing",
         role="Architect &amp; builder", client="Self-hosted / internal",
         url=None,
         intro="A self-hosted multi-agent system that does real daily work. Not a demo, not a prototype. Claude "
-              "API handles the reasoning, n8n orchestrates the workflows, and MCP connects the whole thing to live "
-              "WordPress sites and analytics properties.",
-        scope=["Multi-agent framework running on a self-hosted VPS",
-               "Claude API as the reasoning engine",
-               "n8n for scheduling and workflow orchestration",
-               "Claude Desktop + MCP connected to live WordPress sites",
-               "Claude Code and Git development workflow",
-               "RAG architecture for document grounding",
+              "API handles the reasoning, n8n owns scheduling and orchestration, and MCP connects the whole thing "
+              "to live WordPress sites and analytics properties. It runs on my own VPS, which means I also own the "
+              "uptime, the credentials and the failure modes.",
+        scope=["Multi-agent framework on a self-hosted VPS, with a reusable skill library",
+               "Claude API as the reasoning engine; Claude Code and Git as the development workflow",
+               "n8n for scheduling, orchestration, retries and error handling",
+               "Claude Desktop with MCP connected to live WordPress sites",
+               "RAG architecture for grounding agents in real documents rather than model memory",
                "Full multi-page client website builds executed through MCP",
                "SEO, GEO and AEO documentation systems",
-               "GA4 audits and a daily reporting agent"],
-        challenge="Most AI automation stops at the proof-of-concept stage: impressive in a screenshot, "
-                  "unreliable the moment it has to run unattended against production systems. The hard part is not "
-                  "the model call; it is everything around it: scheduling, error handling, credentials, and knowing "
-                  "when the output is wrong.",
-        approach="I built Hermes as infrastructure rather than as a script. Agents are composable skills with a Git "
-                 "workflow behind them, MCP handles the integrations into live systems, and n8n owns scheduling and "
-                 "retries. A separate system, built on Claude scheduled tasks with MCP into Google Drive and Gmail, "
-                 "validates customer quotations against purchase orders on line items, pricing and expiry, and "
-                 "reports hourly.",
-        result="A GA4 Daily Reporter runs in production across three properties. The quotation validation layer has "
-               "been live since July 2026. It is deliberately too early to claim a catch rate or a time saving. "
-               "Those numbers can wait until the system has a real track record behind it.",
-        stack=["Claude API", "Claude Code", "MCP", "n8n", "Docker", "Self-hosted VPS", "RAG"],
+               "GA4 audits and a daily reporting agent across three properties"],
+        challenge="Most AI automation stops at the proof-of-concept stage: impressive in a screenshot, unreliable "
+                  "the moment it has to run unattended against production systems. The hard part was never the "
+                  "model call. It is everything around it: scheduling, credential handling, retry logic, and "
+                  "knowing when the output is wrong before it reaches anyone who would act on it.",
+        approach="I built Hermes as infrastructure rather than as a collection of scripts. Agents are composable "
+                 "skills with a Git workflow behind them, so behaviour is versioned and reviewable. MCP handles "
+                 "the integrations into live systems so agents act through real interfaces instead of scraped "
+                 "ones. n8n owns scheduling and retries, which keeps the failure handling out of the prompts. "
+                 "The design bias throughout is towards systems that degrade visibly rather than silently.",
+        result="A GA4 Daily Reporter runs in production across three properties, pulling the data, formatting the "
+               "report and distributing the insight without a human in the loop. The system is part of a 90-day "
+               "practitioner sprint aimed at three to five production agents and a monetisable automation service.",
+        stack=["Claude API", "Claude Code", "MCP", "n8n", "RAG", "Docker", "Self-hosted VPS", "Git"],
     ),
     dict(
-        key="invera", featured=True, img="invera",
-        title="Invera Wedding",
-        tagline="Wedding platform built for first impressions",
-        type="Website development", date="2025", role="Website developer",
-        client="Invera Wedding \u2014 via RIAS Strategic",
-        url=("Visit inverawedding.web.id", "https://inverawedding.web.id"),
-        intro="A wedding service platform built through the RIAS Strategic talent pool, one of several projects "
-              "spanning SMEs, companies and factories.",
-        scope=["WordPress and Elementor build",
-               "Service and package presentation",
-               "Gallery setup",
-               "Local SEO fundamentals"],
-        challenge="Wedding sites live or die on first impression. The design had to feel personal and unhurried while "
-                  "still loading quickly on the phones most guests would actually open it on. Image-heavy and "
-                  "fast are not natural allies.",
-        approach="An image-led build with the couple's story and the enquiry flow as the spine of the layout, tuned so "
-                 "the photography stays sharp without making the page heavy.",
-        result="Delivered and live, with a structure that supports service enquiries rather than just looking good.",
-        stack=["WordPress", "Elementor", "Local SEO"],
+        key="quotation-po", featured=True, img="quotation-po",
+        title="Quotation vs PO Validation",
+        tagline="AI checking paperwork nobody wanted to check",
+        type="Business process automation", date="Live since July 2026",
+        role="Architect &amp; builder", client="PT Tjikko Sentral Industrial",
+        url=None,
+        intro="A first-line AI validation layer that checks incoming customer purchase orders against the "
+              "quotations they came from. It is a small, unglamorous problem that quietly costs a lot: a "
+              "mismatch caught after acceptance becomes a margin loss or an argument, and catching them by hand "
+              "is exactly the kind of work that gets skipped when the week is busy.",
+        scope=["Line-item validation: does the PO match what was actually quoted",
+               "Price validation: does the PO price match the quotation price",
+               "Expiry validation: was the quotation still valid when the PO arrived",
+               "Built on Claude scheduled tasks with MCP integrations into Google Drive and Gmail",
+               "Reports hourly, so a mismatch surfaces the same working day",
+               "Deliberately separate from Hermes, which is n8n-based: different failure modes, different "
+               "operational risk"],
+        challenge="Manual reconciliation is the sort of task that is important but never urgent, so it slips. It "
+                  "also has to be right: a validation layer that raises false alarms gets ignored within a week, "
+                  "and one that misses real mismatches is worse than nothing because it creates false confidence.",
+        approach="I kept the scope narrow on purpose. Three checks, clearly defined, running on a schedule rather "
+                 "than trying to be a general-purpose document agent. It reads from the systems the team already "
+                 "uses via MCP rather than asking anyone to change how they work, and reports hourly so a problem "
+                 "surfaces while the paperwork is still fresh. Building it separately from Hermes was a "
+                 "reliability decision, not a technical one: I did not want a workflow failure in one system to "
+                 "take out the other.",
+        result="Live in production since July 2026, removing a recurring manual reconciliation task from the "
+               "Marketing Manager and returning that time to field and market work. It is still early, so there "
+               "is deliberately no catch-rate or time-saved figure here: those numbers are worth having only once "
+               "the system has a real track record behind it.",
+        stack=["Claude API", "Claude scheduled tasks", "MCP", "Google Drive", "Gmail"],
     ),
     dict(
-        key="nyliem", featured=True, img="nyliem",
-        title="Ny Liem Heritage",
-        tagline="Heritage brand, translated to the web",
-        type="Website development", date="2025", role="Website developer",
-        client="Ny Liem Heritage \u2014 via RIAS Strategic",
-        url=("Visit nyliem.com", "https://nyliem.com"),
-        intro="A brand site for a heritage culinary business with a long story and an established product line, also "
-              "delivered through RIAS Strategic.",
-        scope=["WordPress design and build",
-               "Brand storytelling layout",
-               "SEO-ready page structure"],
-        challenge="Translating an established offline brand identity into a web presence without flattening the "
-                  "character that made it recognisable in the first place. Heritage brands lose more than they gain "
-                  "from a template that could belong to anyone.",
-        approach="The build leads with the brand's own visual language and keeps the interface deliberately quiet, so "
-                 "the heritage does the talking.",
-        result="A premium digital presence that carries the brand's story rather than replacing it.",
-        stack=["WordPress", "Elementor", "Brand design"],
-    ),
-
-    # ---------------------------------------------------------- other work
-    dict(
-        key="tjikko-global", featured=False, img="tjikko-global",
+        key="tjikko-global", featured=True, img="tjikko-global",
         title="Tjikko Foam Global",
-        tagline="Export-facing platform",
-        type="International website", date="2026", role="Build &amp; international SEO",
-        client="PT Tjikko Sentral Industrial",
+        tagline="Export-facing platform for international buyers",
+        type="International website + SEO", date="2026",
+        role="Build &amp; international SEO", client="PT Tjikko Sentral Industrial",
         url=("Visit global.tjikkofoam.com", "https://global.tjikkofoam.com"),
-        intro="A dedicated global-facing site positioning Tjikko Foam for international wholesale buyers, distributors "
-              "and export partners beyond Indonesia.",
-        scope=["Next.js build",
-               "Global information architecture with English-first messaging",
+        intro="A dedicated global-facing site positioning Tjikko Foam for international wholesale buyers, "
+              "distributors and export partners. Built in Next.js and kept structurally separate from the "
+              "domestic site so neither proposition had to compromise for the other.",
+        scope=["Next.js build with an export-oriented information architecture",
+               "English-first messaging written for overseas procurement teams",
+               "Product specifications surfaced early rather than buried in a catalogue",
                "International on-page SEO",
                "Cloudflare performance and security layer",
-               "Enquiry flow designed for cross-border leads"],
-        challenge="Domestic B2B messaging does not transfer. International procurement teams look for specifications, "
-                  "capacity and credibility signals long before they look at brand.",
-        approach="I restructured the content around what an overseas buyer needs to verify first, kept the product "
-                 "specifications explicit, and separated the export proposition from the domestic site so neither had "
-                 "to compromise for the other.",
-        result="A distinct international presence built to capture export demand and convert overseas visitors into "
-               "qualified enquiries.",
+               "Cross-border enquiry flow with the credibility signals export buyers look for"],
+        challenge="Domestic B2B messaging does not transfer across borders. International procurement teams "
+                  "evaluate on specification, capacity and verifiable credibility long before they consider "
+                  "brand, and they arrive with no context about an Indonesian manufacturer they have not heard of.",
+        approach="I restructured the content around what an overseas buyer needs to verify first, kept the "
+                 "specifications explicit and scannable, and separated the export proposition from the domestic "
+                 "site entirely. The technical build uses Next.js for speed and clean indexation, with Cloudflare "
+                 "in front to keep latency reasonable for visitors far from the origin.",
+        result="A distinct international presence engineered to capture export demand and convert overseas "
+               "visitors into qualified enquiries, rather than an English translation of a domestic site.",
         stack=["Next.js", "International SEO", "GA4", "Search Console", "Cloudflare"],
     ),
+
     dict(
         key="soka", featured=False, img="soka",
         title="Soka Chemical",
@@ -202,15 +219,19 @@ PROJECTS = [
         client="PT Soka Uni Pratama \u2014 via RIAS Strategic",
         url=("Visit soka-chem.com", "https://soka-chem.com"),
         intro="A corporate product website for a chemical distribution company selling to industrial buyers and "
-              "distributors.",
+              "distributors, delivered through the RIAS Strategic talent pool.",
         scope=["WordPress and Elementor design and build",
-               "Product catalogue structure",
-               "On-page SEO foundation"],
-        challenge="Chemical distribution is a credibility-first category. The site had to make an unglamorous "
-                  "catalogue legible and trustworthy to procurement buyers who compare on specification.",
-        approach="A clean catalogue structure that puts specifications where buyers look for them, on a foundation "
-                 "that can be found in search rather than only handed out as a link.",
-        result="A professional digital presence that represents the brand credibly to industrial buyers.",
+               "Product catalogue structure organised by application, not by internal SKU grouping",
+               "Specification presentation aimed at procurement readers",
+               "On-page SEO foundation and indexable catalogue pages"],
+        challenge="Chemical distribution is a credibility-first category with an unglamorous catalogue. Buyers "
+                  "compare on specification and supply reliability, so the site had to make dry technical "
+                  "information legible and trustworthy rather than dress it up.",
+        approach="A clean catalogue structure that puts specifications where buyers look for them, built on a "
+                 "foundation that can actually be found in search rather than only handed out as a link in an "
+                 "email.",
+        result="A professional digital presence that represents the company credibly to industrial buyers and "
+               "gives its catalogue a searchable home.",
         stack=["WordPress", "Elementor", "On-page SEO"],
     ),
     dict(
@@ -221,15 +242,18 @@ PROJECTS = [
         client="RIAS Strategic \u2014 the agency whose talent pool I freelance through",
         url=("Visit riasstrategic.com", "https://riasstrategic.com"),
         intro="A digital platform for RIAS Strategic, the virtual assistant agency whose freelance talent pool I "
-              "belong to as a UI/UX and website developer. Their own site was one of the projects I delivered.",
+              "belong to as a UI/UX and website developer. Their own site was one of the projects I delivered for "
+              "them, which is a reasonable signal in itself.",
         scope=["WordPress design and build",
-               "Service page structure",
-               "Brand-aligned visual layout"],
+               "Service page structure organised around client problems rather than internal divisions",
+               "Brand-aligned visual layout",
+               "Conversion path for enquiry and onboarding"],
         challenge="A services business has nothing physical to show. Credibility has to come from how clearly the "
-                  "offer is structured and how easily a prospect can work out whether it applies to them.",
-        approach="Service pages structured around the client's problem rather than the agency's internal divisions, "
-                 "with a visual layout that stays consistent with the existing brand.",
-        result="A platform ready for client acquisition and service promotion.",
+                  "offer is structured and how quickly a prospect can work out whether it applies to them.",
+        approach="Service pages framed by the problem the client arrives with, with the agency's internal "
+                 "structure kept out of the navigation entirely, on a layout consistent with the existing brand.",
+        result="A platform ready for client acquisition and service promotion, and the site the agency uses to "
+               "represent itself.",
         stack=["WordPress", "Elementor", "UX layout"],
     ),
     dict(
@@ -239,40 +263,90 @@ PROJECTS = [
         type="E-commerce", date="2025", role="Store build",
         client="The Paw Charm",
         url=("Visit thepawcharmstore.com", "https://thepawcharmstore.com"),
-        intro="An e-commerce store for a pet accessories brand selling directly to consumers. A different "
-              "problem from the B2B work: impulse-led, mobile-first, and dependent on checkout not getting in the way.",
-        scope=["Shopify store setup",
-               "Product catalogue and collections",
-               "Checkout optimisation"],
-        challenge="Consumer retail forgives nothing at checkout. Every extra step between wanting the product and "
-                  "owning it costs conversions.",
+        intro="A Shopify store for a pet accessories brand selling directly to consumers. A different problem "
+              "from the B2B work: impulse-led, mobile-first, and entirely dependent on the checkout not getting "
+              "in the way.",
+        scope=["Shopify store setup and theme configuration",
+               "Product catalogue and collection structure built around browsing behaviour",
+               "Checkout path optimisation",
+               "Mobile-first presentation, where the majority of the traffic lands"],
+        challenge="Consumer retail forgives nothing at checkout. Every additional step between wanting the "
+                  "product and owning it costs conversions, and the margin on accessories does not leave room to "
+                  "buy that traffic back.",
         approach="A catalogue organised the way shoppers browse rather than the way inventory is filed, with the "
-                 "checkout path kept as short as the platform allows.",
-        result="An operational store ready to sell, with the fulfilment and catalogue structure in place behind it.",
-        stack=["Shopify", "E-commerce setup", "Product catalogue"],
+                 "checkout path kept as short as the platform allows and the mobile view treated as the primary "
+                 "design target rather than an adaptation.",
+        result="An operational store ready to sell, with the catalogue and fulfilment structure in place behind "
+               "it.",
+        stack=["Shopify", "E-commerce setup", "Product catalogue", "CRO"],
     ),
     dict(
         key="lingga", featured=False, img="lingga",
         title="Lingga Florist",
         tagline="Florist site plus a paid search campaign",
-        type="Website + Google Ads", date="2023", role="Build &amp; campaign",
+        type="Website + Google Ads", date="Aug \u2014 Sep 2023", role="Build &amp; campaign",
         client="Lingga Florist",
         url=("Visit linggaflorist.com", "https://linggaflorist.com/"),
         intro="A florist store website, plus a Google Ads campaign I ran as a personal project between August and "
               "September 2023. It is the one place in my work where I have run paid search end to end rather than "
-              "relying on organic.",
+              "relying on organic, and I include it precisely because it marks the boundary of what I have "
+              "actually executed.",
         scope=["Website build and product presentation",
-               "Google Ads campaign structure and targeting",
-               "Conversion tracking setup",
+               "Google Ads campaign structure, targeting and ad copy",
+               "Conversion tracking configured before spend started",
                "Ongoing optimisation across the campaign period"],
-        challenge="Florists compete on immediacy. People buy flowers with a deadline. The campaign had to catch "
-                  "high-intent searches at the moment of need on a small budget.",
-        approach="Tight keyword targeting around purchase-intent terms, with conversion tracking in place from the "
-                 "start so budget could be moved toward what was actually converting rather than what was getting "
-                 "clicks.",
-        result="Across the campaign period: 261,000+ impressions, 795 clicks, 275 conversions, and a 34.6% conversion "
-               "rate on roughly Rp 1.04M of total spend.",
-        stack=["WordPress", "Google Ads", "Conversion tracking"],
+        challenge="Florists compete on immediacy. People buy flowers against a deadline, so the campaign had to "
+                  "catch high-intent searches at the moment of need, on a budget small enough that wasted "
+                  "impressions mattered.",
+        approach="Tight keyword targeting around purchase-intent terms rather than broad category terms, with "
+                 "conversion tracking in place from the start so budget could follow what was actually converting "
+                 "instead of what was merely getting clicks.",
+        result="Across the campaign period: 261,000+ impressions, 795 clicks and 275 conversions at a 34.6% "
+               "conversion rate, on roughly Rp 1.04M of total spend.",
+        stack=["WordPress", "Google Ads", "Conversion tracking", "GA4"],
+    ),
+    dict(
+        key="invera", featured=False, img="invera",
+        title="Invera Wedding",
+        tagline="Wedding platform built for first impressions",
+        type="Website development", date="2025", role="Website developer",
+        client="Invera Wedding \u2014 via RIAS Strategic",
+        url=("Visit inverawedding.web.id", "https://inverawedding.web.id"),
+        intro="A wedding service platform built through the RIAS Strategic talent pool, one of several projects "
+              "spanning SMEs, companies and factories.",
+        scope=["WordPress and Elementor build",
+               "Service and package presentation",
+               "Gallery setup tuned so imagery stays sharp without bloating the page",
+               "Local SEO fundamentals"],
+        challenge="Wedding sites live or die on first impression. The design had to feel personal and unhurried "
+                  "while still loading quickly on the phones most guests would actually open it on. Image-heavy "
+                  "and fast are not natural allies.",
+        approach="An image-led build with the couple's story and the enquiry flow as the spine of the layout, "
+                 "with the photography compressed and sized so the emotional impact survives a mobile connection.",
+        result="Delivered and live, with a structure that supports service enquiries rather than only looking "
+               "good.",
+        stack=["WordPress", "Elementor", "Local SEO"],
+    ),
+    dict(
+        key="nyliem", featured=False, img="nyliem",
+        title="Ny Liem Heritage",
+        tagline="Heritage brand, translated to the web",
+        type="Website development", date="2025", role="Website developer",
+        client="Ny Liem Heritage \u2014 via RIAS Strategic",
+        url=("Visit nyliem.com", "https://nyliem.com"),
+        intro="A brand site for a heritage culinary business with a long story and an established product line, "
+              "also delivered through RIAS Strategic.",
+        scope=["WordPress design and build",
+               "Brand storytelling layout that gives the history room",
+               "Product presentation for an established range",
+               "SEO-ready page structure"],
+        challenge="Translating an established offline brand identity into a web presence without flattening the "
+                  "character that made it recognisable in the first place. A generic modern template costs a "
+                  "heritage brand more than it gains.",
+        approach="The build leads with the brand's own visual language and keeps the interface deliberately "
+                 "quiet, so the heritage does the talking rather than the layout.",
+        result="A premium digital presence that carries the brand's story instead of replacing it.",
+        stack=["WordPress", "Elementor", "Brand design"],
     ),
 ]
 
@@ -478,8 +552,17 @@ OTHER_SECTION = '''                  <!-- Content Block - Other Work Start -->
 %s                      </div>
                     </div>
 
-                    <p class="type-basic-160lh animate-in-up work-note">Two more corporate sites, Agromas Tapioca
-                      and Agromas Crackers, are in development and will be added once they are live.</p>
+                    <div class="work-note animate-in-up">
+                      <p class="type-basic-160lh">Also built, outside client work:
+                        <a class="link-small-underline" href="https://github.com/Dyrnzefanya/seoflow-ai-dashboard" target="_blank" rel="noopener">SEOFlow AI Dashboard</a>,
+                        a full-stack SEO analytics SaaS on Next.js, TypeScript, Supabase and Vercel; and
+                        <a class="link-small-underline" href="https://github.com/Dyrnzefanya/Watermark-Bulk" target="_blank" rel="noopener">WaterStamp</a>,
+                        a bulk WebP watermarking tool that runs entirely in the browser in a single Vanilla JS
+                        file, with no backend and no upload. App Store Optimisation work on a Play Store app
+                        rounds out the list.</p>
+                      <p class="type-basic-160lh">Two more corporate sites, Agromas Tapioca and Agromas Crackers,
+                        are in development and will be added once they are live.</p>
+                    </div>
 
                   </div>
                   <!-- Content Block - Other Work End -->
