@@ -1,0 +1,365 @@
+# docs-parallax-web-dyrn
+
+Working context for **dyrn-site**, the personal website. Read this before changing
+anything here.
+
+`README.md` next door covers *how to build and deploy*. This file covers *why things
+are the way they are*, what has already been decided, and what is deliberately unfinished.
+
+- **Live:** https://dyrnzefanya.github.io/personal-site/
+- **Repo:** `Dyrnzefanya/personal-site` (public, GitHub Pages from `main`, folder `/`)
+- **Local:** `D:\CV\dyrn-site`
+- **Last session:** 4 August 2026
+
+---
+
+## 1. The boundary: CV work vs website work
+
+`D:\CV` holds two unrelated bodies of work that happen to share a parent folder. Mixing
+them up is the single easiest way to break something, so this is the first section.
+
+### This is website work
+
+| Path | What it is |
+|---|---|
+| `D:\CV\dyrn-site\` | **This project.** The entire live site. Nothing outside it is deployed. |
+| `D:\CV\Personal-HTML\` | The purchased HTML templates. Blayden is the one in use; the others were evaluated and rejected. Also holds `CONTENT-MAP.md`, the original content plan. |
+| `D:\CV\Portfoliodyrn\` | The **old** portfolio site plus the source mockup images. Read-only reference now — project screenshots were taken from here. Not deployed. |
+
+### This is CV / job-application work — do not touch it for website changes
+
+| Path | What it is |
+|---|---|
+| `D:\CV\Docs\` | **The source of truth.** `Dyrn_Verified_Facts_Memory.md` governs every factual claim, on the CV *and* on the site. `Resume_Strategist_Instructions_v4.md` is the process doc. |
+| `D:\CV\SecondBrain\` | Structured notes per project, employer and proof point. Richest source of project detail. |
+| `D:\CV\master resume\` | Master CV files. `dyrn.jpg` — the hero portrait — came from here. |
+| `D:\CV\cover letter\`, `CV EDIT\`, `CLAUDE CV\`, `Output\`, `tessa cv\`, `company\` | CV variants, cover letters, per-employer applications. Irrelevant to the site. |
+| `D:\CV\templates\`, `tools\`, `SERP\` | Tooling for the CV/job-search workflow, not for the site. |
+
+### Where they legitimately meet
+
+Exactly two places:
+
+1. **Facts.** Site copy and CV copy must agree, because a recruiter reads both. The
+   Verified Facts Memory is the arbiter for both. If a claim changes there, it changes
+   in both places.
+2. **The CV PDF.** The site links to a downloadable CV. That file is produced by the CV
+   workflow and *consumed* by the site. See §6 — it is currently withheld on purpose.
+
+Everything else is separate. A website task should never require editing anything in
+`Docs\`, `SecondBrain\` or `master resume\`; those are inputs, and they are read-only
+from this side.
+
+---
+
+## 2. What the site is trying to do
+
+One page, two audiences:
+
+- **Recruiters** enter through *Resume* and *About*, and want to leave with a CV.
+- **Freelance clients** enter through *Services* and *Portfolio*, and want to start a
+  conversation.
+
+The design decisions follow from that split: two peer calls-to-action in the hero, an
+enquiry-type dropdown on the contact form, and a portfolio that has to prove both
+"can build things" and "gets results".
+
+Positioning, in the site's own words: WordPress developer and SEO specialist, Jakarta,
+eight years across IT and digital. The through-line is that he has been an entire
+digital and IT department by himself for four years.
+
+---
+
+## 3. Current state
+
+Live and working:
+
+- Single page: home · portfolio · about · services · resume · contact
+- **12 project case studies**, each with type/date/role/client, an intro, a scope list,
+  the challenge, the approach, the result, a stack tag row, and a live-site link
+- Six featured in a scroll-driven stack, six in an "Other work" tile grid
+- Real portrait in the hero, monochrome-treated
+- `llms.txt`, `sitemap.xml`, JSON-LD entity graph, visible "last updated" date
+- Accessibility: pinch zoom restored, real form labels, skip link, focus rings
+
+Commit history so far:
+
+```
+acfc929  Hero: real portrait, anchored bottom-right and treated for legibility
+9a3eeca  Portfolio: deepen every case study and rebalance what it proves
+5a44cfb  SEO, AI-search and accessibility pass
+7d6cd61  Hero: use the template's cutout objects as placeholder decoration
+2a14442  README: record the live Pages URL
+6da9497  Personal site: portfolio, resume and services in one page
+```
+
+---
+
+## 4. How the work went, and why
+
+Chronological, because several decisions only make sense in order.
+
+### 4.1 Template selection
+
+Seven templates were in `Personal-HTML`. Each was served locally and rendered rather
+than judged from its thumbnail. **Blayden demo-2** won because it was the only one with
+both a *Services* section (freelance) and a *Resume* section (hiring), it scrolls
+normally, and it was the newest and least jQuery-bound.
+
+Rejected, with reasons worth remembering so they are not re-litigated: Gilber and Roger
+hijack scrolling with `pagepiling` (bad for a long CV and bad for SEO); Roberto scrolls
+horizontally; Profession looks like 2016; Merge is a WordPress theme, not HTML.
+
+### 4.2 Content
+
+Every line was written from `Docs\Dyrn_Verified_Facts_Memory.md`. The blocklist in that
+file was applied literally — see §5.
+
+The old portfolio's testimonials were **not** carried over. They carry their own
+disclaimer: *"representational and pending formal client approval for publication."*
+Unapproved quotes do not go on a public site.
+
+### 4.3 Weight
+
+The template shipped at 21 MB with 1054 KB of render-blocking CSS. Now 11 MB, with
+`plugins.css` at 318 KB (~37 KB gzipped by Pages). Removed: FontAwesome (zero `fa-`
+classes), unused Phosphor icon weights and ~5,800 unused glyph rules, legacy `.ttf`/`.svg`
+font formats, demo image folders, `-demo.css` files, the Vegas plugin.
+
+The icon subsetting is **scripted, not hand-edited** — it reads the icon list out of
+`index.html`. If you add a new `ph-*` icon to the markup its CSS rule will be missing;
+re-run the subsetter against a fresh `plugins.css` or add the one `content:` rule by hand.
+
+### 4.4 Deployment
+
+Deliberately a **project site** under a sub-path, not the root user site. The root repo
+`dyrnzefanya.github.io` already exists, is live, and contains a `Personality-Test` folder;
+overwriting it was not worth it. The cost of that choice is real and is documented in §7.
+
+### 4.5 SEO / AI-search pass
+
+Added `llms.txt`, `sitemap.xml`, a JSON-LD `@graph` (ProfilePage + WebSite + Person +
+an ItemList of seven projects, cross-linked by `@id`), and a machine-readable
+`dateModified` plus a visible "last updated" line.
+
+Accessibility problems found — all of them shipped by the template, none introduced here:
+`maximum-scale=1` disabled pinch zoom (WCAG 1.4.4); nine form inputs had no `<label>`,
+only placeholders; no skip link; focus rings removed in places.
+
+### 4.6 Rebalancing the portfolio
+
+The portfolio was eleven website builds, which framed someone whose headline says
+"IT, SEO and AI automation" as a web developer who also does SEO. The proof contradicted
+the positioning.
+
+Fixed by promoting two AI systems into the featured stack (Hermes, and the Quotation vs
+PO validation layer, which had been one sentence buried inside another popup), rewriting
+Tjikko as digital **and** IT ownership, and linking SEOFlow and WaterStamp as side work.
+Copy went from roughly 2,600 to 3,450 words.
+
+### 4.7 Copy humanisation
+
+The skill's phrase-swapper found zero AI patterns, but it only does 1:1 phrase swaps and
+is blind to structural tells. A manual scan found **25 lines carrying em-dashes** — the
+loudest signal in machine-written prose. Now 8, of which 6 are legitimate label
+separators (`Client — via RIAS Strategic`). What was removed was the rhetorical
+mid-sentence dash used as a dramatic pause.
+
+**If you write new copy for this site, do not reintroduce them.** Also watch rule-of-three
+lists and "X, not Y" antithesis; both were already over-used here.
+
+---
+
+## 5. Content rules (non-negotiable)
+
+From the blocklist in `Docs\Dyrn_Verified_Facts_Memory.md`. Re-read that file before
+writing any new claim.
+
+- **busabunga.com** — cite speed-to-rank ("#1 within about a month of launch"). Never the
+  raw percentages (+1,500% clicks / +36,800% impressions) or raw click counts; the base
+  was tiny and the numbers collapse under questioning.
+- **tjikkofoam.com** — use ~40% organic growth / ~25% more leads. Never the raw GSC
+  figures, which are modest in absolute terms.
+- **RIAS Strategic** is a virtual assistant agency whose freelance talent pool he belongs
+  to. **Never** his own agency.
+- **No Google Ads or Meta Ads at Tjikko.** Tjikko growth is SEO-only. Meta Ads anywhere is
+  framework knowledge, never executed. The one legitimate paid-search credit is the Lingga
+  Florist personal project — and its CPC figure stays out until he confirms it.
+- **No marketplace sales results.** Shopee/Tokopedia: built and managed the listings, and
+  is leading the current reactivation. Not results.
+- **No hours-saved figures.** They conflict across old CVs.
+- **AquaFoam** — the Docs say *ask before using anything AquaFoam*. It is absent from the
+  site for that reason, not by oversight.
+- **No testimonials** until real, approved quotes exist.
+- **No website count.** The RIAS project count is flagged unverified.
+- **Jakarta, not Bekasi.** Older CVs get this wrong.
+- **Never mention the hybrid/remote preference.** That is an offer-stage conversation.
+
+---
+
+## 6. Open items
+
+| # | Item | Notes |
+|---|---|---|
+| 1 | **Contact form endpoint** | **Blocker.** `index.html` still has `value="YOUR_FORM_ID"`. Needs a Web3Forms access key or a Formspree endpoint. Until then, anyone who submits the form gets silence. |
+| 2 | **CV PDF** | Withheld on purpose. `master resume\Dyrn_Zefanya_Resume_Digital_Specialist.pdf` (24 Jun 2026) predates the Verified Facts Memory and contains "Bekasi", the AquaFoam +20% sales claim, Google/Meta Ads execution at Tjikko, and hours-saved figures — all blocklisted. Regenerate from Docs, drop it at `cv/Dyrn_Zefanya_CV.pdf`, remove `cv/` from `.gitignore`, and switch the three "Request my CV" buttons back to `href="cv/Dyrn_Zefanya_CV.pdf" download`. |
+| 3 | **No IT case study** | Wazuh across 50+ devices with ~30% less downtime is only a bullet inside the Tjikko popup. Someone hiring for an IT role gets nothing from the portfolio. Needs its own card, ideally with a topology diagram or dashboard screenshot. |
+| 4 | **IEEE publication is buried** | Sits at the bottom of the resume block. It is a genuine differentiator in the Indonesian market. |
+| 5 | **Heading hierarchy skips levels** | h2 → h5 in the portfolio stack, h2 → h6 in the about block. Fixing it means changing tags whose sizing comes from the tag rather than the class, so it needs a visual check first. |
+| 6 | **No process / "how I work" section** | Freelance clients want to know this before they make contact. |
+| 7 | **Third-party presence** | AI search engines cite Wikipedia, Reddit and review sites far more than personal domains. This is the biggest remaining lever for AI visibility and none of it lives on this page. |
+| 8 | **OG image is generated, not designed** | Functional 1200×630 card. A properly designed one would do better. |
+
+---
+
+## 7. Constraints and gotchas
+
+Things that cost time to discover. Read before debugging.
+
+### The whole page goes blank if one image 404s
+
+`js/app.js` hides all content until `imagesLoaded` fires its `done` event. That event only
+fires when **every** image loads successfully. A single 404 means `done` never fires and
+the page stays blank forever, with no console error. If the site renders as an empty dark
+screen, check for a broken image path first.
+
+### robots.txt and llms.txt cannot work from this repo
+
+Both are **root-only**. Crawlers read `https://dyrnzefanya.github.io/robots.txt`, never
+`.../personal-site/robots.txt`. That path belongs to the separate `dyrnzefanya.github.io`
+repo. The `llms.txt` here is linked from the footer and some agents will follow it, but it
+is not in the canonical location. The fix is to add `robots.txt` to the root repo (config
+is in `README.md`) or move the site to the root / a custom domain.
+
+### The four absolute URLs
+
+`canonical`, `og:url`, `og:image` and the JSON-LD `url` all hard-code the sub-path. Every
+other path in the project is relative. If the site moves, those four lines are the entire
+change.
+
+### Stack cards are absolutely positioned siblings
+
+`.portfolio-stack__inner` **must keep `isolation: isolate`**. Without it, a `z-index` on a
+card's caption escapes its own card and paints over every card that slides in afterwards —
+the first project's title ends up stuck on screen for the whole stack.
+
+### The popup cover image needs its height cap
+
+The case-study popup scrolls fine, but with a full-height cover image the opening view is
+all photo and nothing else, which reads as an image-only lightbox. `custom.css` caps it at
+`min(58vh, 620px)` so the title and the first rows of data land in view. Keep the cap if
+you swap the artwork.
+
+### `loading="lazy"` does nothing for the popup images
+
+They live inside `display: none` containers and Chrome loads lazy images it cannot
+position. Roughly 1.7 MB of project imagery still loads up front. Genuinely deferring it
+means swapping `src` in JS on popup open. WebP would help more; no encoder was available
+on this machine, so the mockups are JPEG at 1600 px.
+
+### Em-dashes in the generator are escape sequences
+
+`tools/gen_projects.py` stores them as the six characters `\u2014`, not the character. A
+find-and-replace using the literal character silently matches nothing. This wasted a cycle
+once: the edit appeared to work on `index.html`, then regenerating put every dash back.
+
+### Hero portrait legibility was measured, not eyeballed
+
+The browser in the working session could not produce screenshots, so white-text contrast
+over the photo was computed by sampling the JPEG and applying the CSS filter maths.
+Colour at `brightness(.72)` scored **2.0:1** against the brightest pixels — below the 3:1
+WCAG minimum for large text. Monochrome at `brightness(.55) contrast(1.15)` scores
+**3.3:1** worst-pixel, 10.4:1 average, and matches the site's desaturated imagery. If you
+change the photo or the filter, re-check this rather than trusting it.
+
+**Nobody has visually reviewed the hero.** The geometry and contrast are sound on paper.
+It still deserves human eyes at several widths.
+
+### Pushing has been slow
+
+Pushes to this repo have stalled for minutes at a time and been reported as hung when they
+had actually succeeded. **Always `git fetch` before concluding a push failed** — a stale
+`origin/main` ref caused a false report once. `http.version HTTP/1.1` and a large
+`http.postBuffer` are already set locally.
+
+---
+
+## 8. Making changes
+
+### Project content
+
+Do **not** hand-edit the portfolio markup. Edit the `PROJECTS` list in
+`tools/gen_projects.py` and run:
+
+```bash
+python tools/gen_projects.py
+```
+
+It rewrites the featured stack, the tile grid and all 12 popups in place, and is
+idempotent — running it twice produces the same file. Hand edits to that region get
+overwritten on the next run.
+
+Adding a featured project also needs a background image rule (`.portfolio-item-5` …
+`-10` in `custom.css`, matched to the featured order) and, ideally, an entry in the
+JSON-LD `ItemList` so the structured data matches what the page shows.
+
+### Styling
+
+All site-specific CSS lives in `css/custom.css`. `main.css` and `plugins.css` are template
+files, kept unmodified apart from the icon subsetting, so the template stays updatable.
+`custom.css` loads last and wins.
+
+### Behaviour
+
+`js/custom.js` holds site-specific JS. Currently one thing: it stops clicks on
+"Visit live site" from bubbling to the card, which would otherwise open the case study
+*and* follow the link. Both paths are worth re-testing if you touch it — clicking the pill
+must not open the popup, and clicking anywhere else on the card must.
+
+### Verification without a browser
+
+The browser tooling was unreliable throughout. These checks catch most breakage:
+
+```bash
+# every local asset referenced by the page exists
+# every in-page anchor resolves
+# every popup trigger has a target
+# JSON-LD parses
+# CSS braces balance
+python - <<'EOF'
+import io, os, re, json
+s = io.open("index.html", encoding="utf-8").read()
+refs = set(re.findall(r'(?:src|href)="(?!https?:|mailto:|tel:|#)([^"]+)"', s))
+print("missing assets:", [r for r in sorted(refs) if not os.path.exists(r.split('?')[0])] or "none")
+ids = set(re.findall(r'id="([^"]+)"', s))
+anchors = set(re.findall(r'href="#([a-zA-Z][\w-]*)"', s))
+print("broken anchors:", sorted(a for a in anchors if a not in ids) or "none")
+mfp = set(re.findall(r'data-mfp-src="#([^"]+)"', s))
+print("popup wiring  :", "ok" if mfp <= ids else sorted(mfp - ids))
+json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', s, re.S).group(1))
+print("JSON-LD       : valid")
+c = io.open("css/custom.css", encoding="utf-8").read()
+print("custom.css    :", "balanced" if c.count("{") == c.count("}") else "UNBALANCED")
+EOF
+```
+
+Then serve it and look at it properly:
+
+```bash
+python -m http.server 8877
+```
+
+---
+
+## 9. Quick reference
+
+| Need | Go to |
+|---|---|
+| Change a project's copy | `tools/gen_projects.py` → `PROJECTS`, then re-run it |
+| Change any styling | `css/custom.css` |
+| Change site behaviour | `js/custom.js` |
+| Check a factual claim | `D:\CV\Docs\Dyrn_Verified_Facts_Memory.md` |
+| Find richer project detail | `D:\CV\SecondBrain\03-Projects\` |
+| Source mockups and screenshots | `D:\CV\Portfoliodyrn\` |
+| Deploy steps, asset inventory | `README.md` |
+| Original content plan | `D:\CV\Personal-HTML\CONTENT-MAP.md` |
