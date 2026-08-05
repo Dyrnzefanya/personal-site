@@ -9,7 +9,7 @@ are the way they are*, what has already been decided, and what is deliberately u
 - **Live:** https://dyrnzefanya.github.io/personal-site/
 - **Repo:** `Dyrnzefanya/personal-site` (public, GitHub Pages from `main`, folder `/`)
 - **Local:** `D:\CV\dyrn-site`
-- **Last session:** 4 August 2026
+- **Last session:** 5 August 2026
 
 ---
 
@@ -80,11 +80,14 @@ Live and working:
 - Six featured in a scroll-driven stack, six in an "Other work" tile grid
 - Real portrait in the hero, monochrome-treated
 - `llms.txt`, `sitemap.xml`, JSON-LD entity graph, visible "last updated" date
-- Accessibility: pinch zoom restored, real form labels, skip link, focus rings
+- Accessibility: pinch zoom restored, real form labels, skip link, focus rings,
+  heading hierarchy with no skipped levels
 
 Commit history so far:
 
 ```
+1ad4cee  Fix heading hierarchy, and remove a flower growing out of my shoulder
+1045212  Add docs-parallax-web-dyrn: working context for future sessions
 acfc929  Hero: real portrait, anchored bottom-right and treated for legibility
 9a3eeca  Portfolio: deepen every case study and rebalance what it proves
 5a44cfb  SEO, AI-search and accessibility pass
@@ -205,10 +208,9 @@ writing any new claim.
 | 2 | **CV PDF** | Withheld on purpose. `master resume\Dyrn_Zefanya_Resume_Digital_Specialist.pdf` (24 Jun 2026) predates the Verified Facts Memory and contains "Bekasi", the AquaFoam +20% sales claim, Google/Meta Ads execution at Tjikko, and hours-saved figures — all blocklisted. Regenerate from Docs, drop it at `cv/Dyrn_Zefanya_CV.pdf`, remove `cv/` from `.gitignore`, and switch the three "Request my CV" buttons back to `href="cv/Dyrn_Zefanya_CV.pdf" download`. |
 | 3 | **No IT case study** | Wazuh across 50+ devices with ~30% less downtime is only a bullet inside the Tjikko popup. Someone hiring for an IT role gets nothing from the portfolio. Needs its own card, ideally with a topology diagram or dashboard screenshot. |
 | 4 | **IEEE publication is buried** | Sits at the bottom of the resume block. It is a genuine differentiator in the Indonesian market. |
-| 5 | **Heading hierarchy skips levels** | h2 → h5 in the portfolio stack, h2 → h6 in the about block. Fixing it means changing tags whose sizing comes from the tag rather than the class, so it needs a visual check first. |
-| 6 | **No process / "how I work" section** | Freelance clients want to know this before they make contact. |
-| 7 | **Third-party presence** | AI search engines cite Wikipedia, Reddit and review sites far more than personal domains. This is the biggest remaining lever for AI visibility and none of it lives on this page. |
-| 8 | **OG image is generated, not designed** | Functional 1200×630 card. A properly designed one would do better. |
+| 5 | **No process / "how I work" section** | Freelance clients want to know this before they make contact. |
+| 6 | **Third-party presence** | AI search engines cite Wikipedia, Reddit and review sites far more than personal domains. This is the biggest remaining lever for AI visibility and none of it lives on this page. |
+| 7 | **OG image is generated, not designed** | Functional 1200×630 card. A properly designed one would do better. |
 
 ---
 
@@ -257,6 +259,14 @@ position. Roughly 1.7 MB of project imagery still loads up front. Genuinely defe
 means swapping `src` in JS on popup open. WebP would help more; no encoder was available
 on this machine, so the mockups are JPEG at 1600 px.
 
+### Heading tags are chosen by rank, not by size
+
+Fixed on 5 Aug 2026. The template picked tags by how big it wanted the text; the
+document now runs h1 → h2 → h3 → h4 with no skips, and `custom.css` pins the sizes
+so nothing moved. **If you add a heading, pick the tag by its place in the outline
+and pin the size in `custom.css` if it needs to look different.** Do not reach for
+h5/h6 to make text smaller — there are none left on the page.
+
 ### Em-dashes in the generator are escape sequences
 
 `tools/gen_projects.py` stores them as the six characters `\u2014`, not the character. A
@@ -272,8 +282,11 @@ WCAG minimum for large text. Monochrome at `brightness(.55) contrast(1.15)` scor
 **3.3:1** worst-pixel, 10.4:1 average, and matches the site's desaturated imagery. If you
 change the photo or the filter, re-check this rather than trusting it.
 
-**Nobody has visually reviewed the hero.** The geometry and contrast are sound on paper.
-It still deserves human eyes at several widths.
+The hero was finally seen on 5 Aug 2026 once the browser recovered, and the maths held:
+the headline stays legible where it crosses the portrait. Seeing it also caught something
+no measurement could — a leftover decorative magnolia sitting on his shoulder, since
+removed. **It has still only been viewed at one width (1707px).** Narrow and mid widths
+deserve human eyes.
 
 ### Pushing has been slow
 
