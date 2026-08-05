@@ -44,6 +44,46 @@
   background-image: url("../img/work/hermes-seo-report.jpg");
 }
 
+/* --- Heading hierarchy ------------------------------------- */
+/* The template picked heading tags by how big it wanted the text, which left
+   the document skipping h2 -> h5, h2 -> h6 and h2 -> h4. The tags are now
+   chosen by rank, and the sizes are pinned here so nothing moves visually.
+   Values are copied from the original tag rules in main.css. */
+
+/* Portfolio stack captions: were h5, now h3 under the section's h2. */
+.portfolio-stack__title {
+  font: normal 500 2.2rem var(--_font-accent);
+}
+
+/* Case-study block labels: were <p>, now h4 under each popup's h3.
+   .tagline-chapter already carries a full `font` shorthand and outranks the
+   bare h4 tag rule, so no size pinning is needed for these. */
+
+/* Contact details in the About block were marked up as h6. They are not
+   headings, so they are plain paragraphs now; this restores the h6 look. */
+.about-info__value {
+  font: normal var(--font-weight-base) 1.8rem/1.6 var(--_font-default);
+  color: var(--t-bright);
+}
+
+@media only screen and (min-width: 1200px) {
+  .about-info__value {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .about-info__value {
+    font-size: 2.2rem;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .about-info__value {
+    font-size: 2.6rem;
+  }
+}
+
 /* --- Colophon ---------------------------------------------- */
 /* A visible "last updated" date. AI search engines weight recency, and an
    undated page loses to a dated one on otherwise equal footing. */
@@ -475,18 +515,6 @@ textarea:focus-visible,
           filter: grayscale(1) brightness(0.55) contrast(1.15);
 }
 
-/* Small floating accent, kept from the template's composition. */
-.intro-bg-portrait .intro-bg-03__02 {
-  width: min(13vw, 180px);
-}
-
-.intro-bg-portrait .intro-bg-03__02 img {
-  width: 100%;
-  height: auto;
-  -webkit-filter: brightness(0.55) saturate(0.7);
-          filter: brightness(0.55) saturate(0.7);
-}
-
 /* Below the xl breakpoint the headline uses the full width, so pull the
    portrait back and let it sit further behind the type. */
 @media only screen and (max-width: 1199px) {
@@ -500,10 +528,6 @@ textarea:focus-visible,
   .intro-bg-portrait .intro-bg-03__01 {
     width: 66vw;
     opacity: 0.4;
-  }
-
-  .intro-bg-portrait .intro-bg-03__02 {
-    display: none;
   }
 }
 

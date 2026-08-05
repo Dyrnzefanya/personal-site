@@ -356,7 +356,7 @@ STACK_ITEM = '''                          <!-- portfolio stack single item -->
                           <div class="stack-item">
                             <div data-mfp-src="#project-{key}" class="portfolio-stack__inner portfolio-item-{n} popup-trigger">
                               <div class="portfolio-stack__descr">
-                                <h5 class="portfolio-stack__title light">{title}</h5>
+                                <h3 class="portfolio-stack__title light">{title}</h3>
                                 <p class="portfolio-stack__tagline">{tagline}</p>
 {visit}                              </div>
                             </div>
@@ -398,7 +398,7 @@ BLOCK = '''                          <!-- Project Block - {label} Start -->
                               <div class="container-fluid p-0">
                                 <div class="row g-0">
                                   <div class="col-12 col-xl-4">
-                                    <p class="project__subtitle tagline-chapter">{label}</p>
+                                    <h4 class="project__subtitle tagline-chapter">{label}</h4>
                                   </div>
                                   <div class="col-12 col-xl-8">
 {body}                                  </div>
@@ -543,7 +543,7 @@ OTHER_SECTION = '''                  <!-- Content Block - Other Work Start -->
 
                     <!-- Section Subtitle Start -->
                     <div class="block__subtitle grid-block-subtitle">
-                      <p class="tagline-chapter animate-in-up">Other work</p>
+                      <h3 class="tagline-chapter animate-in-up">Other work</h3>
                     </div>
                     <!-- Section Subtitle End -->
 
