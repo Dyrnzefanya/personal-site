@@ -3561,39 +3561,39 @@
                         <i class="ph-thin ph-smiley reply__icon"></i>
                         <p class="reply__title">Done!</p>
                         <span class="reply__text">Thanks for your message. I'll get back as soon as possible.</span>
-                      </div> 
+                      </div>
+                      <p class="form__error" id="form-error" role="alert" hidden></p>
                       <!-- Reply Messages End -->
 
                       <!-- Contact Form Start -->
-                      <!-- NOTE: replace YOUR_FORM_ID below with a Web3Forms access key or a Formspree
-                           endpoint before going live. GitHub Pages cannot run the template's PHP mailer. -->
-                      <form class="form contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                        <!-- Hidden Required Fields -->
-                        <input type="hidden" name="access_key" value="YOUR_FORM_ID">
-                        <input type="hidden" name="subject" value="New message from dyrnzefanya.github.io/personal-site">
-                        <input type="checkbox" name="botcheck" class="d-none" style="display:none">
-                        <!-- END Hidden Required Fields-->
+                      <!-- Posts to Formspree. js/custom.js intercepts the submit and sends it by
+                           fetch so the page never navigates away; the action below is the
+                           no-JavaScript fallback and must stay correct. -->
+                      <form class="form contact-form" id="contact-form" action="https://formspree.io/f/mgawwjyw" method="POST">
+                        <input type="hidden" name="_subject" value="New enquiry from dyrnzefanya.github.io">
+                        <!-- Formspree honeypot: bots fill it, humans never see it -->
+                        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="visually-hidden">
                         <div class="container-fluid p-0">
                           <div class="row gx-0">
                             <div class="col-12 col-md-6 form__item animate-in-up">
                               <label class="visually-hidden" for="f-name">Your name</label>
-                              <input id="f-name" type="text" name="Name" placeholder="Your name*" required>
+                              <input id="f-name" type="text" name="name" placeholder="Your name*" required>
                             </div>
                             <div class="col-12 col-md-6 form__item animate-in-up">
                               <label class="visually-hidden" for="f-company">Company name</label>
-                              <input id="f-company" type="text" name="Company" placeholder="Company name">
+                              <input id="f-company" type="text" name="company" placeholder="Company name">
                             </div>
                             <div class="col-12 col-md-6 form__item animate-in-up">
                               <label class="visually-hidden" for="f-email">Email address</label>
-                              <input id="f-email" type="email" name="E-mail" placeholder="Email*" required>
+                              <input id="f-email" type="email" name="email" placeholder="Email*" required>
                             </div>
                             <div class="col-12 col-md-6 form__item animate-in-up">
                               <label class="visually-hidden" for="f-phone">Phone number</label>
-                              <input id="f-phone" type="tel" name="Phone" placeholder="Phone">
+                              <input id="f-phone" type="tel" name="phone" placeholder="Phone">
                             </div>
                             <div class="col-12 form__item animate-in-up">
                               <label class="visually-hidden" for="f-enquiry">What is this about?</label>
-                              <select id="f-enquiry" name="Enquiry type" required>
+                              <select id="f-enquiry" name="enquiry" required>
                                 <option value="" disabled selected>What is this about?*</option>
                                 <option value="Job opportunity">A job opportunity</option>
                                 <option value="Website project">A website or SEO project</option>
@@ -3602,7 +3602,7 @@
                             </div>
                             <div class="col-12 form__item animate-in-up">
                               <label class="visually-hidden" for="f-message">Your message</label>
-                              <textarea id="f-message" name="Message" placeholder="A few words about your project or role*" required></textarea>
+                              <textarea id="f-message" name="message" placeholder="A few words about your project or role*" required></textarea>
                             </div>
                             <div class="col-12 form__item animate-in-up">
                               <button class="btn btn-default hover-default" type="submit">

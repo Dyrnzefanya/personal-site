@@ -204,13 +204,12 @@ writing any new claim.
 
 | # | Item | Notes |
 |---|---|---|
-| 1 | **Contact form endpoint** | **Blocker.** `index.html` still has `value="YOUR_FORM_ID"`. Needs a Web3Forms access key or a Formspree endpoint. Until then, anyone who submits the form gets silence. |
-| 2 | **CV PDF** | Withheld on purpose. `master resume\Dyrn_Zefanya_Resume_Digital_Specialist.pdf` (24 Jun 2026) predates the Verified Facts Memory and contains "Bekasi", the AquaFoam +20% sales claim, Google/Meta Ads execution at Tjikko, and hours-saved figures — all blocklisted. Regenerate from Docs, drop it at `cv/Dyrn_Zefanya_CV.pdf`, remove `cv/` from `.gitignore`, and switch the three "Request my CV" buttons back to `href="cv/Dyrn_Zefanya_CV.pdf" download`. |
-| 3 | **No IT case study** | Wazuh across 50+ devices with ~30% less downtime is only a bullet inside the Tjikko popup. Someone hiring for an IT role gets nothing from the portfolio. Needs its own card, ideally with a topology diagram or dashboard screenshot. |
-| 4 | **IEEE publication is buried** | Sits at the bottom of the resume block. It is a genuine differentiator in the Indonesian market. |
-| 5 | **No process / "how I work" section** | Freelance clients want to know this before they make contact. |
-| 6 | **Third-party presence** | AI search engines cite Wikipedia, Reddit and review sites far more than personal domains. This is the biggest remaining lever for AI visibility and none of it lives on this page. |
-| 7 | **OG image is generated, not designed** | Functional 1200×630 card. A properly designed one would do better. |
+| 1 | **CV PDF** | Withheld on purpose. `master resume\Dyrn_Zefanya_Resume_Digital_Specialist.pdf` (24 Jun 2026) predates the Verified Facts Memory and contains "Bekasi", the AquaFoam +20% sales claim, Google/Meta Ads execution at Tjikko, and hours-saved figures — all blocklisted. Regenerate from Docs, drop it at `cv/Dyrn_Zefanya_CV.pdf`, remove `cv/` from `.gitignore`, and switch the three "Request my CV" buttons back to `href="cv/Dyrn_Zefanya_CV.pdf" download`. |
+| 2 | **No IT case study** | Wazuh across 50+ devices with ~30% less downtime is only a bullet inside the Tjikko popup. Someone hiring for an IT role gets nothing from the portfolio. Needs its own card, ideally with a topology diagram or dashboard screenshot. |
+| 3 | **IEEE publication is buried** | Sits at the bottom of the resume block. It is a genuine differentiator in the Indonesian market. |
+| 4 | **No process / "how I work" section** | Freelance clients want to know this before they make contact. |
+| 5 | **Third-party presence** | AI search engines cite Wikipedia, Reddit and review sites far more than personal domains. This is the biggest remaining lever for AI visibility and none of it lives on this page. |
+| 6 | **OG image is generated, not designed** | Functional 1200×630 card. A properly designed one would do better. |
 
 ---
 
@@ -258,6 +257,22 @@ They live inside `display: none` containers and Chrome loads lazy images it cann
 position. Roughly 1.7 MB of project imagery still loads up front. Genuinely deferring it
 means swapping `src` in JS on popup open. WebP would help more; no encoder was available
 on this machine, so the mockups are JPEG at 1600 px.
+
+### The contact form is wired by hand, not by Formspree's SDK
+
+The template ships its own jQuery submit handler pointed at `mail.php`, and it only
+implements `.done()` — a failed request did nothing visible, so a visitor would believe
+a message had been sent when it had not. `js/custom.js` removes that handler
+(`$form.off("submit")` from a *later* `jQuery(function)`, so it runs after app.js has
+bound) and replaces it with a fetch.
+
+Formspree's `@formspree/ajax` CDN bundle was not used: the template already has a styled
+success panel, and the site otherwise loads no third-party JavaScript. The `Accept:
+application/json` header is what stops Formspree replying with a redirect to its own
+thank-you page.
+
+The `action` attribute is the no-JavaScript fallback. Keep it pointing at the real
+endpoint even though the fetch normally handles submission.
 
 ### Heading tags are chosen by rank, not by size
 

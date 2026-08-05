@@ -17,8 +17,8 @@ Personal site for Dyrn Zefanya — freelance portfolio and job-application front
 | # | Item | Status |
 |---|---|---|
 | 1 | **CV PDF** at `cv/Dyrn_Zefanya_CV.pdf` | **Deliberately not published.** See the warning below. The three buttons now read "Request my CV" and jump to the contact form, so nothing 404s. Once a clean PDF exists, drop it in `cv/`, remove `cv/` from `.gitignore`, and change the three `href="#contact"` buttons back to `href="cv/Dyrn_Zefanya_CV.pdf" download` with the caption "Download CV". |
-| 2 | **Contact form endpoint** | **Blocker.** `index.html` still has `value="YOUR_FORM_ID"`. Replace with a Web3Forms access key or swap the `action` for a Formspree endpoint. GitHub Pages cannot run the template's PHP mailer, which has been removed. |
-| 3 | **Portrait photo** | The hero currently uses the template's own decorative cutouts (`img/demo/`) as a placeholder — the composition the template ships with. `pas-foto-dyrn.jpg` was tried and is unusable: red ID-photo background, and it covered the headline. A portrait-orientation shot on a neutral or dark background would replace the `intro-bg-01` block. |
+| 2 | **Contact form endpoint** | Done. Posts to Formspree at `https://formspree.io/f/mgawwjyw`. `js/custom.js` submits by fetch so the page never leaves; the `action` attribute is the no-JavaScript fallback and must stay correct. |
+| 3 | **Portrait photo** | Done. `img/work/portrait.jpg`, from `master resume\dyrn.jpg`, anchored bottom-right at its own aspect ratio with the left and top edges masked into the background. Monochrome at `brightness(.55) contrast(1.15)` so the headline stays legible where it crosses the frame — see the note in `docs-parallax-web-dyrn.md` before changing the filter. |
 | 4 | **OG image** | Done. `img/og-image.jpg` is a generated 1200×630 card: name, role, location and years, with a dimmed busabunga screenshot on the right. Regenerate it if the headline copy changes. |
 | 5 | **Favicon** | Done. The template's cat is gone. `icon.svg` is a "DZ" monogram that inverts with the system colour scheme; the PNGs and a 3-size `favicon.ico` were generated from it, and the web manifest now carries your name and relative icon paths (the template's were absolute, which breaks under a project sub-path). |
 
@@ -66,7 +66,7 @@ git push
 - **`llms.txt`** — plain-language summary of who Dyrn is and what he has shipped, for
   ChatGPT / Claude / Perplexity. Keep the verified numbers in it identical to the page.
 - **`sitemap.xml`** — one URL, submit it in Search Console.
-- **JSON-LD `@graph`** — `ProfilePage` + `WebSite` + `Person` + an `ItemList` of six
+- **JSON-LD `@graph`** — `ProfilePage` + `WebSite` + `Person` + an `ItemList` of seven
   projects, all cross-linked by `@id`. Replaces the flat `Person` object; gives AI
   systems an entity to attach the results to rather than loose prose.
 - **Freshness** — a visible "Last updated" date in the footer plus `dateModified` in the
@@ -108,9 +108,6 @@ Moving the site to the root repo, or onto a custom domain, solves this outright.
 
 ### Known gaps
 
-- **Heading hierarchy skips levels** (h2 → h5 in the portfolio stack, h2 → h6 in the
-  about block). Fixing it means changing tags whose sizing comes from the tag, not the
-  class, so it needs a visual check before shipping.
 - **No third-party presence work.** AI systems cite Wikipedia, Reddit and review sites
   far more than personal domains. Guest posts, a filled-out LinkedIn, and answers in
   relevant communities move AI visibility more than anything left on this page.
@@ -125,7 +122,7 @@ img/work/           project mockups, resized to 1600px and recompressed
                     (9.9 MB of originals → 1.8 MB)
 cv/                 CV PDF, linked from three Download buttons
 tools/              gen_projects.py — regenerates the whole portfolio section
-                    (stack, tile grid and all 11 popups) from one data list
+                    (stack, tile grid and all 12 popups) from one data list
 ```
 
 To add or edit a project, change the `PROJECTS` list in `tools/gen_projects.py` and run it:
@@ -139,15 +136,15 @@ of the script will overwrite it.
 
 ### Portfolio
 
-Eleven projects, each with a full case-study popup: **Type / Date / Role / Client**, an intro,
+Twelve projects, each with a full case-study popup: **Type / Date / Role / Client**, an intro,
 a *What I built* scope list, *The challenge*, *How I approached it*, *Result*, and a *Stack*
 tag row, plus a live link where one exists.
 
 - **Six featured** in the scrolling stack: busabunga.com, Sekolah Trinitas, Tjikko Foam,
-  Hermes, Invera Wedding, Ny Liem Heritage. Stack backgrounds come from `.portfolio-item-5`
-  … `-10` in `custom.css`.
-- **Five under "Other work"** as a tile grid: Tjikko Foam Global, Soka Chemical, RIAS
-  Strategic, The Paw Charm, Lingga Florist.
+  Hermes, Quotation vs PO Validation, Tjikko Foam Global. Stack backgrounds come from
+  `.portfolio-item-5` … `-10` in `custom.css`, matched to the featured order.
+- **Six under "Other work"** as a tile grid: Soka Chemical, RIAS Strategic, The Paw Charm,
+  Lingga Florist, Invera Wedding, Ny Liem Heritage.
 
 Popup IDs are `#project-<key>` (e.g. `#project-busabunga`), wired to their triggers via
 `data-mfp-src`. To add a project, edit the `PROJECTS` list in the generator script rather than

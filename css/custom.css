@@ -550,6 +550,24 @@ textarea:focus-visible,
   height: 100%;
 }
 
+/* --- Contact form error message ---------------------------- */
+/* The template only had a success panel. A failed submit used to be silent,
+   which is worse than an error: the visitor walks away believing they got
+   through. */
+.form__error {
+  margin-top: 1.6rem;
+  padding: 12px 16px;
+  border: 1px solid currentColor;
+  border-radius: 8px;
+  color: #ff8a7a;
+  font-size: 1.5rem;
+  line-height: 1.55;
+}
+
+.form__error[hidden] {
+  display: none;
+}
+
 /* --- Contact form select ----------------------------------- */
 /* Match the native select to the template's input styling. */
 .contact-form select {
