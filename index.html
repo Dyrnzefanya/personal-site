@@ -3571,8 +3571,12 @@
                            no-JavaScript fallback and must stay correct. -->
                       <form class="form contact-form" id="contact-form" action="https://formspree.io/f/mgawwjyw" method="POST">
                         <input type="hidden" name="_subject" value="New enquiry from dyrnzefanya.github.io">
-                        <!-- Formspree honeypot: bots fill it, humans never see it -->
-                        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="visually-hidden">
+                        <!-- Formspree honeypot. display:none is deliberate and inline: a
+                             visually-hidden field is still laid out and gets filled by
+                             browser autofill and password managers, which makes Formspree
+                             reject the submission. Inline rather than a class so it stays
+                             hidden even if the stylesheet fails to load. -->
+                        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
                         <div class="container-fluid p-0">
                           <div class="row gx-0">
                             <div class="col-12 col-md-6 form__item animate-in-up">

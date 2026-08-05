@@ -84,6 +84,16 @@ jQuery(function ($) {
   $form.on("submit", function (event) {
     event.preventDefault();
     clearError();
+
+    // Belt and braces. The honeypot is display:none so nothing should reach it,
+    // but a password manager that ignores that would get the whole submission
+    // rejected by Formspree with "Honeypot field _gotcha is not empty" — and the
+    // visitor would have no idea why.
+    var honeypot = $form.find('[name="_gotcha"]');
+    if (honeypot.length && honeypot.val()) {
+      honeypot.val("");
+    }
+
     setBusy(true);
 
     fetch($form.attr("action"), {

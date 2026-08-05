@@ -259,6 +259,15 @@ means swapping `src` in JS on popup open. WebP would help more; no encoder was a
 on this machine, so the mockups are JPEG at 1600 px.
 
 ### The contact form is wired by hand, not by Formspree's SDK
+**The honeypot must be `display:none`, not visually-hidden.** This bit us once: the
+`_gotcha` field was hidden with the `.visually-hidden` class, which keeps an element
+laid out and reachable so screen readers can still read it. Browser autofill and
+password managers duly filled it, and Formspree rejected every submission with
+*"Honeypot field _gotcha is not empty"*. A honeypot is a bot trap, not content — it
+should be hidden from everything. The `display:none` is inline rather than in a class
+so it survives the stylesheet failing to load, and `js/custom.js` also blanks the field
+on submit in case a password manager ignores it anyway.
+
 
 The template ships its own jQuery submit handler pointed at `mail.php`, and it only
 implements `.done()` — a failed request did nothing visible, so a visitor would believe
