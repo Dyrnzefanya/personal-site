@@ -134,3 +134,109 @@ jQuery(function ($) {
       });
   });
 });
+
+/* -----------------------------------------------------------
+   Service cards → detail popups
+
+   The cards are Magnific Popup triggers like the portfolio cards. Enter and
+   Space open them from the keyboard, and "Discuss a project" inside a popup
+   closes it before the page scrolls to the contact form.
+   ----------------------------------------------------------- */
+jQuery(function ($) {
+  $(document).on("keydown", ".service-card", function (event) {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      $(this).trigger("click");
+    }
+  });
+
+  // Capture phase: the click never bubbles up to document from inside the popup.
+  document.addEventListener(
+    "click",
+    function (event) {
+      if (event.target.closest(".popup-to-contact")) {
+        $.magnificPopup.close();
+      }
+    },
+    true
+  );
+});
+
+/* -----------------------------------------------------------
+   "How I work" stepper
+
+   The markup lists every step as a tab plus a panel, all visible, so it reads
+   fine without JavaScript. This hides all but the current panel, wires the
+   tabs (click, arrow keys, prev/next), fills the progress bar, and moves one
+   card across the mini Trello board to the list the step belongs to.
+   ----------------------------------------------------------- */
+(function () {
+  "use strict";
+
+  var root = document.querySelector("[data-process]");
+  if (!root) {
+    return;
+  }
+
+  var tabs = Array.prototype.slice.call(root.querySelectorAll(".process__tab"));
+  var panels = Array.prototype.slice.call(root.querySelectorAll(".process__panel"));
+  var lists = root.querySelectorAll(".process__list");
+  var bar = root.querySelector(".process__progress span");
+  var count = root.querySelector(".process__count b");
+  var prev = root.querySelector('[data-step="-1"]');
+  var next = root.querySelector('[data-step="1"]');
+  var card = document.createElement("div");
+  card.className = "process__card";
+  var current = 0;
+
+  root.classList.add("is-enhanced");
+
+  function show(i, focus) {
+    current = Math.max(0, Math.min(tabs.length - 1, i));
+    tabs.forEach(function (tab, k) {
+      var on = k === current;
+      tab.setAttribute("aria-selected", on ? "true" : "false");
+      tab.tabIndex = on ? 0 : -1;
+      tab.classList.toggle("is-done", k < current);
+      panels[k].hidden = !on;
+    });
+    var tab = tabs[current];
+    card.innerHTML = "<span>" + tab.querySelector(".process__num").textContent + "</span>" +
+      tab.querySelector(".process__name").textContent;
+    var list = lists[+tab.getAttribute("data-board")];
+    Array.prototype.forEach.call(lists, function (l) {
+      l.classList.toggle("is-active", l === list);
+    });
+    list.querySelector(".process__slot").appendChild(card);
+    card.classList.remove("is-moving");
+    void card.offsetWidth; // restart the drop-in animation
+    card.classList.add("is-moving");
+    bar.style.width = ((current + 1) / tabs.length * 100) + "%";
+    count.textContent = current + 1;
+    prev.disabled = current === 0;
+    next.disabled = current === tabs.length - 1;
+    if (focus) {
+      tab.focus();
+    }
+  }
+
+  tabs.forEach(function (tab, k) {
+    tab.addEventListener("click", function () { show(k); });
+    tab.addEventListener("keydown", function (event) {
+      var to = { ArrowRight: k + 1, ArrowDown: k + 1, ArrowLeft: k - 1, ArrowUp: k - 1,
+                 Home: 0, End: tabs.length - 1 }[event.key];
+      if (to !== undefined) {
+        event.preventDefault();
+        show(to, true);
+      }
+    });
+  });
+
+  [prev, next].forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      show(current + (+btn.getAttribute("data-step")));
+    });
+  });
+
+  show(0);
+})();

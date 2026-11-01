@@ -17,21 +17,26 @@
 }
 
 .portfolio-item-8 {
-  background-image: url("../img/work/hermes.jpg");
+  background-image: url("../img/work/meta-ads.jpg");
 }
 
 .portfolio-item-9 {
+  background-image: url("../img/work/hermes.jpg");
+}
+
+.portfolio-item-10 {
   background-image: url("../img/work/quotation-po.jpg");
 }
 
-.portfolio-item-10 {
+.portfolio-item-11 {
   background-image: url("../img/work/tjikko-global.jpg");
 }
 
-/* Items 9 and 10 are additions, so they need the shared rules
+/* Items 9 to 11 are additions, so they need the shared rules
    main.css applies to .portfolio-item-1 … -8 via its own selectors. */
 .portfolio-item-9,
-.portfolio-item-10 {
+.portfolio-item-10,
+.portfolio-item-11 {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -593,4 +598,435 @@ textarea:focus-visible,
 .contact-form select option {
   color: #141414;
   background-color: #fff;
+}
+
+/* --- Service cards open a detail popup ---------------------- */
+.service-card {
+  cursor: pointer;
+  transition: transform .3s ease;
+}
+
+.service-card:hover,
+.service-card:focus-visible {
+  transform: translateY(-4px);
+}
+
+.service-card__more {
+  display: inline-flex;
+  align-items: center;
+  gap: .4em;
+  margin-top: 1.6rem;
+  font-size: .875rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  opacity: .7;
+}
+
+.service-card:hover .service-card__more {
+  opacity: 1;
+}
+
+/* No cover image on service popups, so the title needs its own room. */
+.service-popup__head {
+  padding-top: 6rem;
+}
+
+.service-popup__title {
+  margin-top: .8rem;
+  font-size: clamp(2.6rem, 6vw, 5.2rem);
+  line-height: 1.05;
+}
+
+/* --- Popup scrolling (PC + mobile) -------------------------- */
+/* main.css gives .popup overflow:hidden (for its rounded corners) plus
+   overscroll-behavior:contain. overflow:hidden makes the card a scroll
+   container that cannot scroll, and contain stops the wheel from chaining
+   on to .mfp-container, the real scroller. Result: the popup only scrolled
+   with the pointer in the margin outside the card. overflow:clip still clips
+   the corners without creating a scroll container. */
+.popup {
+  overflow: hidden;            /* fallback for browsers without clip */
+  overflow: clip;
+  overscroll-behavior: auto;
+}
+
+/* The one scroller: contain keeps the page behind from scrolling once the
+   popup hits its end (and stops pull-to-refresh on mobile). */
+.mfp-fade .mfp-container {
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+}
+
+/* Smaller side margins on phones so the content gets the width. */
+@media only screen and (max-width: 767px) {
+  .popup {
+    width: calc(100% - 2rem);
+    margin: 1rem auto;
+  }
+
+  .mfp-close-btn-in .mfp-close {
+    right: 1.6rem;
+    top: 1.6rem;
+  }
+
+  .service-popup__head {
+    padding-top: 5rem;
+  }
+}
+
+/* --- Popup close button: always visible --------------------- */
+/* The template draws it as a dark icon on the dark popup (invisible at
+   ≥1200px) and positions it inside the card, so it scrolls away. Pin it to
+   the viewport instead, as a light pill with a label.
+   position:fixed only works if no ancestor has a transform, and the fade-in
+   leaves .mfp-content at translateY(0); "none" once open fixes that while
+   keeping the open animation. */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  transform: none;
+}
+
+.mfp-close-btn-in .popup > .mfp-close,
+.mfp-close-btn-in .popup > .mfp-close.permanent-dark {
+  position: fixed;
+  top: 2.4rem;
+  right: 2.4rem;
+  z-index: 1100;
+  display: inline-flex;
+  align-items: center;
+  gap: .8rem;
+  width: auto;
+  height: 4.6rem;
+  padding: 0 1.8rem 0 1.4rem;
+  border: 1px solid rgba(0, 0, 0, .08);
+  border-radius: 99rem;
+  background-color: var(--t-per-bright-light);
+  color: var(--t-per-bright-dark);
+  font: 600 1.4rem/1 var(--_font-default);
+  letter-spacing: .02em;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .35);
+  cursor: pointer;
+}
+
+.mfp-close-btn-in .popup > .mfp-close::before {
+  position: static;
+  transform: none;
+  font-size: 1.8rem;
+}
+
+.mfp-close-btn-in .popup > .mfp-close::after {
+  content: "Close";
+}
+
+.no-touch .mfp-close-btn-in .popup > .mfp-close:hover,
+.no-touch .mfp-close-btn-in .popup > .mfp-close.permanent-dark:hover {
+  background-color: var(--neutral-white);
+  color: var(--t-per-bright-dark);
+  border-color: rgba(0, 0, 0, .08);
+  transform: scale(1.04);
+}
+
+.mfp-close-btn-in .popup > .mfp-close:focus-visible {
+  outline: 2px solid var(--neutral-white);
+  outline-offset: 3px;
+}
+
+@media only screen and (max-width: 767px) {
+  .mfp-close-btn-in .popup > .mfp-close,
+  .mfp-close-btn-in .popup > .mfp-close.permanent-dark {
+    top: 1.6rem;
+    right: 1.6rem;
+    height: 4.2rem;
+    padding: 0 1.4rem 0 1.2rem;
+  }
+}
+
+/* --- How I work: stepper + mini Trello board ---------------- */
+.process__intro {
+  max-width: 64rem;
+  color: var(--t-medium);
+  margin-bottom: 3.2rem;
+}
+
+.process__progress {
+  height: 2px;
+  background: var(--stroke-elements);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 1.6rem;
+}
+
+.process__progress span {
+  display: block;
+  height: 100%;
+  width: 12.5%;
+  background: var(--t-bright);
+  transition: width .5s cubic-bezier(.2, .8, .2, 1);
+}
+
+.process__tabs {
+  list-style: none;
+  margin: 0 0 2.4rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .8rem;
+}
+
+@media only screen and (min-width: 1200px) {
+  .process__tabs {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+}
+
+.process__tab {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .6rem;
+  padding: 1.2rem 1.2rem 1.4rem;
+  border: 1px solid var(--stroke-elements);
+  border-radius: var(--_radius-s);
+  background: transparent;
+  color: var(--t-medium);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color .3s, background-color .3s, color .3s, transform .3s;
+}
+
+.process__tab:hover {
+  color: var(--t-bright);
+  transform: translateY(-2px);
+}
+
+.process__tab[aria-selected="true"] {
+  background: var(--t-bright);
+  border-color: var(--t-bright);
+  color: var(--base);
+}
+
+.process__tab.is-done {
+  color: var(--t-bright);
+}
+
+.process__tab:focus-visible {
+  outline: 2px solid var(--t-bright);
+  outline-offset: 3px;
+}
+
+.process__num {
+  font-size: 1.2rem;
+  letter-spacing: .08em;
+  opacity: .7;
+}
+
+.process__name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.process__body {
+  display: grid;
+  gap: 2.4rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .process__body {
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+.process__panel {
+  border: 1px solid var(--stroke-elements);
+  border-radius: var(--_radius);
+  padding: 2.8rem;
+  margin-bottom: 1.6rem;
+}
+
+.process.is-enhanced .process__panel {
+  margin-bottom: 0;
+  animation: process-in .45s cubic-bezier(.2, .8, .2, 1);
+}
+
+@keyframes process-in {
+  from { opacity: 0; transform: translateY(1.2rem); }
+  to   { opacity: 1; transform: none; }
+}
+
+.process__eyebrow {
+  color: var(--t-muted);
+  margin-bottom: 1rem;
+}
+
+.process__title {
+  font-size: clamp(2.4rem, 3.4vw, 3.4rem);
+  line-height: 1.1;
+  margin-bottom: 1.6rem;
+}
+
+.process__text {
+  color: var(--t-medium);
+}
+
+.process__meta {
+  display: grid;
+  gap: 1.6rem;
+  margin-top: 2.4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--stroke-elements);
+}
+
+@media only screen and (min-width: 768px) {
+  .process__meta {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.process__label {
+  font-weight: 600;
+  color: var(--t-bright);
+  margin-bottom: .4rem;
+}
+
+/* Mini Trello board: only meaningful once JS moves the card. */
+.process__board {
+  display: none;
+  border-radius: var(--_radius);
+  padding: 1.6rem;
+  background: var(--base-tint);
+}
+
+.process.is-enhanced .process__board {
+  display: block;
+}
+
+.process__board-title {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  color: var(--t-medium);
+  margin-bottom: 1.2rem;
+}
+
+.process__lists {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: .6rem;
+}
+
+.process__list {
+  min-height: 15rem;
+  padding: .8rem .6rem;
+  border-radius: .8rem;
+  background: rgba(127, 127, 127, .08);
+  transition: background-color .3s;
+}
+
+.process__list.is-active {
+  background: rgba(127, 127, 127, .18);
+}
+
+.process__list-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--t-medium);
+  margin-bottom: .8rem;
+  min-height: 2.6rem;
+}
+
+.process__card {
+  padding: .8rem;
+  border-radius: .6rem;
+  background: var(--t-bright);
+  color: var(--base);
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.25;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, .25);
+}
+
+.process__card span {
+  display: block;
+  font-size: 1rem;
+  opacity: .6;
+  margin-bottom: .2rem;
+}
+
+.process__card.is-moving {
+  animation: process-card .5s cubic-bezier(.2, .8, .2, 1);
+}
+
+@keyframes process-card {
+  from { opacity: 0; transform: translateY(-1rem) rotate(-3deg); }
+  to   { opacity: 1; transform: none; }
+}
+
+.process__nav {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  margin-top: 2.4rem;
+}
+
+.process.is-enhanced .process__nav {
+  display: flex;
+}
+
+.process__btn {
+  width: 4.4rem;
+  height: 4.4rem;
+  border-radius: 50%;
+  border: 1px solid var(--stroke-elements);
+  background: transparent;
+  color: var(--t-bright);
+  font-size: 1.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color .3s, color .3s, opacity .3s;
+}
+
+.process__btn:hover:not(:disabled) {
+  background: var(--t-bright);
+  color: var(--base);
+}
+
+.process__btn:disabled {
+  opacity: .3;
+  cursor: default;
+}
+
+.process__btn--prev i {
+  transform: rotate(180deg);
+}
+
+.process__count {
+  color: var(--t-medium);
+  min-width: 9rem;
+  text-align: center;
+}
+
+.process__count b {
+  color: var(--t-bright);
+}
+
+.process__cta {
+  margin-top: 4rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .process__panel,
+  .process__card,
+  .process__progress span {
+    animation: none !important;
+    transition: none !important;
+  }
 }

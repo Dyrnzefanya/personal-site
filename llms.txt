@@ -1,50 +1,77 @@
 # Dyrn Zefanya
 
-> IT and digital specialist in Jakarta, Indonesia. Eight years across IT
-> infrastructure and digital marketing, five of them in WordPress, technical SEO
-> and analytics for B2B industrial clients. Available for freelance website and
-> SEO work, and open to full-time roles.
+> Digital growth and systems specialist in Jakarta, Indonesia. 8+ years in IT and
+> digital since 2017, including five as the sole digital and IT owner of a B2B
+> manufacturer. Builds websites, makes them discoverable on Google and in AI answers,
+> runs Meta and Google Ads judged on CRM-qualified leads, and automates the analysis
+> that repeats. Available for freelance website, SEO and ads work, and open to
+> full-time roles.
 
 Site: https://dyrnzefanya.github.io/personal-site/
 Contact: dryndarmawan@gmail.com
 
 ## What he does
 
-- **Website development** — WordPress and Elementor, or Next.js and React. Delivered
-  for factories, schools, SMEs and service businesses.
-- **Technical SEO** — audits, on-page work, technical fixes, local SEO.
+- **Website development** — WordPress and Elementor, Shopify, or Next.js and React.
+  Delivered for factories, schools, a business school, a law firm, SMEs and service businesses.
+- **Technical SEO and GEO** — audits, intent mapping, on-page and technical fixes,
+  schema, local SEO, visibility in Google's AI features.
+- **Paid acquisition** — Meta Ads (Click-to-WhatsApp) and Google Ads, tied to CRM
+  data so decisions use qualified leads rather than platform metrics.
+- **CRM and lead tracking** — Mekari Qontak CRM joined with ad data in Google Sheets
+  (Coefficient, Apps Script dashboards), so every qualified lead traces to an ad.
 - **Analytics and reporting** — GA4, Google Tag Manager, Looker Studio, Search Console.
-- **AI automation** — n8n workflows, MCP integrations, internal agents that remove
-  recurring manual work.
+- **AI automation** — Claude API, Claude Code, MCP and n8n workflows that remove
+  recurring manual work, with a person kept on the decision.
 
 ## Verified results
 
-- **busabunga.com** — built end to end in React; reached #1 and page-one Google
-  positions for its target commercial keywords within about one month of its June 2026
-  launch, on a brand-new domain with no backlinks and no ad budget.
+- **PT Tjikko Sentral Industrial** — roughly 40% growth in organic traffic and 25% more
+  leads after the site rebuild and technical SEO. tjikkofoam.com ranks #1 on Google for
+  "pabrik busa", "produsen busa" and "busa molded", and is cited in Google's AI Overview
+  for "pabrik busa". Wazuh SIEM across 50+ devices cut downtime by about 30%.
+- **busabunga.com** — built in Next.js with Claude Code; reached #1 and page-one Google
+  positions for "floral foam", "wet floral foam" and "busa bunga" within about one month
+  of its June 2026 launch, on a new domain with no backlinks and no ad budget.
 - **Sekolah Trinitas** — #1 Google rankings for five competitive local keywords:
   sekolah kristen lampung, sekolah kristen terbaik lampung, sekolah trilingual terbaik
   lampung, sekolah trilingual lampung, sekolah kristen lampung paling bagus.
-- **PT Tjikko Sentral Industrial** — roughly 40% growth in organic traffic and 25% more
-  leads over four years, SEO-driven with no paid advertising. Wazuh SIEM across 50+
-  devices cut downtime by about 30%.
-- **Hermes AI Agent System** — self-hosted multi-agent stack on Claude API, n8n and MCP.
-  A GA4 Daily Reporter runs in production across three properties.
+- **B2B Meta Ads + CRM (anonymised client)** — 105 CRM-qualified B2B leads traced to
+  individual Meta ads out of 2,573 WhatsApp chats, 1 May – 15 Oct 2026, with three deals
+  worth Rp167M. Daily AI analysis recommends KEEP / SCALE / FIX / PAUSE per ad.
+- **nyliem.com** — 1.4K impressions in Google's Generative AI features, 30 Jul – 12 Oct
+  2026, up from near zero.
+- **Lingga Florist** — Google Ads search campaign, Aug – Sep 2023: 261K+ impressions,
+  795 clicks, 275 conversions (34.6%) on about Rp1.04M spend.
+- **Hermes AI Agent System** — self-hosted stack on Claude API, n8n and MCP. A GA4 Daily
+  Reporter runs in production across three properties, plus a daily SEO audit.
+- **Quotation vs PO validation** — hourly Claude check of customer purchase orders
+  against quotations, live at Tjikko since July 2026.
+
+## Other websites delivered
+
+Tjikko Foam Global (global.tjikkofoam.com), STIE Gentiaras (gentiaras.ac.id),
+Jakarta Law Firm (jakarta-lawfirm.com),
+Soka Chemical (soka-chem.com), RIAS Strategic (riasstrategic.com), The Paw Charm
+(thepawcharmstore.com), Invera Wedding (inverawedding.web.id), Lingga Florist
+(linggaflorist.com), Ny.Liem Heritage (nyliem.com).
 
 ## Background
 
 - IT & Digital Specialist, PT Tjikko Sentral Industrial (Jul 2021 – present). Sole owner
   of the company's entire digital and IT function.
-- UI/UX & Website Developer, RIAS Strategic freelance talent pool (Nov 2025 – present).
-- IT Front End Analyst, PT Metrox Group (Oct 2017 – Jan 2021).
+- Freelance Website Developer, RIAS Strategic freelance talent pool (Nov 2025 – present).
+- IT Application Front-End Analyst, PT Metrox Group (Oct 2017 – Jan 2021).
 - B.Sc. Information Systems, Universitas Multimedia Nusantara, 2017.
 - IEEE publication: "IT Governance Evaluation on Educational Institutions Based on
   COBIT 5.0 Framework" (2017), IEEE Xplore document 8266030.
+- Claude for Performance Marketing Bootcamp, Belajar Lagi (2026).
 
 ## Links
 
 - Portfolio and case studies: https://dyrnzefanya.github.io/personal-site/
 - LinkedIn: https://www.linkedin.com/in/dyrnzefanya
 - GitHub: https://github.com/dyrnzefanya
+- SEOFlow AI Dashboard: https://seoflow-ai.vercel.app
 
-Last updated: 2026-08-04
+Last updated: 2026-11-01

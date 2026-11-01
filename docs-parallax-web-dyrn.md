@@ -9,7 +9,7 @@ are the way they are*, what has already been decided, and what is deliberately u
 - **Live:** https://dyrnzefanya.github.io/personal-site/
 - **Repo:** `Dyrnzefanya/personal-site` (public, GitHub Pages from `main`, folder `/`)
 - **Local:** `D:\CV\dyrn-site`
-- **Last session:** 5 August 2026
+- **Last session:** 1 November 2026
 
 ---
 
@@ -71,6 +71,15 @@ digital and IT department by himself for four years.
 ---
 
 ## 3. Current state
+
+**1 Nov 2026 update:** content re-aligned to the Master Portfolio 2026. Added the B2B Meta
+Ads + CRM case (featured, `portfolio-item-8`, image from the portfolio PDF dashboard) and
+Jakarta Law Firm (other work, screenshot taken headless). Featured stack is now 7 cards
+(`.portfolio-item-5` … `-11`), other work 8 tiles (STIE Gentiaras added), 14 project popups
+plus 6 service popups: Website development, SEO & GEO, Paid ads, CRM & lead tracking,
+Analytics & reporting, AI automation. Services card 3 became
+"Ads & analytics"; tech stack gained an "Ads & CRM" row; education gained a Training row.
+
 
 Live and working:
 
@@ -185,16 +194,19 @@ writing any new claim.
   figures, which are modest in absolute terms.
 - **RIAS Strategic** is a virtual assistant agency whose freelance talent pool he belongs
   to. **Never** his own agency.
-- **No Google Ads or Meta Ads at Tjikko.** Tjikko growth is SEO-only. Meta Ads anywhere is
-  framework knowledge, never executed. The one legitimate paid-search credit is the Lingga
-  Florist personal project — and its CPC figure stays out until he confirms it.
+- **Meta Ads: superseded on 1 Nov 2026.** The Master Portfolio 2026
+  (`D:\CV\Portfoliodyrn\MasterPortfolio\`, Oct 2026) and the Oct 2026 resume record
+  hands-on Meta Ads at Tjikko and the anonymised B2B corporate-gifting Meta Ads + CRM case.
+  Those documents are newer than the Verified Facts Memory and win where they differ.
+  Keep the client in that case anonymised. Lingga Florist Google Ads figures come from the
+  same portfolio.
 - **No marketplace sales results.** Shopee/Tokopedia: built and managed the listings, and
   is leading the current reactivation. Not results.
 - **No hours-saved figures.** They conflict across old CVs.
 - **AquaFoam** — the Docs say *ask before using anything AquaFoam*. It is absent from the
   site for that reason, not by oversight.
 - **No testimonials** until real, approved quotes exist.
-- **No website count.** The RIAS project count is flagged unverified.
+- **No website count on the site.** The portfolio says 10; with Jakarta Law Firm it is 11. Count is not used.
 - **Jakarta, not Bekasi.** Older CVs get this wrong.
 - **Never mention the hybrid/remote preference.** That is an offer-stage conversation.
 
@@ -243,6 +255,21 @@ change.
 `.portfolio-stack__inner` **must keep `isolation: isolate`**. Without it, a `z-index` on a
 card's caption escapes its own card and paints over every card that slides in afterwards —
 the first project's title ends up stuck on screen for the whole stack.
+
+### Popups only scroll because of the overflow:clip override
+
+`main.css` gives `.popup` `overflow:hidden` plus `overscroll-behavior:contain`. Together
+they swallow the mouse wheel: the card becomes a scroll container that cannot scroll and
+refuses to pass the wheel to `.mfp-container`, so popups only scrolled with the pointer in
+the margin. `custom.css` overrides it with `overflow:clip` and moves `contain` to the
+container. **Do not remove that block.**
+
+### Hermes images are designed, not screenshots
+
+`img/work/hermes.jpg` (architecture diagram) and `hermes-seo-report.jpg` (audit card) were
+rendered from HTML with headless Chrome at 2x, replacing raw Discord screenshots (Nitro
+banner, server avatars, game ads). Rebuild them the same way rather than going back to a
+screenshot.
 
 ### The popup cover image needs its height cap
 
@@ -339,6 +366,31 @@ overwritten on the next run.
 Adding a featured project also needs a background image rule (`.portfolio-item-5` …
 `-10` in `custom.css`, matched to the featured order) and, ideally, an entry in the
 JSON-LD `ItemList` so the structured data matches what the page shows.
+
+### Services
+
+The six service cards and their detail popups (`#service-<key>`) are generated too,
+from the `SERVICES` list in `tools/gen_projects.py`. Each popup has Best for /
+Platforms / You get / Evidence, then What I do, How I work, Proof on this page and
+Tools. **Proof lines must point to a project visible on the page.** Service popups
+carry the `Project Popup` comment markers so the same splice replaces them.
+"Discuss a project" closes the popup via `.popup-to-contact` in `js/custom.js`.
+
+### Process section ("How I work on a project")
+
+Generated from `STEPS` and `BOARD` in `tools/gen_projects.py` and spliced between
+Services and Resume (`#process`). Eight steps, from discovery call to aftercare; each
+step names the Trello list (`board` index) its card sits in, and `js/custom.js` moves
+one card across the mini board as the visitor clicks. Without JS all panels show as a
+list. Payment terms and revision counts are deliberately left to the proposal; add
+numbers only once Dyrn decides them. Not in the top menu yet: a 7th item would crowd
+the bottom bar on phones.
+
+### Popup close button
+
+Pinned to the viewport as a light "Close" pill (`custom.css`, "always visible"). It
+needs `.mfp-ready .mfp-content { transform: none }`, otherwise `position: fixed` is
+trapped by the fade-in transform and the button scrolls away with the content.
 
 ### Styling
 
